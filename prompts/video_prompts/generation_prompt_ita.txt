@@ -1,0 +1,3 @@
+<video>
+Rispondi alla seguente domanda sul video con una singola frase concisa.
+Domanda: {question}

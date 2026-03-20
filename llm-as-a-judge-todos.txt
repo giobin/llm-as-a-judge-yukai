@@ -1,0 +1,25 @@
+LLM as a Judge
+
+vorrei creare un progetto che mi permetta di definire una buona pipeline llm as a judge dato un task.
+la pipeline si occupa di caricare un dataset di valutazione, definisce come usarlo, carica un llm, crea il prompt per il judge e valuta il tutto.
+Questo sistema dovrebbe essere utilizzato per valutare la bravura di un llm as a judge. 
+
+- argparse arguments
+    - tipologia di modello da usare per llm as a judge: openai o vllm (se si usa openai la chiave API è data come variabile d'ambiente)
+    - nome del modello da usare
+    - dataset da utilizzare (trovi info specifiche in /data01/gbonetta/llm-as-a-judge/esempio_dataset.txt)
+    - file prompt
+
+- modello
+    - variabili e codice per usare modelli OpenAI e VLLM. 
+
+- process del dataset da utilizzare per testare l'llm as a judge.
+    - logica di estrazione di sample dal dataset per testare le risposte di llm as a judge vs ground truth
+
+- definizione task specifico
+    - descrizione di input (domanda, riposta, ground truth)
+    - descrizione di output (si/no, score...)
+    - creazione prompt (il prompt può essere semplicemente caricato da un file esterno per rendere più facile testare con prompt diversi)
+
+- valutazione 
+    - loop che valuta le performance di llm as a judge

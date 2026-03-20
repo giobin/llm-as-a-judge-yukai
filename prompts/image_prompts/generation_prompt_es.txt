@@ -1,0 +1,3 @@
+<image>
+Lee la transcripcion siguiente y observa la imagen. Usando ambas, escribe una sola caption concisa en espanol.
+Transcripcion: {transcript}

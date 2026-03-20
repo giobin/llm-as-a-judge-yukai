@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-as-a-judge-pipeline"
+version = "0.1.0"
+description = "Pipeline per valutare LLM as a Judge su dataset MAIA"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "datasets>=2.18.0",
+  "openai>=1.40.0",
+  "tqdm>=4.66.0",
+  "numpy>=1.26.0",
+  "pillow>=10.0.0",
+  "decord>=0.6.0"
+]
+
+[project.scripts]
+llm-judge = "llm_judge_pipeline.cli:main"
+dataset-augment-foils = "dataset_augmentation.cli:main"
+optimize-judge-prompt = "prompt_optimization.run_promptwizard:main"
+model-infer = "model_inference.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

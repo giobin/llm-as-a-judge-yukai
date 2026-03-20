@@ -1,0 +1,3 @@
+<image>
+Rispondi alla seguente domanda sull'immagine con una singola frase concisa.
+Domanda: {question}

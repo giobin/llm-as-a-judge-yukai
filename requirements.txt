@@ -1,0 +1,6 @@
+datasets>=2.18.0
+openai>=1.40.0
+tqdm>=4.66.0
+numpy>=1.26.0
+pillow>=10.0.0
+decord>=0.6.0

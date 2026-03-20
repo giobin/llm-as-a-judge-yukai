@@ -1,0 +1,9 @@
+il dataset è reperibile su huggingface: caput/MAIA_dev_set_eng
+voglio usare il subset "gen"
+
+- ispeziona il dataset per capire come è fatto. in particolare ogni esempio ha tra le altre cose una "question" e diverse "answers". Ogni answer è buona. sono tutte valide risposte da usare come ground truth.
+- non voglio usare i video per ora. Quindi il prompt all'llm as a judge deve contenere quanto segue:
+    - descrizione task ("sei un llm as a judge. Data una domanda devi valutare se la risposta è corretta... ")
+    - domanda ("question")
+    - ground truth (usiamo 4 "answers*" per ora)
+
