@@ -73,6 +73,21 @@ llm-judge \
   --max-samples 20
 ```
 
+## Esempio uso con vLLM in-process
+
+```bash
+CUDA_VISIBLE_DEVICES=0,1 llm-judge \
+  --backend vllm_in_process \
+  --model-name google/gemma-3-27b-it \
+  --vllm-tensor-parallel-size 2 \
+  --vllm-enforce-eager \
+  --vllm-disable-custom-all-reduce \
+  --dataset-name caput/MAIA_dev_set_eng \
+  --dataset-subset gen \
+  --split train \
+  --max-samples 20
+```
+
 ## Model Inference (Multimodale MAIA GEN)
 
 La CLI `model-infer` genera risposte a partire da:
@@ -118,6 +133,24 @@ model-infer \
   --videos-dir /data01/gbonetta/MAIA-Multimodal_AI_Assessment/Videos \
   --prompt-file prompts/generation_prompt_ita.txt \
   --num-frames 8 \
+  --output-file model_inference_ita.json
+```
+
+Esempio vLLM in-process:
+
+```bash
+CUDA_VISIBLE_DEVICES=0,1 model-infer \
+  --backend vllm_in_process \
+  --model-name google/gemma-3-27b-it \
+  --dataset-name caput/MAIA_ita \
+  --dataset-subset gen \
+  --split test \
+  --videos-dir /data01/gbonetta/MAIA-Multimodal_AI_Assessment/Videos \
+  --prompt-file prompts/generation_prompt_ita.txt \
+  --num-frames 8 \
+  --vllm-tensor-parallel-size 2 \
+  --vllm-enforce-eager \
+  --vllm-disable-custom-all-reduce \
   --output-file model_inference_ita.json
 ```
 

@@ -15,7 +15,7 @@ from .schemas import JudgeSample
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="LLM-as-a-Judge evaluation pipeline")
 
-    parser.add_argument("--backend", choices=["openai", "vllm"], required=True)
+    parser.add_argument("--backend", choices=["openai", "vllm", "vllm_in_process"], required=True)
     parser.add_argument("--model-name", required=True)
 
     parser.add_argument("--dataset-name", default="caput/MAIA_dev_set_eng")
@@ -44,6 +44,12 @@ def parse_args() -> argparse.Namespace:
 
     parser.add_argument("--vllm-base-url", default=None)
     parser.add_argument("--vllm-api-key", default=None)
+    parser.add_argument("--vllm-tensor-parallel-size", type=int, default=1)
+    parser.add_argument("--vllm-gpu-memory-utilization", type=float, default=0.9)
+    parser.add_argument("--vllm-max-model-len", type=int, default=None)
+    parser.add_argument("--vllm-trust-remote-code", action="store_true")
+    parser.add_argument("--vllm-enforce-eager", action="store_true")
+    parser.add_argument("--vllm-disable-custom-all-reduce", action="store_true")
 
     parser.add_argument("--input-json", type=Path, default=None)
     parser.add_argument(
@@ -80,6 +86,12 @@ def build_config(args: argparse.Namespace) -> PipelineConfig:
         verbose=args.verbose,
         vllm_base_url=args.vllm_base_url,
         vllm_api_key=args.vllm_api_key,
+        vllm_tensor_parallel_size=args.vllm_tensor_parallel_size,
+        vllm_gpu_memory_utilization=args.vllm_gpu_memory_utilization,
+        vllm_max_model_len=args.vllm_max_model_len,
+        vllm_trust_remote_code=args.vllm_trust_remote_code,
+        vllm_enforce_eager=args.vllm_enforce_eager,
+        vllm_disable_custom_all_reduce=args.vllm_disable_custom_all_reduce,
         input_json=args.input_json,
         candidate_source=args.candidate_source,
         generated_field=args.generated_field,
@@ -142,6 +154,12 @@ def main() -> None:
         model_name=cfg.model_name,
         vllm_base_url=cfg.vllm_base_url,
         vllm_api_key=cfg.vllm_api_key,
+        vllm_tensor_parallel_size=cfg.vllm_tensor_parallel_size,
+        vllm_gpu_memory_utilization=cfg.vllm_gpu_memory_utilization,
+        vllm_max_model_len=cfg.vllm_max_model_len,
+        vllm_trust_remote_code=cfg.vllm_trust_remote_code,
+        vllm_enforce_eager=cfg.vllm_enforce_eager,
+        vllm_disable_custom_all_reduce=cfg.vllm_disable_custom_all_reduce,
     )
 
     report = evaluate_judge(
@@ -167,6 +185,13 @@ def main() -> None:
             "temperature": cfg.temperature,
             "max_tokens": cfg.max_tokens,
             "verbose": cfg.verbose,
+            "vllm_base_url": cfg.vllm_base_url,
+            "vllm_tensor_parallel_size": cfg.vllm_tensor_parallel_size,
+            "vllm_gpu_memory_utilization": cfg.vllm_gpu_memory_utilization,
+            "vllm_max_model_len": cfg.vllm_max_model_len,
+            "vllm_trust_remote_code": cfg.vllm_trust_remote_code,
+            "vllm_enforce_eager": cfg.vllm_enforce_eager,
+            "vllm_disable_custom_all_reduce": cfg.vllm_disable_custom_all_reduce,
             "candidate_source": cfg.candidate_source,
             "generated_field": cfg.generated_field,
             "input_json": str(cfg.input_json) if cfg.input_json else None,
