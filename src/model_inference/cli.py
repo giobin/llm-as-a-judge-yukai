@@ -11,7 +11,7 @@ from .pipeline import run_generation
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Multimodal model inference pipeline for video or image datasets")
 
-    parser.add_argument("--backend", choices=["openai", "vllm"], required=True)
+    parser.add_argument("--backend", choices=["openai", "vllm", "vllm_in_process"], required=True)
     parser.add_argument("--model-name", required=True)
 
     parser.add_argument("--dataset-name", default="caput/MAIA_eng")
@@ -33,6 +33,12 @@ def parse_args() -> argparse.Namespace:
 
     parser.add_argument("--vllm-base-url", default=None)
     parser.add_argument("--vllm-api-key", default=None)
+    parser.add_argument("--vllm-tensor-parallel-size", type=int, default=1)
+    parser.add_argument("--vllm-gpu-memory-utilization", type=float, default=0.9)
+    parser.add_argument("--vllm-max-model-len", type=int, default=None)
+    parser.add_argument("--vllm-trust-remote-code", action="store_true")
+    parser.add_argument("--vllm-enforce-eager", action="store_true")
+    parser.add_argument("--vllm-disable-custom-all-reduce", action="store_true")
 
     parser.add_argument("--output-file", type=Path, default=Path("model_inference_report.json"))
 
@@ -58,6 +64,12 @@ def build_config(args: argparse.Namespace) -> InferenceConfig:
         verbose=args.verbose,
         vllm_base_url=args.vllm_base_url,
         vllm_api_key=args.vllm_api_key,
+        vllm_tensor_parallel_size=args.vllm_tensor_parallel_size,
+        vllm_gpu_memory_utilization=args.vllm_gpu_memory_utilization,
+        vllm_max_model_len=args.vllm_max_model_len,
+        vllm_trust_remote_code=args.vllm_trust_remote_code,
+        vllm_enforce_eager=args.vllm_enforce_eager,
+        vllm_disable_custom_all_reduce=args.vllm_disable_custom_all_reduce,
     )
 
 

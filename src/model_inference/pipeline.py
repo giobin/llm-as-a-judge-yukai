@@ -37,6 +37,12 @@ def _build_public_config(cfg: InferenceConfig) -> dict[str, Any]:
         "verbose": cfg.verbose,
         "vllm_base_url": cfg.vllm_base_url,
         "has_vllm_api_key": bool(cfg.vllm_api_key),
+        "vllm_tensor_parallel_size": cfg.vllm_tensor_parallel_size,
+        "vllm_gpu_memory_utilization": cfg.vllm_gpu_memory_utilization,
+        "vllm_max_model_len": cfg.vllm_max_model_len,
+        "vllm_trust_remote_code": cfg.vllm_trust_remote_code,
+        "vllm_enforce_eager": cfg.vllm_enforce_eager,
+        "vllm_disable_custom_all_reduce": cfg.vllm_disable_custom_all_reduce,
     }
 
 
@@ -59,6 +65,12 @@ def run_generation(cfg: InferenceConfig) -> dict[str, Any]:
         model_name=cfg.model_name,
         vllm_base_url=cfg.vllm_base_url,
         vllm_api_key=cfg.vllm_api_key,
+        vllm_tensor_parallel_size=cfg.vllm_tensor_parallel_size,
+        vllm_gpu_memory_utilization=cfg.vllm_gpu_memory_utilization,
+        vllm_max_model_len=cfg.vllm_max_model_len,
+        vllm_trust_remote_code=cfg.vllm_trust_remote_code,
+        vllm_enforce_eager=cfg.vllm_enforce_eager,
+        vllm_disable_custom_all_reduce=cfg.vllm_disable_custom_all_reduce,
     )
 
     media_cache: dict[str, dict[str, Any]] = {}

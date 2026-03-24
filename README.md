@@ -4,7 +4,7 @@ Pipeline Python per valutare un modello usato come **LLM-as-a-Judge**.
 
 Funzionalita' principali:
 - CLI con `argparse`
-- backend modello `openai` o `vllm`
+- backend modello `openai`, `vllm` o `vllm_in_process`
 - caricamento dataset Hugging Face con o senza subset/config
 - prompt esterno caricabile da file
 - pipeline multimodale `model-infer` (video -> frame -> prompt -> risposta)
@@ -17,14 +17,10 @@ Funzionalita' principali:
 ## Struttura
 
 - `src/llm_judge_pipeline/cli.py`: entrypoint CLI
-- `src/llm_judge_pipeline/model_client.py`: client OpenAI/vLLM
-- `src/llm_judge_pipeline/dataset.py`: estrazione sample dal dataset
-- `src/llm_judge_pipeline/prompting.py`: rendering prompt + parser output judge
-- `src/llm_judge_pipeline/evaluation.py`: loop di valutazione + metriche
+- `src/llm_judge_pipeline/model_client.py`: client OpenAI/vLLM/vLLM in-process
 - `src/model_inference/cli.py`: entrypoint CLI multimodale per generazione risposte
-- `src/model_inference/video.py`: risoluzione video locale + sampling frame uniforme
-- `src/model_inference/prompting.py`: rendering prompt + integrazione `<video>`
-- `src/model_inference/model_client.py`: client multimodale OpenAI/vLLM
+- `src/model_inference/model_client.py`: client multimodale OpenAI/vLLM/vLLM in-process
+- `src/common/vllm_in_process.py`: helper per inizializzare `vllm.LLM` in-process
 - `prompts/image_prompts/`: prompt per task immagine / judge
 - `prompts/video_prompts/`: prompt per task video / generation
 
@@ -72,7 +68,7 @@ llm-judge \
 
 Per dataset con subset/config, aggiungi `--dataset-subset gen`.
 
-## Esempio uso con vLLM
+## Esempio uso con vLLM server
 
 ```bash
 llm-judge \
@@ -85,6 +81,31 @@ llm-judge \
   --prompt-file prompts/image_prompts/judge_prompt_en.txt \
   --output-file judge_eval_report.json
 ```
+
+## Esempio uso con vLLM in-process
+
+```bash
+CUDA_VISIBLE_DEVICES=0,1 llm-judge \
+  --backend vllm_in_process \
+  --model-name google/gemma-3-27b-it \
+  --dataset-name caput/MAIA_dev_set_eng \
+  --dataset-subset gen \
+  --split train \
+  --max-samples 20 \
+  --prompt-file prompts/image_prompts/judge_prompt_en.txt \
+  --vllm-tensor-parallel-size 2 \
+  --vllm-enforce-eager \
+  --vllm-disable-custom-all-reduce \
+  --output-file judge_eval_report.json
+```
+
+Flag specifici per `vllm_in_process` e riusabili anche in `model-infer`:
+- `--vllm-tensor-parallel-size`
+- `--vllm-gpu-memory-utilization`
+- `--vllm-max-model-len`
+- `--vllm-trust-remote-code`
+- `--vllm-enforce-eager`
+- `--vllm-disable-custom-all-reduce`
 
 ## Model Inference
 
@@ -114,7 +135,7 @@ model-infer \
   --output-file model_inference_eng.json
 ```
 
-Esempio vLLM:
+Esempio vLLM server:
 
 ```bash
 model-infer \
@@ -128,6 +149,24 @@ model-infer \
   --videos-dir /data01/gbonetta/MAIA-Multimodal_AI_Assessment/Videos \
   --prompt-file prompts/video_prompts/generation_prompt_ita.txt \
   --num-frames 8 \
+  --output-file model_inference_ita.json
+```
+
+Esempio vLLM in-process:
+
+```bash
+CUDA_VISIBLE_DEVICES=0,1 model-infer \
+  --backend vllm_in_process \
+  --model-name google/gemma-3-27b-it \
+  --dataset-name caput/MAIA_ita \
+  --dataset-subset gen \
+  --split test \
+  --videos-dir /data01/gbonetta/MAIA-Multimodal_AI_Assessment/Videos \
+  --prompt-file prompts/video_prompts/generation_prompt_ita.txt \
+  --num-frames 8 \
+  --vllm-tensor-parallel-size 2 \
+  --vllm-enforce-eager \
+  --vllm-disable-custom-all-reduce \
   --output-file model_inference_ita.json
 ```
 
