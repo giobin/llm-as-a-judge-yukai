@@ -50,3 +50,9 @@ logs/
 judge_results/
 model_infer_results/
 src/prompt_optimization/artifacts/
+
+# Container artifacts
+container/*.sif
+container/*.sandbox
+.singularity/
+singularity_build_*.log
