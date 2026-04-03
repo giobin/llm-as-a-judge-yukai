@@ -1,8 +1,10 @@
 from __future__ import annotations
 
-from string import Formatter
 from pathlib import Path
+from string import Formatter
 from typing import Any
+
+from PIL import Image
 
 VIDEO_PLACEHOLDER = "<video>"
 IMAGE_PLACEHOLDER = "<image>"
@@ -26,7 +28,10 @@ def render_prompt(template: str, variables: dict[str, str]) -> str:
     return template.format_map(stringified_variables)
 
 
-def build_user_content(prompt: str, media_data_uris: list[str]) -> list[dict[str, Any]]:
+def _build_content_with_media_parts(
+    prompt: str,
+    media_parts: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
     content: list[dict[str, Any]] = []
 
     for placeholder in (VIDEO_PLACEHOLDER, IMAGE_PLACEHOLDER):
@@ -36,22 +41,34 @@ def build_user_content(prompt: str, media_data_uris: list[str]) -> list[dict[str
                 if segment:
                     content.append({"type": "text", "text": segment})
                 if index < len(segments) - 1:
-                    for media_uri in media_data_uris:
-                        content.append(
-                            {
-                                "type": "image_url",
-                                "image_url": {"url": media_uri},
-                            }
-                        )
+                    content.extend(media_parts)
             return content
 
-    # Fallback: prepend images when no explicit media placeholder is provided.
-    for media_uri in media_data_uris:
-        content.append(
-            {
-                "type": "image_url",
-                "image_url": {"url": media_uri},
-            }
-        )
+    content.extend(media_parts)
     content.append({"type": "text", "text": prompt})
     return content
+
+
+def build_user_content(prompt: str, media_data_uris: list[str]) -> list[dict[str, Any]]:
+    media_parts = [
+        {
+            "type": "image_url",
+            "image_url": {"url": media_uri},
+        }
+        for media_uri in media_data_uris
+    ]
+    return _build_content_with_media_parts(prompt=prompt, media_parts=media_parts)
+
+
+def build_vllm_in_process_user_content(
+    prompt: str,
+    media_images: list[Image.Image],
+) -> list[dict[str, Any]]:
+    media_parts = [
+        {
+            "type": "image_pil",
+            "image_pil": image,
+        }
+        for image in media_images
+    ]
+    return _build_content_with_media_parts(prompt=prompt, media_parts=media_parts)

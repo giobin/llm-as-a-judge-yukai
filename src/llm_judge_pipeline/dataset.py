@@ -41,14 +41,17 @@ def _collect_reference_answers(row: dict[str, Any]) -> list[str]:
     return []
 
 
-def _extract_first_transcript(value: Any) -> str:
+def _extract_transcripts(value: Any) -> list[str]:
     if isinstance(value, list):
+        transcripts: list[str] = []
         for item in value:
             text = str(item).strip()
             if text:
-                return text
-        return ""
-    return str(value or "").strip()
+                transcripts.append(text)
+        return transcripts
+
+    text = str(value or "").strip()
+    return [text] if text else []
 
 
 def _build_task_prompt(row: dict[str, Any]) -> str:
@@ -182,10 +185,13 @@ def load_maia_gen_samples(
 def load_generated_samples_from_json(
     input_json: Path,
     generated_field: str,
+    generated_sample_mode: str,
     num_references: int,
     offset_samples: int,
     max_samples: int,
 ) -> list[JudgeSample]:
+    if generated_sample_mode not in {"generated_field", "transcript_pair"}:
+        raise ValueError("generated_sample_mode must be 'generated_field' or 'transcript_pair'.")
     if not 1 <= num_references <= 7:
         raise ValueError("num_references must be between 1 and 7.")
     if offset_samples < 0:
@@ -217,22 +223,30 @@ def load_generated_samples_from_json(
         if not question:
             continue
 
-        generated_answer = str(row.get(generated_field, "")).strip()
-        if not generated_answer:
-            continue
+        if generated_sample_mode == "transcript_pair":
+            transcripts = _extract_transcripts(row.get("transcripts"))
+            if len(transcripts) < 2:
+                continue
+            candidate_answer = transcripts[0]
+            ground_truth_answers = [transcripts[1]]
+        else:
+            candidate_answer = str(row.get(generated_field, "")).strip()
+            if not candidate_answer:
+                continue
 
-        all_answers = _collect_reference_answers(row)
-        if not all_answers:
-            continue
+            all_answers = _collect_reference_answers(row)
+            if not all_answers:
+                continue
 
-        ground_truth_answers = all_answers[: min(num_references, len(all_answers))]
+            ground_truth_answers = all_answers[: min(num_references, len(all_answers))]
+
         question_id = str(row.get("id", row.get("question_id", idx)))
 
         samples.append(
             JudgeSample(
                 question_id=question_id,
                 question=question,
-                candidate_answer=generated_answer,
+                candidate_answer=candidate_answer,
                 ground_truth_answers=ground_truth_answers,
                 expected_label="yes",
             )

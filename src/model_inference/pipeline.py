@@ -7,7 +7,7 @@ from tqdm.auto import tqdm
 from .config import InferenceConfig
 from .dataset import load_dataset_rows, prepare_inference_row
 from .model_client import build_model_client
-from .prompting import build_user_content, load_prompt_template, render_prompt
+from .prompting import build_user_content, build_vllm_in_process_user_content, load_prompt_template, render_prompt
 from .schemas import GenerationReport, GenerationSummary
 from .video import (
     format_frames_as_data_uris,
@@ -113,7 +113,10 @@ def run_generation(cfg: InferenceConfig) -> dict[str, Any]:
                         "video_path": str(resolved_path),
                         "image_url": None,
                         "frame_indices": frame_indices,
-                        "media_data_uris": format_frames_as_data_uris(frames),
+                        "media_images": frames,
+                        "media_data_uris": (
+                            None if cfg.backend == "vllm_in_process" else format_frames_as_data_uris(frames)
+                        ),
                     }
                 else:
                     image = load_image_from_url(
@@ -125,15 +128,24 @@ def run_generation(cfg: InferenceConfig) -> dict[str, Any]:
                         "video_path": None,
                         "image_url": prepared_row.media_locator,
                         "frame_indices": [0],
-                        "media_data_uris": format_image_list_as_data_uris([image]),
+                        "media_images": [image],
+                        "media_data_uris": (
+                            None if cfg.backend == "vllm_in_process" else format_image_list_as_data_uris([image])
+                        ),
                     }
 
             cached_meta = media_cache[cache_key]
             prompt = render_prompt(prompt_template, prepared_row.prompt_variables)
-            user_content = build_user_content(
-                prompt=prompt,
-                media_data_uris=cached_meta["media_data_uris"],
-            )
+            if cfg.backend == "vllm_in_process":
+                user_content = build_vllm_in_process_user_content(
+                    prompt=prompt,
+                    media_images=cached_meta["media_images"],
+                )
+            else:
+                user_content = build_user_content(
+                    prompt=prompt,
+                    media_data_uris=cached_meta["media_data_uris"],
+                )
 
             if cfg.verbose:
                 tqdm.write(f"\n[Row {index}/{len(rows)}] id={row.get('id')}")

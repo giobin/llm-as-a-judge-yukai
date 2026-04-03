@@ -11,6 +11,7 @@ OFFSET_SAMPLES="${OFFSET_SAMPLES:-0}"
 MAX_SAMPLES="${MAX_SAMPLES:-240}"
 NUM_REFERENCES="${NUM_REFERENCES:-1}"
 GENERATED_FIELD="${GENERATED_FIELD:-generated_answer1}"
+GENERATED_SAMPLE_MODE="${GENERATED_SAMPLE_MODE:-generated_field}"
 
 GEMMA_JUDGE_MODEL="${GEMMA_JUDGE_MODEL:-google/gemma-3-27b-it}"
 GPT_JUDGE_MODEL="${GPT_JUDGE_MODEL:-gpt-5.2}"
@@ -83,6 +84,16 @@ source_json_for_model_and_subset() {
 
 run_llm_judge() {
   python -m llm_judge_pipeline.cli "$@"
+}
+
+validate_generated_sample_mode() {
+  case "${GENERATED_SAMPLE_MODE}" in
+    generated_field|transcript_pair) ;;
+    *)
+      echo "ERROR: GENERATED_SAMPLE_MODE deve essere 'generated_field' oppure 'transcript_pair'. Valore attuale: ${GENERATED_SAMPLE_MODE}"
+      exit 1
+      ;;
+  esac
 }
 
 wait_for_vllm_server() {
@@ -159,7 +170,7 @@ run_judge_eval() {
   local source_suffix="$5"
   local subset="$6"
 
-  local input_file prompt_file output_dir output_file judge_slug source_slug
+  local input_file prompt_file output_dir output_file judge_slug source_slug mode_suffix
   input_file="$(source_json_for_model_and_subset "${source_dir}" "${source_suffix}" "${subset}")"
   prompt_file="$(prompt_file_for_subset "${subset}")"
 
@@ -177,7 +188,11 @@ run_judge_eval() {
   source_slug="${source_suffix}"
   output_dir="${RESULTS_BASE_DIR}/judge_${judge_key}"
   mkdir -p "${output_dir}"
-  output_file="${output_dir}/eval_${subset}_generated_from_${source_slug}_judged_by_${judge_slug}_num_refs_${NUM_REFERENCES}_offset_${OFFSET_SAMPLES}_max_${MAX_SAMPLES}.json"
+  mode_suffix=""
+  if [[ "${GENERATED_SAMPLE_MODE}" != "generated_field" ]]; then
+    mode_suffix="_sample_mode_${GENERATED_SAMPLE_MODE}"
+  fi
+  output_file="${output_dir}/eval_${subset}_generated_from_${source_slug}_judged_by_${judge_slug}_num_refs_${NUM_REFERENCES}${mode_suffix}_offset_${OFFSET_SAMPLES}_max_${MAX_SAMPLES}.json"
 
   echo "------------------------------------------------------------"
   echo "Judge model: ${judge_model} (backend: ${backend})"
@@ -185,6 +200,7 @@ run_judge_eval() {
   echo "Subset: ${subset}"
   echo "Prompt file: ${prompt_file}"
   echo "Num references: ${NUM_REFERENCES}"
+  echo "Generated sample mode: ${GENERATED_SAMPLE_MODE}"
   echo "Offset samples: ${OFFSET_SAMPLES}"
   echo "Max samples: ${MAX_SAMPLES}"
   echo "Output: ${output_file}"
@@ -198,6 +214,7 @@ run_judge_eval() {
       --candidate-source generated \
       --input-json "${input_file}" \
       --generated-field "${GENERATED_FIELD}" \
+      --generated-sample-mode "${GENERATED_SAMPLE_MODE}" \
       --num-references "${NUM_REFERENCES}" \
       --offset-samples "${OFFSET_SAMPLES}" \
       --max-samples "${MAX_SAMPLES}" \
@@ -210,6 +227,7 @@ run_judge_eval() {
       --candidate-source generated \
       --input-json "${input_file}" \
       --generated-field "${GENERATED_FIELD}" \
+      --generated-sample-mode "${GENERATED_SAMPLE_MODE}" \
       --num-references "${NUM_REFERENCES}" \
       --offset-samples "${OFFSET_SAMPLES}" \
       --max-samples "${MAX_SAMPLES}" \
@@ -222,6 +240,7 @@ main() {
   local source_dir source_suffix subset source
 
   activate_venv
+  validate_generated_sample_mode
   check_requirements
 
   start_vllm_server_for_gemma_judge

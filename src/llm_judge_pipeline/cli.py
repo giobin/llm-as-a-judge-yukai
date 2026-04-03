@@ -61,7 +61,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--generated-field",
         default="generated_answer1",
-        help="Field name to read generated candidate answers from when --candidate-source=generated.",
+        help="Field name to read generated candidate answers from when --candidate-source=generated and --generated-sample-mode=generated_field.",
+    )
+    parser.add_argument(
+        "--generated-sample-mode",
+        choices=["generated_field", "transcript_pair"],
+        default="generated_field",
+        help="How to build judge samples from --input-json when --candidate-source=generated.",
     )
 
     parser.add_argument("--output-file", type=Path, default=Path("judge_eval_report.json"))
@@ -95,6 +101,7 @@ def build_config(args: argparse.Namespace) -> PipelineConfig:
         input_json=args.input_json,
         candidate_source=args.candidate_source,
         generated_field=args.generated_field,
+        generated_sample_mode=args.generated_sample_mode,
     )
 
 
@@ -125,6 +132,7 @@ def main() -> None:
         samples = load_generated_samples_from_json(
             input_json=cfg.input_json,
             generated_field=cfg.generated_field,
+            generated_sample_mode=cfg.generated_sample_mode,
             num_references=cfg.num_references,
             offset_samples=cfg.offset_samples,
             max_samples=cfg.max_samples,
@@ -194,6 +202,7 @@ def main() -> None:
             "vllm_disable_custom_all_reduce": cfg.vllm_disable_custom_all_reduce,
             "candidate_source": cfg.candidate_source,
             "generated_field": cfg.generated_field,
+            "generated_sample_mode": cfg.generated_sample_mode,
             "input_json": str(cfg.input_json) if cfg.input_json else None,
             "sample_prompt_file": str(prompt_sample_path) if prompt_sample_path else None,
         },

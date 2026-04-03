@@ -37,6 +37,7 @@ def test_load_generated_samples_from_json_rows_object(tmp_path: Path) -> None:
     samples = load_generated_samples_from_json(
         input_json=path,
         generated_field="generated_answer1",
+        generated_sample_mode="generated_field",
         num_references=4,
         offset_samples=0,
         max_samples=0,
@@ -71,6 +72,7 @@ def test_load_generated_samples_from_json_pixmo_caption_rows(tmp_path: Path) -> 
     samples = load_generated_samples_from_json(
         input_json=path,
         generated_field="generated_answer1",
+        generated_sample_mode="generated_field",
         num_references=4,
         offset_samples=0,
         max_samples=0,
@@ -83,6 +85,52 @@ def test_load_generated_samples_from_json_pixmo_caption_rows(tmp_path: Path) -> 
     assert sample.candidate_answer == "A kid wearing a yellow raincoat splashes in a puddle."
     assert sample.ground_truth_answers == ["A child in a yellow raincoat jumps into a puddle."]
     assert sample.question == "Write a caption for the image."
+
+
+def test_load_generated_samples_from_json_pixmo_caption_transcript_pair_mode(tmp_path: Path) -> None:
+    payload = {
+        "schema_version": "model_inference/v1",
+        "rows": [
+            {
+                "id": "pixmo-1",
+                "image_url": "https://example.com/image.png",
+                "transcripts": [
+                    "Candidate transcript.",
+                    "Reference transcript.",
+                    "Unused third transcript.",
+                ],
+                "caption": "This caption is ignored in transcript_pair mode.",
+                "generated_answer1": "This generated answer is ignored too.",
+                "generation_meta": {"media_type": "image"},
+            },
+            {
+                "id": "pixmo-2",
+                "image_url": "https://example.com/image2.png",
+                "transcripts": ["Only one transcript."],
+                "generation_meta": {"media_type": "image"},
+            },
+        ],
+    }
+
+    path = tmp_path / "generated_pixmo_transcripts.json"
+    path.write_text(json.dumps(payload), encoding="utf-8")
+
+    samples = load_generated_samples_from_json(
+        input_json=path,
+        generated_field="generated_answer1",
+        generated_sample_mode="transcript_pair",
+        num_references=4,
+        offset_samples=0,
+        max_samples=0,
+    )
+
+    assert len(samples) == 1
+    sample = samples[0]
+    assert sample.question_id == "pixmo-1"
+    assert sample.expected_label == "yes"
+    assert sample.question == "Write a caption for the image."
+    assert sample.candidate_answer == "Candidate transcript."
+    assert sample.ground_truth_answers == ["Reference transcript."]
 
 
 def test_load_generated_samples_from_json_pixmo_ask_model_anything_rows(tmp_path: Path) -> None:
@@ -106,6 +154,7 @@ def test_load_generated_samples_from_json_pixmo_ask_model_anything_rows(tmp_path
     samples = load_generated_samples_from_json(
         input_json=path,
         generated_field="generated_answer1",
+        generated_sample_mode="generated_field",
         num_references=4,
         offset_samples=0,
         max_samples=0,

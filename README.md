@@ -173,6 +173,7 @@ Flag nuovi:
 - `--input-json`: path al JSON locale
 - `--candidate-source`: `synthetic` (default) oppure `generated`
 - `--generated-field`: campo da usare come candidate (default `generated_answer1`)
+- `--generated-sample-mode`: `generated_field` (default) oppure `transcript_pair`
 
 Esempio:
 
@@ -183,12 +184,28 @@ llm-judge \
   --candidate-source generated \
   --input-json model_inference_eng.json \
   --generated-field generated_answer1 \
+  --generated-sample-mode generated_field \
   --num-references 4 \
   --prompt-file prompts/judge_prompt_en.txt \
   --output-file judge_eval_generated_eng.json
 ```
 
 In modalita' `generated`, la candidate answer e' presa da `generated_answer1` e l'`expected_label` e' `yes`.
+
+Per `VillanovaAI/multi-pixmo-cap` puoi anche usare la modalita' `transcript_pair`: se `transcripts` contiene almeno 2 elementi, il primo viene usato come `candidate_answer` e il secondo come unica reference. In questa modalita' `--generated-field` viene ignorato.
+
+Esempio:
+
+```bash
+llm-judge \
+  --backend openai \
+  --model-name gpt-5.2 \
+  --candidate-source generated \
+  --input-json model_inference_multi_pixmo_cap.json \
+  --generated-sample-mode transcript_pair \
+  --prompt-file prompts/image_prompts/qa_judge_prompt_en.txt \
+  --output-file judge_eval_multi_pixmo_cap_transcripts.json
+```
 
 ## Note sul dataset
 
