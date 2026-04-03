@@ -31,3 +31,4 @@ class PipelineConfig:
     candidate_source: str
     generated_field: str
     pixmo_transcript_positive_ratio: float
+    generated_sample_mode: str

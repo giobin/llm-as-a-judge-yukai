@@ -1,8 +1,10 @@
 from __future__ import annotations
 
-from string import Formatter
 from pathlib import Path
+from string import Formatter
 from typing import Any
+
+from PIL import Image
 
 VIDEO_PLACEHOLDER = "<video>"
 IMAGE_PLACEHOLDER = "<image>"
@@ -59,7 +61,18 @@ def _build_media_parts(media_items: list[Any], media_part_type: str) -> list[dic
                 }
             )
         elif media_part_type == "image_pil":
-            parts.append({"image_pil": item})
+            parts.append({"type": "image_pil", "image_pil": item})
         else:
             raise ValueError(f"Unsupported media_part_type: {media_part_type}")
     return parts
+
+
+def build_vllm_in_process_user_content(
+    prompt: str,
+    media_images: list[Image.Image],
+) -> list[dict[str, Any]]:
+    return build_user_content(
+        prompt=prompt,
+        media_items=media_images,
+        media_part_type="image_pil",
+    )

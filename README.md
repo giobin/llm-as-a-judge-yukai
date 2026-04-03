@@ -222,6 +222,12 @@ Per il backend `vllm_in_process`, il launcher usa il Python nativo del container
 
 `llm-judge` supporta input JSON prodotto da `model-infer`.
 
+Flag nuovi:
+- `--input-json`: path al JSON locale
+- `--candidate-source`: `synthetic` (default), `generated` oppure `pixmo_transcripts`
+- `--generated-field`: campo da usare come candidate (default `generated_answer1`)
+- `--generated-sample-mode`: `generated_field` (default) oppure `transcript_pair`
+
 Esempio:
 
 ```bash
@@ -231,10 +237,13 @@ llm-judge \
   --candidate-source generated \
   --input-json model_inference_eng.json \
   --generated-field generated_answer1 \
+  --generated-sample-mode generated_field \
   --num-references 4 \
   --prompt-file prompts/image_prompts/judge_prompt_en.txt \
   --output-file judge_eval_generated_eng.json
 ```
+
+In modalita' `generated`, la candidate answer e' presa da `generated_answer1` e l'`expected_label` e' `yes`.
 
 Per l'esperimento `multi-pixmo-cap` basato su transcript interni al dataset e' disponibile anche un source dedicato:
 - usa solo sample con almeno 2 elementi in `transcripts`
@@ -243,7 +252,22 @@ Per l'esperimento `multi-pixmo-cap` basato su transcript interni al dataset e' d
 - usa un transcript casuale da un altro sample come candidate negativa
 - la quota di positivi e' controllata da `--pixmo-transcript-positive-ratio`
 
-Esempio:
+Per `VillanovaAI/multi-pixmo-cap` puoi anche usare la modalita' `transcript_pair`: se `transcripts` contiene almeno 2 elementi, il primo viene usato come `candidate_answer` e il secondo come unica reference. In questa modalita' `--generated-field` viene ignorato.
+
+Esempio `generated + transcript_pair`:
+
+```bash
+llm-judge \
+  --backend openai \
+  --model-name gpt-5.2 \
+  --candidate-source generated \
+  --input-json model_inference_multi_pixmo_cap.json \
+  --generated-sample-mode transcript_pair \
+  --prompt-file prompts/image_prompts/qa_judge_prompt_en.txt \
+  --output-file judge_eval_multi_pixmo_cap_transcripts.json
+```
+
+Esempio `pixmo_transcripts`:
 
 ```bash
 llm-judge \

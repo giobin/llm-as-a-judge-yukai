@@ -18,7 +18,7 @@ GPT_BACKEND="openai"
 GPT_MODEL_NAME="${GPT_MODEL_NAME:-gpt-5.2}"
 GPT_RESULTS_DIR="${RESULTS_BASE_DIR}/gpt52_multi_pixmo_ask_model_anything"
 
-GEMMA_BACKEND="vllm"
+GEMMA_BACKEND="${GEMMA_BACKEND:-vllm}"
 GEMMA_MODEL_NAME="${GEMMA_MODEL_NAME:-google/gemma-3-27b-it}"
 GEMMA_RESULTS_DIR="${RESULTS_BASE_DIR}/gemma3_27b_it_multi_pixmo_ask_model_anything"
 GEMMA27_GPUS="${GEMMA27_GPUS:-4,5}"
@@ -28,6 +28,9 @@ VLLM_BASE_URL="http://${VLLM_HOST}:${VLLM_PORT}"
 VLLM_API_KEY="${VLLM_API_KEY:-EMPTY}"
 VLLM_TIMEOUT_SECONDS="${VLLM_TIMEOUT_SECONDS:-600}"
 VLLM_POLL_INTERVAL="${VLLM_POLL_INTERVAL:-5}"
+VLLM_GPU_MEMORY_UTILIZATION="${VLLM_GPU_MEMORY_UTILIZATION:-0.9}"
+VLLM_MAX_MODEL_LEN="${VLLM_MAX_MODEL_LEN:-}"
+VLLM_TRUST_REMOTE_CODE="${VLLM_TRUST_REMOTE_CODE:-0}"
 
 SUBSETS=("it" "en" "es")
 VLLM_PID=""
@@ -45,6 +48,20 @@ activate_venv() {
   export PYTHONPATH="${ROOT_DIR}/src${PYTHONPATH:+:${PYTHONPATH}}"
 }
 
+gemma_tp_size() {
+  awk -F',' '{print NF}' <<< "${GEMMA27_GPUS}"
+}
+
+validate_backend() {
+  case "${GEMMA_BACKEND}" in
+    vllm|vllm_in_process) ;;
+    *)
+      echo "ERROR: GEMMA_BACKEND deve essere 'vllm' oppure 'vllm_in_process'. Valore attuale: ${GEMMA_BACKEND}"
+      exit 1
+      ;;
+  esac
+}
+
 check_requirements() {
   if [[ -z "${OPENAI_API_KEY:-}" ]]; then
     echo "ERROR: OPENAI_API_KEY non impostata."
@@ -56,14 +73,21 @@ check_requirements() {
     exit 1
   fi
 
-  if ! command -v vllm >/dev/null 2>&1; then
-    echo "ERROR: comando vllm non trovato. Verifica il venv: ${VENV_DIR}"
+  if ! python -c "import vllm" >/dev/null 2>&1; then
+    echo "ERROR: package vllm non disponibile. Verifica il venv: ${VENV_DIR}"
     exit 1
   fi
 
-  if ! command -v curl >/dev/null 2>&1; then
-    echo "ERROR: curl non trovato."
-    exit 1
+  if [[ "${GEMMA_BACKEND}" == "vllm" ]]; then
+    if ! command -v vllm >/dev/null 2>&1; then
+      echo "ERROR: comando vllm non trovato. Verifica il venv: ${VENV_DIR}"
+      exit 1
+    fi
+
+    if ! command -v curl >/dev/null 2>&1; then
+      echo "ERROR: curl non trovato."
+      exit 1
+    fi
   fi
 }
 
@@ -138,12 +162,12 @@ start_vllm_server() {
   local model_slug log_file tp_size
   model_slug="${GEMMA_MODEL_NAME//[^a-zA-Z0-9]/_}"
   log_file="${LOGS_DIR}/vllm_model_infer_${model_slug}_multi_pixmo_ask_model_anything.log"
-  tp_size=$(awk -F',' '{print NF}' <<< "${GEMMA27_GPUS}")
+  tp_size="$(gemma_tp_size)"
 
   stop_vllm_server
 
   echo "------------------------------------------------------------"
-  echo "Avvio vLLM per modello: ${GEMMA_MODEL_NAME}"
+  echo "Avvio vLLM server per modello: ${GEMMA_MODEL_NAME}"
   echo "Dataset: ${DATASET_NAME}"
   echo "Base URL: ${VLLM_BASE_URL}"
   echo "Log: ${log_file}"
@@ -204,8 +228,10 @@ run_gpt_infer() {
 
 run_gemma_infer() {
   local subset="$1"
-  local prompt_file output_file
+  local prompt_file output_file tp_size
+  local -a cmd env_prefix
   prompt_file="$(prompt_file_for_subset "${subset}")"
+  tp_size="$(gemma_tp_size)"
 
   if [[ ! -f "${prompt_file}" ]]; then
     echo "ERROR: prompt file non trovato: ${prompt_file}"
@@ -216,6 +242,7 @@ run_gemma_infer() {
 
   echo "------------------------------------------------------------"
   echo "Model: ${GEMMA_MODEL_NAME}"
+  echo "Backend: ${GEMMA_BACKEND}"
   echo "Subset: ${subset}"
   echo "Dataset: ${DATASET_NAME} (subset: ${subset}, split: ${SPLIT})"
   echo "Prompt file: ${prompt_file}"
@@ -227,33 +254,75 @@ run_gemma_infer() {
   echo "Image cache root: ${IMAGE_CACHE_ROOT:-<HF_HOME default>}"
   echo "Output: ${output_file}"
 
-  run_model_infer \
-    --backend "${GEMMA_BACKEND}" \
-    --model-name "${GEMMA_MODEL_NAME}" \
-    --vllm-base-url "${VLLM_BASE_URL}" \
-    --vllm-api-key "${VLLM_API_KEY}" \
-    --dataset-name "${DATASET_NAME}" \
-    --dataset-subset "${subset}" \
-    --split "${SPLIT}" \
-    --offset-samples "${OFFSET_SAMPLES}" \
-    --max-samples "${MAX_SAMPLES}" \
-    --media-mode image \
-    --prompt-file "${prompt_file}" \
-    --max-image-dimension "${MAX_IMAGE_DIMENSION}" \
+  cmd=(
+    python
+    -m
+    model_inference.cli
+    --backend "${GEMMA_BACKEND}"
+    --model-name "${GEMMA_MODEL_NAME}"
+    --dataset-name "${DATASET_NAME}"
+    --dataset-subset "${subset}"
+    --split "${SPLIT}"
+    --offset-samples "${OFFSET_SAMPLES}"
+    --max-samples "${MAX_SAMPLES}"
+    --media-mode image
+    --prompt-file "${prompt_file}"
+    --max-image-dimension "${MAX_IMAGE_DIMENSION}"
     --output-file "${output_file}"
+  )
+
+  if [[ "${GEMMA_BACKEND}" == "vllm" ]]; then
+    cmd+=(
+      --vllm-base-url "${VLLM_BASE_URL}"
+      --vllm-api-key "${VLLM_API_KEY}"
+    )
+    "${cmd[@]}"
+    return
+  fi
+
+  cmd+=(
+    --vllm-tensor-parallel-size "${tp_size}"
+    --vllm-gpu-memory-utilization "${VLLM_GPU_MEMORY_UTILIZATION}"
+    --vllm-enforce-eager
+    --vllm-disable-custom-all-reduce
+  )
+
+  if [[ -n "${VLLM_MAX_MODEL_LEN}" ]]; then
+    cmd+=(--vllm-max-model-len "${VLLM_MAX_MODEL_LEN}")
+  fi
+
+  if [[ "${VLLM_TRUST_REMOTE_CODE}" == "1" ]]; then
+    cmd+=(--vllm-trust-remote-code)
+  fi
+
+  env_prefix=(env NCCL_P2P_DISABLE=1 CUDA_VISIBLE_DEVICES="${GEMMA27_GPUS}")
+  "${env_prefix[@]}" "${cmd[@]}"
 }
 
 main() {
   local subset
 
   activate_venv
+  validate_backend
   check_requirements
 
-  start_vllm_server
+  if [[ "${GEMMA_BACKEND}" == "vllm" ]]; then
+    start_vllm_server
+  else
+    echo "------------------------------------------------------------"
+    echo "Uso vLLM in-process per Gemma"
+    echo "Model: ${GEMMA_MODEL_NAME}"
+    echo "CUDA_VISIBLE_DEVICES=${GEMMA27_GPUS}"
+    echo "Tensor parallel size: $(gemma_tp_size)"
+  fi
+
   for subset in "${SUBSETS[@]}"; do
     run_gemma_infer "${subset}"
   done
-  stop_vllm_server
+
+  if [[ "${GEMMA_BACKEND}" == "vllm" ]]; then
+    stop_vllm_server
+  fi
 
   for subset in "${SUBSETS[@]}"; do
     run_gpt_infer "${subset}"

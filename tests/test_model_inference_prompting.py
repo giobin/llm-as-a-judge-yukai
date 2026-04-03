@@ -3,7 +3,7 @@ from __future__ import annotations
 import pytest
 from PIL import Image
 
-from model_inference.prompting import build_user_content, render_prompt
+from model_inference.prompting import build_user_content, build_vllm_in_process_user_content, render_prompt
 
 
 def test_render_prompt_requires_question_placeholder() -> None:
@@ -66,5 +66,20 @@ def test_build_user_content_with_image_pil_for_vllm_in_process() -> None:
     )
 
     assert content[0] == {"type": "text", "text": "Observe "}
+    assert content[1]["type"] == "image_pil"
+    assert content[1]["image_pil"] is image
+    assert content[2] == {"type": "text", "text": " Caption it"}
+
+
+def test_build_vllm_in_process_user_content_uses_pil_images() -> None:
+    image = Image.new("RGB", (4, 4), color="blue")
+
+    content = build_vllm_in_process_user_content(
+        prompt="Observe <image> Caption it",
+        media_images=[image],
+    )
+
+    assert content[0] == {"type": "text", "text": "Observe "}
+    assert content[1]["type"] == "image_pil"
     assert content[1]["image_pil"] is image
     assert content[2] == {"type": "text", "text": " Caption it"}
