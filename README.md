@@ -110,6 +110,24 @@ Flag specifici per `vllm_in_process` e riusabili anche in `model-infer`:
 ## Model Inference
 
 La CLI `model-infer` genera risposte a partire da:
+
+Per i dataset image-only `VillanovaAI/multi-pixmo-cap` e `VillanovaAI/multi-pixmo-ask-model-anything` e' disponibile anche un flusso offline:
+
+```bash
+prefetch-multi-pixmo --max-images 400
+```
+
+Questo comando scarica in `HF_HOME` i due dataset Hugging Face e salva le prime 400 immagini di ogni subset (`it`, `en`, `es`) sotto `HF_HOME/llm_as_a_judge_assets/images/...`.
+Poi le pipeline possono essere lanciate sui nodi GPU senza accesso internet usando:
+
+```bash
+model-infer \
+  ... \
+  --hf-local-files-only \
+  --require-local-images
+```
+
+Se vuoi usare una root diversa per le immagini locali, aggiungi `--image-cache-root /path/dedicato`.
 - domanda (`question`)
 - frame estratti dal video associato (`video_id` / `file_name`)
 
@@ -170,6 +188,36 @@ CUDA_VISIBLE_DEVICES=0,1 model-infer \
   --output-file model_inference_ita.json
 ```
 
+## Smoke Test GPU
+
+Per fare uno smoke test di `model-infer` sui dataset `VillanovaAI/multi-pixmo-cap` e `VillanovaAI/multi-pixmo-ask-model-anything` su nodo GPU, con 10 sample per dataset e un modello alla volta con backend `vllm_in_process`, e' disponibile il launcher:
+
+```bash
+export LLM_JUDGE_SIF=/leonardo_work/FBKLM_prj1/$USER/containers/llm-judge-vllm.sif
+export HF_HOME=/leonardo_work/FBKLM_prj1/hf_cache
+./scripts/run_multi_pixmo_infer_smoke_on_gpu.sh
+```
+
+Default principali:
+- `NUM_GPUS=4`
+- `MAX_SAMPLES=10`
+- `SUBSETS=it`
+- tutti i modelli elencati nello script worker
+
+Output principali:
+- report JSON di inferenza in `model_infer_results/smoke/`
+- log per modello/dataset in `logs/multi_pixmo_smoke/`
+- riepilogo finale in `logs/multi_pixmo_smoke/summary.tsv`
+
+Per cambiare subset o limitare i modelli:
+
+```bash
+SUBSETS=it,en MAX_SAMPLES=10 MODELS=models--google--gemma-3-12b-it,models--Qwen--Qwen2.5-VL-7B-Instruct ./scripts/run_multi_pixmo_infer_smoke_on_gpu.sh
+```
+
+Il riepilogo include anche il tempo effettivo per 10 sample e una stima lineare per 240 sample.
+Per il backend `vllm_in_process`, il launcher usa il Python nativo del container e aggiunge `src/` e i site-packages della `.venv` del repo al `sys.path`, evitando conflitti tra `vllm/transformers` del container e le librerie Python del progetto.
+
 ## Judge su risposte generate
 
 `llm-judge` supporta input JSON prodotto da `model-infer`.
@@ -186,6 +234,29 @@ llm-judge \
   --num-references 4 \
   --prompt-file prompts/image_prompts/judge_prompt_en.txt \
   --output-file judge_eval_generated_eng.json
+```
+
+Per l'esperimento `multi-pixmo-cap` basato su transcript interni al dataset e' disponibile anche un source dedicato:
+- usa solo sample con almeno 2 elementi in `transcripts`
+- usa `transcripts[1]` come unica reference
+- usa `transcripts[0]` come candidate positiva
+- usa un transcript casuale da un altro sample come candidate negativa
+- la quota di positivi e' controllata da `--pixmo-transcript-positive-ratio`
+
+Esempio:
+
+```bash
+llm-judge \
+  --backend openai \
+  --model-name gpt-5.2 \
+  --dataset-name VillanovaAI/multi-pixmo-cap \
+  --dataset-subset it \
+  --split train \
+  --candidate-source pixmo_transcripts \
+  --pixmo-transcript-positive-ratio 0.4 \
+  --random-seed 42 \
+  --prompt-file prompts/image_prompts/judge_prompt_ita.txt \
+  --output-file judge_eval_pixmo_transcripts_it.json
 ```
 
 ## Dataset augmentation

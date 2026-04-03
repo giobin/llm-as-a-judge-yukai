@@ -5,7 +5,11 @@ import json
 from pathlib import Path
 
 from .config import PipelineConfig
-from .dataset import load_generated_samples_from_json, load_maia_gen_samples
+from .dataset import (
+    load_generated_samples_from_json,
+    load_maia_gen_samples,
+    load_pixmo_transcript_pair_samples,
+)
 from .evaluation import evaluate_judge
 from .model_client import build_model_client
 from .prompting import load_prompt_template, render_prompt
@@ -54,7 +58,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--input-json", type=Path, default=None)
     parser.add_argument(
         "--candidate-source",
-        choices=["synthetic", "generated"],
+        choices=["synthetic", "generated", "pixmo_transcripts"],
         default="synthetic",
         help="Source of candidate answers: synthetic positive/negative samples or generated answers from model-infer JSON.",
     )
@@ -62,6 +66,15 @@ def parse_args() -> argparse.Namespace:
         "--generated-field",
         default="generated_answer1",
         help="Field name to read generated candidate answers from when --candidate-source=generated.",
+    )
+    parser.add_argument(
+        "--pixmo-transcript-positive-ratio",
+        type=float,
+        default=0.5,
+        help=(
+            "Quota di candidate answers positive per --candidate-source=pixmo_transcripts. "
+            "0.0 = tutte negative, 1.0 = tutte positive."
+        ),
     )
 
     parser.add_argument("--output-file", type=Path, default=Path("judge_eval_report.json"))
@@ -95,6 +108,7 @@ def build_config(args: argparse.Namespace) -> PipelineConfig:
         input_json=args.input_json,
         candidate_source=args.candidate_source,
         generated_field=args.generated_field,
+        pixmo_transcript_positive_ratio=args.pixmo_transcript_positive_ratio,
     )
 
 
@@ -128,6 +142,16 @@ def main() -> None:
             num_references=cfg.num_references,
             offset_samples=cfg.offset_samples,
             max_samples=cfg.max_samples,
+        )
+    elif cfg.candidate_source == "pixmo_transcripts":
+        samples = load_pixmo_transcript_pair_samples(
+            dataset_name=cfg.dataset_name,
+            subset=cfg.dataset_subset,
+            split=cfg.split,
+            offset_samples=cfg.offset_samples,
+            max_samples=cfg.max_samples,
+            positive_ratio=cfg.pixmo_transcript_positive_ratio,
+            seed=cfg.random_seed,
         )
     else:
         samples = load_maia_gen_samples(
@@ -179,6 +203,7 @@ def main() -> None:
             "dataset_subset": cfg.dataset_subset,
             "split": cfg.split,
             "num_references": cfg.num_references,
+            "effective_num_references": 1 if cfg.candidate_source == "pixmo_transcripts" else cfg.num_references,
             "offset_samples": cfg.offset_samples,
             "max_samples": cfg.max_samples,
             "random_seed": cfg.random_seed,
@@ -194,6 +219,7 @@ def main() -> None:
             "vllm_disable_custom_all_reduce": cfg.vllm_disable_custom_all_reduce,
             "candidate_source": cfg.candidate_source,
             "generated_field": cfg.generated_field,
+            "pixmo_transcript_positive_ratio": cfg.pixmo_transcript_positive_ratio,
             "input_json": str(cfg.input_json) if cfg.input_json else None,
             "sample_prompt_file": str(prompt_sample_path) if prompt_sample_path else None,
         },
@@ -211,8 +237,12 @@ def main() -> None:
                 "expected": row.expected,
                 "predicted": row.predicted,
                 "score": row.score,
+                "question": sample.question,
+                "candidate_answer": sample.candidate_answer,
+                "ground_truth_answers": sample.ground_truth_answers,
+                "metadata": sample.metadata,
             }
-            for row in report.results
+            for row, sample in zip(report.results, samples)
         ],
     }
 

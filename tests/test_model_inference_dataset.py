@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from pathlib import Path
+
 import pytest
 
 from model_inference.dataset import (
@@ -7,6 +9,7 @@ from model_inference.dataset import (
     MULTI_PIXMO_CAP_DATASET,
     prepare_inference_row,
 )
+from model_inference.offline_assets import build_cached_image_path
 
 
 def test_prepare_maia_row_uses_video_and_question() -> None:
@@ -102,4 +105,55 @@ def test_prepare_villanova_ask_model_anything_requires_question() -> None:
             dataset_name=MULTI_PIXMO_ASK_MODEL_ANYTHING_DATASET,
             media_mode="auto",
             row_index=2,
+        )
+
+
+def test_prepare_villanova_row_uses_local_cached_image_when_available(tmp_path: Path) -> None:
+    row = {
+        "image_url": "https://example.com/sample.png",
+        "transcripts": ["A dog jumping over a log."],
+        "caption": "A dog jumps over a fallen tree.",
+    }
+    cached_path = build_cached_image_path(
+        dataset_name=MULTI_PIXMO_CAP_DATASET,
+        subset="en",
+        split="train",
+        image_url=row["image_url"],
+        image_cache_root=tmp_path,
+    )
+    cached_path.parent.mkdir(parents=True, exist_ok=True)
+    cached_path.write_bytes(b"fake")
+
+    prepared = prepare_inference_row(
+        row=row,
+        dataset_name=MULTI_PIXMO_CAP_DATASET,
+        media_mode="auto",
+        row_index=4,
+        dataset_subset="en",
+        split="train",
+        image_cache_root=tmp_path,
+        require_local_images=True,
+    )
+
+    assert prepared.media_locator == str(cached_path)
+    assert prepared.source_image_url == row["image_url"]
+
+
+def test_prepare_villanova_row_requires_local_cached_image_when_requested(tmp_path: Path) -> None:
+    row = {
+        "image_url": "https://example.com/sample.png",
+        "transcripts": ["A dog jumping over a log."],
+        "caption": "A dog jumps over a fallen tree.",
+    }
+
+    with pytest.raises(FileNotFoundError, match="Local image not found"):
+        prepare_inference_row(
+            row=row,
+            dataset_name=MULTI_PIXMO_CAP_DATASET,
+            media_mode="auto",
+            row_index=4,
+            dataset_subset="en",
+            split="train",
+            image_cache_root=tmp_path,
+            require_local_images=True,
         )

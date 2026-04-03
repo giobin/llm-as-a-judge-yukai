@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import pytest
+from PIL import Image
 
 from model_inference.prompting import build_user_content, render_prompt
 
@@ -23,7 +24,7 @@ def test_render_prompt_replaces_transcript() -> None:
 def test_build_user_content_with_video_placeholder() -> None:
     content = build_user_content(
         prompt="Intro <video> Outro",
-        media_data_uris=["data:image/png;base64,AAA", "data:image/png;base64,BBB"],
+        media_items=["data:image/png;base64,AAA", "data:image/png;base64,BBB"],
     )
 
     assert content[0] == {"type": "text", "text": "Intro "}
@@ -37,7 +38,7 @@ def test_build_user_content_with_video_placeholder() -> None:
 def test_build_user_content_without_video_placeholder_prepends_images() -> None:
     content = build_user_content(
         prompt="Only text",
-        media_data_uris=["data:image/png;base64,CCC"],
+        media_items=["data:image/png;base64,CCC"],
     )
 
     assert content[0]["type"] == "image_url"
@@ -47,10 +48,23 @@ def test_build_user_content_without_video_placeholder_prepends_images() -> None:
 def test_build_user_content_with_image_placeholder() -> None:
     content = build_user_content(
         prompt="Observe <image> Caption it",
-        media_data_uris=["data:image/png;base64,DDD"],
+        media_items=["data:image/png;base64,DDD"],
     )
 
     assert content[0] == {"type": "text", "text": "Observe "}
     assert content[1]["type"] == "image_url"
     assert content[1]["image_url"]["url"].endswith("DDD")
+    assert content[2] == {"type": "text", "text": " Caption it"}
+
+
+def test_build_user_content_with_image_pil_for_vllm_in_process() -> None:
+    image = Image.new("RGB", (8, 8), color="red")
+    content = build_user_content(
+        prompt="Observe <image> Caption it",
+        media_items=[image],
+        media_part_type="image_pil",
+    )
+
+    assert content[0] == {"type": "text", "text": "Observe "}
+    assert content[1]["image_pil"] is image
     assert content[2] == {"type": "text", "text": " Caption it"}

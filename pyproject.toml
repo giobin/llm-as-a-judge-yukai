@@ -22,6 +22,7 @@ llm-judge = "llm_judge_pipeline.cli:main"
 dataset-augment-foils = "dataset_augmentation.cli:main"
 optimize-judge-prompt = "prompt_optimization.run_promptwizard:main"
 model-infer = "model_inference.cli:main"
+prefetch-multi-pixmo = "model_inference.prefetch:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

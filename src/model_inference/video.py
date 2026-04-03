@@ -10,6 +10,8 @@ from urllib.request import Request, urlopen
 import numpy as np
 from PIL import Image
 
+from .offline_assets import is_remote_url
+
 try:
     from decord import VideoReader, cpu
 except Exception:  # pragma: no cover - handled at runtime with a clear error.
@@ -116,6 +118,25 @@ def format_image_as_data_uri(img: Image.Image) -> str:
 
 def format_frames_as_data_uris(frames: list[Image.Image]) -> list[str]:
     return [format_image_as_data_uri(frame) for frame in frames]
+
+
+def load_image(image_locator: str, max_image_dimension: int) -> Image.Image:
+    if is_remote_url(image_locator):
+        return load_image_from_url(image_locator, max_image_dimension=max_image_dimension)
+    return load_image_from_file(Path(image_locator), max_image_dimension=max_image_dimension)
+
+
+def load_image_from_file(image_path: Path, max_image_dimension: int) -> Image.Image:
+    if not image_path.is_file():
+        raise FileNotFoundError(f"Local image file not found: {image_path}")
+
+    try:
+        with Image.open(image_path) as raw_image:
+            image = raw_image.convert("RGB")
+    except Exception as exc:
+        raise RuntimeError(f"Unable to decode image from local file {image_path}: {exc}") from exc
+
+    return resize_max_dim(image, max_dim=max_image_dimension)
 
 
 def load_image_from_url(image_url: str, max_image_dimension: int) -> Image.Image:

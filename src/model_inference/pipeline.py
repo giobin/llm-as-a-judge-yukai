@@ -12,7 +12,7 @@ from .schemas import GenerationReport, GenerationSummary
 from .video import (
     format_frames_as_data_uris,
     format_image_list_as_data_uris,
-    load_image_from_url,
+    load_image,
     resolve_video_path,
     sample_video_frames,
 )
@@ -40,9 +40,53 @@ def _build_public_config(cfg: InferenceConfig) -> dict[str, Any]:
         "vllm_tensor_parallel_size": cfg.vllm_tensor_parallel_size,
         "vllm_gpu_memory_utilization": cfg.vllm_gpu_memory_utilization,
         "vllm_max_model_len": cfg.vllm_max_model_len,
+        "vllm_max_num_seqs": cfg.vllm_max_num_seqs,
         "vllm_trust_remote_code": cfg.vllm_trust_remote_code,
         "vllm_enforce_eager": cfg.vllm_enforce_eager,
         "vllm_disable_custom_all_reduce": cfg.vllm_disable_custom_all_reduce,
+        "hf_local_files_only": cfg.hf_local_files_only,
+        "image_cache_root": str(cfg.image_cache_root) if cfg.image_cache_root else None,
+        "require_local_images": cfg.require_local_images,
+    }
+
+
+def _resolve_media_parts(cfg: InferenceConfig, prepared_row, row: dict[str, Any]) -> dict[str, Any]:
+    use_pil_media = cfg.backend == "vllm_in_process"
+    media_part_type = "image_pil" if use_pil_media else "image_url"
+
+    if prepared_row.media_type == "video":
+        if cfg.videos_dir is None:
+            raise ValueError("Video datasets require --videos-dir.")
+        resolved_path = resolve_video_path(row=row, videos_dir=cfg.videos_dir)
+        frames, frame_indices = sample_video_frames(
+            video_path=resolved_path,
+            num_frames=cfg.num_frames,
+            max_image_dimension=cfg.max_image_dimension,
+        )
+        media_items = frames if use_pil_media else format_frames_as_data_uris(frames)
+        return {
+            "media_type": "video",
+            "video_path": str(resolved_path),
+            "image_url": None,
+            "image_path": None,
+            "frame_indices": frame_indices,
+            "media_items": media_items,
+            "media_part_type": media_part_type,
+        }
+
+    image = load_image(
+        image_locator=prepared_row.media_locator,
+        max_image_dimension=cfg.max_image_dimension,
+    )
+    media_items = [image] if use_pil_media else format_image_list_as_data_uris([image])
+    return {
+        "media_type": "image",
+        "video_path": None,
+        "image_url": prepared_row.source_image_url,
+        "image_path": prepared_row.media_locator if prepared_row.media_locator and not prepared_row.media_locator.startswith(("http://", "https://")) else None,
+        "frame_indices": [0],
+        "media_items": media_items,
+        "media_part_type": media_part_type,
     }
 
 
@@ -55,6 +99,7 @@ def run_generation(cfg: InferenceConfig) -> dict[str, Any]:
         split=cfg.split,
         offset_samples=cfg.offset_samples,
         max_samples=cfg.max_samples,
+        local_files_only=cfg.hf_local_files_only,
     )
 
     if not rows:
@@ -68,6 +113,7 @@ def run_generation(cfg: InferenceConfig) -> dict[str, Any]:
         vllm_tensor_parallel_size=cfg.vllm_tensor_parallel_size,
         vllm_gpu_memory_utilization=cfg.vllm_gpu_memory_utilization,
         vllm_max_model_len=cfg.vllm_max_model_len,
+        vllm_max_num_seqs=cfg.vllm_max_num_seqs,
         vllm_trust_remote_code=cfg.vllm_trust_remote_code,
         vllm_enforce_eager=cfg.vllm_enforce_eager,
         vllm_disable_custom_all_reduce=cfg.vllm_disable_custom_all_reduce,
@@ -95,44 +141,26 @@ def run_generation(cfg: InferenceConfig) -> dict[str, Any]:
                 dataset_name=cfg.dataset_name,
                 media_mode=cfg.media_mode,
                 row_index=index,
+                dataset_subset=cfg.dataset_subset,
+                split=cfg.split,
+                image_cache_root=cfg.image_cache_root,
+                require_local_images=cfg.require_local_images,
             )
 
             cache_key = prepared_row.media_cache_key
             if cache_key not in media_cache:
-                if prepared_row.media_type == "video":
-                    if cfg.videos_dir is None:
-                        raise ValueError("Video datasets require --videos-dir.")
-                    resolved_path = resolve_video_path(row=row, videos_dir=cfg.videos_dir)
-                    frames, frame_indices = sample_video_frames(
-                        video_path=resolved_path,
-                        num_frames=cfg.num_frames,
-                        max_image_dimension=cfg.max_image_dimension,
-                    )
-                    media_cache[cache_key] = {
-                        "media_type": "video",
-                        "video_path": str(resolved_path),
-                        "image_url": None,
-                        "frame_indices": frame_indices,
-                        "media_data_uris": format_frames_as_data_uris(frames),
-                    }
-                else:
-                    image = load_image_from_url(
-                        image_url=prepared_row.media_locator,
-                        max_image_dimension=cfg.max_image_dimension,
-                    )
-                    media_cache[cache_key] = {
-                        "media_type": "image",
-                        "video_path": None,
-                        "image_url": prepared_row.media_locator,
-                        "frame_indices": [0],
-                        "media_data_uris": format_image_list_as_data_uris([image]),
-                    }
+                media_cache[cache_key] = _resolve_media_parts(
+                    cfg=cfg,
+                    prepared_row=prepared_row,
+                    row=row,
+                )
 
             cached_meta = media_cache[cache_key]
             prompt = render_prompt(prompt_template, prepared_row.prompt_variables)
             user_content = build_user_content(
                 prompt=prompt,
-                media_data_uris=cached_meta["media_data_uris"],
+                media_items=cached_meta["media_items"],
+                media_part_type=cached_meta["media_part_type"],
             )
 
             if cfg.verbose:
@@ -163,6 +191,7 @@ def run_generation(cfg: InferenceConfig) -> dict[str, Any]:
             "video_id": str(row.get("video_id", "")),
             "video_path": cached_meta["video_path"] if cached_meta else None,
             "image_url": cached_meta["image_url"] if cached_meta else None,
+            "image_path": cached_meta["image_path"] if cached_meta else None,
             "num_frames_used": len(cached_meta["frame_indices"]) if cached_meta else 0,
             "frame_indices": cached_meta["frame_indices"] if cached_meta else [],
         }

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import math
 import random
 from pathlib import Path
 from typing import Any
@@ -51,6 +52,13 @@ def _extract_first_transcript(value: Any) -> str:
     return str(value or "").strip()
 
 
+def _extract_transcripts(value: Any) -> list[str]:
+    if isinstance(value, list):
+        return [str(item).strip() for item in value if str(item).strip()]
+    text = str(value or "").strip()
+    return [text] if text else []
+
+
 def _build_task_prompt(row: dict[str, Any]) -> str:
     question = str(row.get("question", "")).strip()
     if question:
@@ -64,6 +72,10 @@ def _build_task_prompt(row: dict[str, Any]) -> str:
         return "Write a caption for the image."
 
     return ""
+
+
+def _half_up_round(value: float) -> int:
+    return math.floor(value + 0.5)
 
 
 def _load_split(dataset_name: str, subset: str | None, split: str):
@@ -81,6 +93,109 @@ def _load_split(dataset_name: str, subset: str | None, split: str):
             # Fallback for datasets published without config/subset.
             return load_dataset(dataset_name, split=split)
     return load_dataset(dataset_name, split=split)
+
+
+def load_pixmo_transcript_pair_samples(
+    dataset_name: str,
+    subset: str | None,
+    split: str,
+    offset_samples: int = 0,
+    max_samples: int = 50,
+    positive_ratio: float = 0.5,
+    seed: int = 42,
+) -> list[JudgeSample]:
+    if offset_samples < 0:
+        raise ValueError("offset_samples must be >= 0.")
+    if max_samples < 0:
+        raise ValueError("max_samples must be >= 0.")
+    if not 0.0 <= positive_ratio <= 1.0:
+        raise ValueError("positive_ratio must be between 0.0 and 1.0.")
+
+    dataset = _load_split(dataset_name=dataset_name, subset=subset, split=split)
+
+    eligible_rows: list[dict[str, Any]] = []
+    transcripts_by_row: list[list[str]] = []
+    question_ids: list[str] = []
+
+    for idx in range(len(dataset)):
+        row = dict(dataset[idx])
+        transcripts = _extract_transcripts(row.get("transcripts"))
+        if len(transcripts) < 2:
+            continue
+
+        eligible_rows.append(row)
+        transcripts_by_row.append(transcripts)
+        question_ids.append(str(row.get("id", idx)))
+
+    eligible_rows = eligible_rows[offset_samples:]
+    transcripts_by_row = transcripts_by_row[offset_samples:]
+    question_ids = question_ids[offset_samples:]
+    if max_samples > 0:
+        eligible_rows = eligible_rows[:max_samples]
+        transcripts_by_row = transcripts_by_row[:max_samples]
+        question_ids = question_ids[:max_samples]
+
+    if not eligible_rows:
+        return []
+    if len(eligible_rows) < 2 and positive_ratio < 1.0:
+        raise ValueError("Need at least 2 eligible rows with 2+ transcripts to create negative samples.")
+
+    rng = random.Random(seed)
+    positive_count = _half_up_round(len(eligible_rows) * positive_ratio)
+    shuffled_positions = list(range(len(eligible_rows)))
+    rng.shuffle(shuffled_positions)
+    positive_positions = set(shuffled_positions[:positive_count])
+
+    samples: list[JudgeSample] = []
+    for position, row in enumerate(eligible_rows):
+        transcripts = transcripts_by_row[position]
+        reference_answer = transcripts[1]
+        question_id = question_ids[position]
+        question = _build_task_prompt(row)
+        if not question:
+            continue
+
+        if position in positive_positions:
+            candidate_answer = transcripts[0]
+            expected_label = "yes"
+            metadata = {
+                "experiment": "pixmo_transcript_pairs",
+                "candidate_source": "same_sample_first_transcript",
+                "source_row_id": question_id,
+                "candidate_row_id": question_id,
+                "candidate_transcript_index": 0,
+                "reference_row_id": question_id,
+                "reference_transcript_index": 1,
+            }
+        else:
+            donor_positions = [idx for idx in range(len(eligible_rows)) if idx != position]
+            donor_position = rng.choice(donor_positions)
+            donor_transcripts = transcripts_by_row[donor_position]
+            donor_transcript_index = rng.randrange(len(donor_transcripts))
+            candidate_answer = donor_transcripts[donor_transcript_index]
+            expected_label = "no"
+            metadata = {
+                "experiment": "pixmo_transcript_pairs",
+                "candidate_source": "other_sample_random_transcript",
+                "source_row_id": question_id,
+                "candidate_row_id": question_ids[donor_position],
+                "candidate_transcript_index": donor_transcript_index,
+                "reference_row_id": question_id,
+                "reference_transcript_index": 1,
+            }
+
+        samples.append(
+            JudgeSample(
+                question_id=question_id,
+                question=question,
+                candidate_answer=candidate_answer,
+                ground_truth_answers=[reference_answer],
+                expected_label=expected_label,
+                metadata=metadata,
+            )
+        )
+
+    return samples
 
 
 def load_maia_gen_samples(

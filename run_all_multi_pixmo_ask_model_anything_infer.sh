@@ -10,6 +10,9 @@ SPLIT="${SPLIT:-train}"
 OFFSET_SAMPLES="${OFFSET_SAMPLES:-0}"
 MAX_SAMPLES="${MAX_SAMPLES:-240}"
 MAX_IMAGE_DIMENSION="${MAX_IMAGE_DIMENSION:-900}"
+HF_LOCAL_FILES_ONLY="${HF_LOCAL_FILES_ONLY:-1}"
+REQUIRE_LOCAL_IMAGES="${REQUIRE_LOCAL_IMAGES:-1}"
+IMAGE_CACHE_ROOT="${IMAGE_CACHE_ROOT:-}"
 
 GPT_BACKEND="openai"
 GPT_MODEL_NAME="${GPT_MODEL_NAME:-gpt-5.2}"
@@ -78,7 +81,19 @@ prompt_file_for_subset() {
 }
 
 run_model_infer() {
-  python -m model_inference.cli "$@"
+  local args=("$@")
+
+  if [[ "${HF_LOCAL_FILES_ONLY}" == "1" ]]; then
+    args+=(--hf-local-files-only)
+  fi
+  if [[ "${REQUIRE_LOCAL_IMAGES}" == "1" ]]; then
+    args+=(--require-local-images)
+  fi
+  if [[ -n "${IMAGE_CACHE_ROOT}" ]]; then
+    args+=(--image-cache-root "${IMAGE_CACHE_ROOT}")
+  fi
+
+  python -m model_inference.cli "${args[@]}"
 }
 
 wait_for_vllm_server() {
@@ -168,6 +183,9 @@ run_gpt_infer() {
   echo "Offset samples: ${OFFSET_SAMPLES}"
   echo "Max samples: ${MAX_SAMPLES}"
   echo "Max image dimension: ${MAX_IMAGE_DIMENSION}"
+  echo "HF local files only: ${HF_LOCAL_FILES_ONLY}"
+  echo "Require local images: ${REQUIRE_LOCAL_IMAGES}"
+  echo "Image cache root: ${IMAGE_CACHE_ROOT:-<HF_HOME default>}"
   echo "Output: ${output_file}"
 
   run_model_infer \
@@ -204,6 +222,9 @@ run_gemma_infer() {
   echo "Offset samples: ${OFFSET_SAMPLES}"
   echo "Max samples: ${MAX_SAMPLES}"
   echo "Max image dimension: ${MAX_IMAGE_DIMENSION}"
+  echo "HF local files only: ${HF_LOCAL_FILES_ONLY}"
+  echo "Require local images: ${REQUIRE_LOCAL_IMAGES}"
+  echo "Image cache root: ${IMAGE_CACHE_ROOT:-<HF_HOME default>}"
   echo "Output: ${output_file}"
 
   run_model_infer \

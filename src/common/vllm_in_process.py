@@ -10,6 +10,7 @@ class VLLMInProcessConfig:
     tensor_parallel_size: int = 1
     gpu_memory_utilization: float = 0.9
     max_model_len: int | None = None
+    max_num_seqs: int | None = None
     trust_remote_code: bool = False
     enforce_eager: bool = False
     disable_custom_all_reduce: bool = False
@@ -38,6 +39,8 @@ def build_llm(model_name: str, cfg: VLLMInProcessConfig) -> Any:
     }
     if cfg.max_model_len is not None:
         init_kwargs["max_model_len"] = cfg.max_model_len
+    if cfg.max_num_seqs is not None:
+        init_kwargs["max_num_seqs"] = cfg.max_num_seqs
     if cfg.enforce_eager:
         init_kwargs["enforce_eager"] = True
     if cfg.disable_custom_all_reduce:

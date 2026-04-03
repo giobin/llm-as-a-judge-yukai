@@ -4,7 +4,7 @@ from io import BytesIO
 
 from PIL import Image
 
-from model_inference.video import load_image_from_url
+from model_inference.video import load_image, load_image_from_url
 
 
 class _FakeResponse:
@@ -36,3 +36,13 @@ def test_load_image_from_url_resizes_downloaded_image(monkeypatch) -> None:
     loaded = load_image_from_url("https://example.com/image.png", max_image_dimension=200)
 
     assert loaded.size == (200, 100)
+
+
+def test_load_image_uses_local_file_when_locator_is_a_path(tmp_path) -> None:
+    image_path = tmp_path / "sample.png"
+    image = Image.new("RGB", (400, 800), color="blue")
+    image.save(image_path, format="PNG")
+
+    loaded = load_image(str(image_path), max_image_dimension=200)
+
+    assert loaded.size == (100, 200)

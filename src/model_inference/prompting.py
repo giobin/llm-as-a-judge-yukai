@@ -26,7 +26,11 @@ def render_prompt(template: str, variables: dict[str, str]) -> str:
     return template.format_map(stringified_variables)
 
 
-def build_user_content(prompt: str, media_data_uris: list[str]) -> list[dict[str, Any]]:
+def build_user_content(
+    prompt: str,
+    media_items: list[Any],
+    media_part_type: str = "image_url",
+) -> list[dict[str, Any]]:
     content: list[dict[str, Any]] = []
 
     for placeholder in (VIDEO_PLACEHOLDER, IMAGE_PLACEHOLDER):
@@ -36,22 +40,26 @@ def build_user_content(prompt: str, media_data_uris: list[str]) -> list[dict[str
                 if segment:
                     content.append({"type": "text", "text": segment})
                 if index < len(segments) - 1:
-                    for media_uri in media_data_uris:
-                        content.append(
-                            {
-                                "type": "image_url",
-                                "image_url": {"url": media_uri},
-                            }
-                        )
+                    content.extend(_build_media_parts(media_items, media_part_type))
             return content
 
-    # Fallback: prepend images when no explicit media placeholder is provided.
-    for media_uri in media_data_uris:
-        content.append(
-            {
-                "type": "image_url",
-                "image_url": {"url": media_uri},
-            }
-        )
+    content.extend(_build_media_parts(media_items, media_part_type))
     content.append({"type": "text", "text": prompt})
     return content
+
+
+def _build_media_parts(media_items: list[Any], media_part_type: str) -> list[dict[str, Any]]:
+    parts: list[dict[str, Any]] = []
+    for item in media_items:
+        if media_part_type == "image_url":
+            parts.append(
+                {
+                    "type": "image_url",
+                    "image_url": {"url": str(item)},
+                }
+            )
+        elif media_part_type == "image_pil":
+            parts.append({"image_pil": item})
+        else:
+            raise ValueError(f"Unsupported media_part_type: {media_part_type}")
+    return parts

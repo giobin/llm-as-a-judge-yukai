@@ -30,3 +30,4 @@ class PipelineConfig:
     input_json: Path | None
     candidate_source: str
     generated_field: str
+    pixmo_transcript_positive_ratio: float

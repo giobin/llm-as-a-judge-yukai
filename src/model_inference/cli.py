@@ -36,9 +36,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--vllm-tensor-parallel-size", type=int, default=1)
     parser.add_argument("--vllm-gpu-memory-utilization", type=float, default=0.9)
     parser.add_argument("--vllm-max-model-len", type=int, default=None)
+    parser.add_argument("--vllm-max-num-seqs", type=int, default=None)
     parser.add_argument("--vllm-trust-remote-code", action="store_true")
     parser.add_argument("--vllm-enforce-eager", action="store_true")
     parser.add_argument("--vllm-disable-custom-all-reduce", action="store_true")
+
+    parser.add_argument("--hf-local-files-only", action="store_true")
+    parser.add_argument("--image-cache-root", type=Path, default=None)
+    parser.add_argument("--require-local-images", action="store_true")
 
     parser.add_argument("--output-file", type=Path, default=Path("model_inference_report.json"))
 
@@ -67,9 +72,13 @@ def build_config(args: argparse.Namespace) -> InferenceConfig:
         vllm_tensor_parallel_size=args.vllm_tensor_parallel_size,
         vllm_gpu_memory_utilization=args.vllm_gpu_memory_utilization,
         vllm_max_model_len=args.vllm_max_model_len,
+        vllm_max_num_seqs=args.vllm_max_num_seqs,
         vllm_trust_remote_code=args.vllm_trust_remote_code,
         vllm_enforce_eager=args.vllm_enforce_eager,
         vllm_disable_custom_all_reduce=args.vllm_disable_custom_all_reduce,
+        hf_local_files_only=args.hf_local_files_only,
+        image_cache_root=args.image_cache_root,
+        require_local_images=args.require_local_images,
     )
 
 
