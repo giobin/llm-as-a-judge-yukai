@@ -6,9 +6,9 @@ VENV_DIR="${VENV_DIR:-${ROOT_DIR}/.llm_as_a_judge_venv}"
 RESULTS_DIR="${ROOT_DIR}/judge_results/maia_it_merged_reference"
 LOGS_DIR="${ROOT_DIR}/logs"
 
-DATASET_NAME="${DATASET_NAME:-giobin/MAIA_dev_set_ita_2wrong}"
-DATASET_SUBSET="${DATASET_SUBSET:-}"
-SPLIT="${SPLIT:-train}"
+DATASET_NAME="${DATASET_NAME:-caput/MAIA_ita}"
+DATASET_SUBSET="${DATASET_SUBSET:-gen}"
+SPLIT="${SPLIT:-test}"
 OFFSET_SAMPLES="${OFFSET_SAMPLES:-0}"
 MAX_SAMPLES="${MAX_SAMPLES:-240}"
 RANDOM_SEED="${RANDOM_SEED:-42}"
@@ -88,10 +88,6 @@ check_requirements() {
     exit 1
   fi
 
-  if [[ "${DATASET_NAME}" != *"_2wrong" ]]; then
-    echo "WARN: dataset ${DATASET_NAME} non sembra il dataset 2wrong."
-    echo "WARN: in questo caso i negativi potrebbero non provenire da wrong_answer1/2."
-  fi
 }
 
 wait_for_vllm_server() {
@@ -165,9 +161,13 @@ start_vllm_server_for_gemma_judge() {
 output_file() {
   local judge_key="$1"
   local model_name="$2"
-  local model_slug
+  local model_slug dataset_slug subset_slug split_slug
   model_slug="${model_name//[^a-zA-Z0-9]/_}"
-  echo "${RESULTS_DIR}/eval_maia_it_merged_reference_${judge_key}_${model_slug}_offset_${OFFSET_SAMPLES}_max_${MAX_SAMPLES}.json"
+  dataset_slug="${DATASET_NAME//[^a-zA-Z0-9]/_}"
+  subset_slug="${DATASET_SUBSET:-default}"
+  subset_slug="${subset_slug//[^a-zA-Z0-9]/_}"
+  split_slug="${SPLIT//[^a-zA-Z0-9]/_}"
+  echo "${RESULTS_DIR}/eval_maia_it_merged_reference_${dataset_slug}_subset_${subset_slug}_split_${split_slug}_${judge_key}_${model_slug}_offset_${OFFSET_SAMPLES}_max_${MAX_SAMPLES}.json"
 }
 
 print_experiment_header() {
