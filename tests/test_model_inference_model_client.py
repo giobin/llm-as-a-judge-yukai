@@ -52,6 +52,7 @@ def test_build_model_client_vllm_in_process_chats_with_openai_content(monkeypatc
         vllm_tensor_parallel_size=2,
         vllm_gpu_memory_utilization=0.85,
         vllm_max_model_len=4096,
+        vllm_max_num_seqs=8,
         vllm_trust_remote_code=False,
         vllm_enforce_eager=True,
         vllm_disable_custom_all_reduce=True,

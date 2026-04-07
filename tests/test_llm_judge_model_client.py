@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from common.vllm_in_process import VLLMInProcessConfig
 from llm_judge_pipeline.model_client import build_model_client
 
 
@@ -36,8 +37,14 @@ class _FakeLLM:
 
 def test_build_model_client_vllm_in_process_generates_text(monkeypatch) -> None:
     fake_llm = _FakeLLM()
+    captured: dict[str, object] = {}
 
-    monkeypatch.setattr("llm_judge_pipeline.model_client.build_llm", lambda model_name, cfg: fake_llm)
+    def _fake_build_llm(model_name, cfg):
+        captured["model_name"] = model_name
+        captured["cfg"] = cfg
+        return fake_llm
+
+    monkeypatch.setattr("llm_judge_pipeline.model_client.build_llm", _fake_build_llm)
     monkeypatch.setattr(
         "llm_judge_pipeline.model_client.build_sampling_params",
         lambda temperature, max_tokens: _FakeSamplingParams(temperature=temperature, max_tokens=max_tokens),
@@ -51,6 +58,7 @@ def test_build_model_client_vllm_in_process_generates_text(monkeypatch) -> None:
         vllm_tensor_parallel_size=2,
         vllm_gpu_memory_utilization=0.85,
         vllm_max_model_len=4096,
+        vllm_max_num_seqs=8,
         vllm_trust_remote_code=False,
         vllm_enforce_eager=True,
         vllm_disable_custom_all_reduce=True,
@@ -70,3 +78,13 @@ def test_build_model_client_vllm_in_process_generates_text(monkeypatch) -> None:
     assert isinstance(sampling_params, _FakeSamplingParams)
     assert sampling_params.temperature == 0.2
     assert sampling_params.max_tokens == 64
+    assert captured["model_name"] == "google/gemma-3-27b-it"
+    assert captured["cfg"] == VLLMInProcessConfig(
+        tensor_parallel_size=2,
+        gpu_memory_utilization=0.85,
+        max_model_len=4096,
+        max_num_seqs=8,
+        trust_remote_code=False,
+        enforce_eager=True,
+        disable_custom_all_reduce=True,
+    )

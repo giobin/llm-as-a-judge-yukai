@@ -24,6 +24,7 @@ class PipelineConfig:
     vllm_tensor_parallel_size: int
     vllm_gpu_memory_utilization: float
     vllm_max_model_len: int | None
+    vllm_max_num_seqs: int | None
     vllm_trust_remote_code: bool
     vllm_enforce_eager: bool
     vllm_disable_custom_all_reduce: bool
