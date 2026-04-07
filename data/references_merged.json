@@ -1,0 +1,3362 @@
+[
+  {
+    "ID": 1,
+    "question": "Perchè l'uomo è caduto in acqua?",
+    "references": [
+      "Ha perso l'equilibrio",
+      "L'uomo è caduto in acqua perché era salito sul parapetto e invece di tenerlo uno del gruppo lo ha spinto dentro",
+      "Poiché ha perso stabilità ed è finito in acqua",
+      "L'uomo con la camicia bianca alla sua destra prova ripetutamente ad afferrare la bottiglia, facendogli perdere l'equilibrio e cadere",
+      "L'uomo è caduto in acqua perchè era in equilibrio precario sul muretto della fontana",
+      "L'uomo è caduto in acqua perché ha perso l'equilibrio e si è sbilanciato all'indietro",
+      "L'uomo è finito in acqua perché non è riuscito a mantenere l'equilibrio"
+    ],
+    "merged_reference": "L'uomo è caduto in acqua perché ha perso l'equilibrio e la stabilità: era in equilibrio precario sul muretto della fontana, e apparentemente è stato spinto da qualcuno."
+  },
+  {
+    "ID": 2,
+    "question": "Cosa succederebbe se l'uomo con la maglietta grigia non riuscisse ad aprire la bottiglia?",
+    "references": [
+      "Non si brinderebbe",
+      "l'uomo con la maglietta grigia non riuscirebbe a brindare con gli altri in compagnia",
+      "Non potrebbe brindare assieme alle altre persone presenti nel video",
+      "Tutti si farebbero una risata e qualcun altro proverebbe ad aprirla",
+      "Se non aprisse la bottiglia non potrebbe versare lo spumante nei bicchieri",
+      "L'uomo potrebbe rinunciare e farla aprire a una delle altre persone",
+      "L'uomo non potrebbe offrire da bere alle persone intorno a lui"
+    ],
+    "merged_reference": "Se l'uomo con la maglietta grigia non riuscisse ad aprire la bottiglia, non potrebbe brindare né versare lo spumante nei bicchieri degli altri. Probabilmente tutti si farebbero una risata mentre qualcun altro proverebbe ad aprirla."
+  },
+  {
+    "ID": 3,
+    "question": "Dov'è finito lo spumante che c'era nel bicchiere dell'uomo con la maglia a righe colorate?",
+    "references": [
+      "Nel suo stomaco",
+      "Lo spumante del bicchere dell'uomo con la maglia a righe colorate finisce nel suo stomaco",
+      "È stato bevuto dall'uomo con la maglia a righe colorate",
+      "L'uomo ha bevuto lo spumante",
+      "Lo spumante nel bicchiere dell'uomo con la maglia a righe è stato ingerito dalla persona stessa",
+      "Il vino spumante nel bicchiere è stato consumato dall'uomo con la maglia a righe colorate",
+      "Lo spumante è stato bevuto"
+    ],
+    "merged_reference": "Lo spumante viene bevuto dall’uomo con la maglia a righe colorate e quindi finisce nel suo stomaco."
+  },
+  {
+    "ID": 4,
+    "question": "In che città si svolge la scena?",
+    "references": [
+      "Roma",
+      "La scena si svolge nella capitale d'Italia",
+      "La scena è girata in una famosa zona di Roma",
+      "La scena è ambientata a Roma in una location molto turistica",
+      "La scena si svolge nella città di Roma",
+      "La scena si svolge a Roma, presso la fontana di Trevi",
+      "La scena è stata interamente girata nella città di Roma"
+    ],
+    "merged_reference": "La scena si svolge a Roma, presso la fontana di Trevi."
+  },
+  {
+    "ID": 5,
+    "question": "Quante volte queste persone sono già state alla fontana di Trevi?",
+    "references": [
+      "Non è specificato ma potrebbero anche non essere la loro prima volta",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Dall'abbigliamento appaiono essere turisti, quindi potrebbe essere la prima volta che visitano Roma",
+      "Il video non mi fornisce la risposta però potrebbe anche essere la loro prima volta da turisti",
+      "Non è possibile stabilire quante volte queste persone sono state alla Fontana di Trevi",
+      "Non è possibile dedurre questo dal video",
+      "Non abbiamo i dati necessari per determinare quante volte queste persone abbiano visitato la fontana di Trevi"
+    ],
+    "merged_reference": "Non è possibile stabilire quante volte queste persone siano state alla Fontana di Trevi, poiché nel video non ci sono dati sufficienti per determinarlo; dall’abbigliamento sembrano turisti, quindi potrebbe essere la loro prima visita."
+  },
+  {
+    "ID": 6,
+    "question": "Quanti gatti ci sono?",
+    "references": [
+      "0",
+      "in questo video non ci sono gatti",
+      "Non ci sono felini nel filmato",
+      "Non si notano gatti nella scena",
+      "Nelle scene inquadrate nel video non sono presenti gatti",
+      "Non compaiono animali domestici nel video",
+      "Nel video, non appaiono gatti"
+    ],
+    "merged_reference": "Non ci sono gatti nel video."
+  },
+  {
+    "ID": 7,
+    "question": "Cosa dovrebbe fare l'uomo per uscire dalla fontana?",
+    "references": [
+      "Dovrebbe chiedere aiuto se non riesce solo",
+      "L'uomo dovrebbe salire sul parapetto da dove l'hanno spinto",
+      "Dovrebbe scavalcare il bordo della fontana",
+      "L'uomo dovrebbe appoggiarsi al bordo e risalire",
+      "L'uomo dovrebbe  farsi aiutare dalle altre persone vicine",
+      "L'uomo dovrebbe chiedere aiuto e aggrapparsi alle braccia di alcune delle altre persone",
+      "L'uomo dovrebbe accettare l'offerta d'aiuto del signore con la maglia blu e la coda"
+    ],
+    "merged_reference": "L'uomo dovrebbe scavalcare il bordo della fontana e risalire appoggiandosi a questo bordo. Nel caso non riuscisse da solo, dovrebbe chiedere aiuto e farsi aiutare dalle persone vicine. In particolare, potrebbe accettare l'offerta d'aiuto del signore con la maglia blu e la coda."
+  },
+  {
+    "ID": 8,
+    "question": "Qual è l'umore generale dei personaggi presenti nella scena?",
+    "references": [
+      "Sembrano felici",
+      "L'umore generale è di festa",
+      "Sono felici e sorridenti, pare che brindino per un lieto evento",
+      "Tutti sono divertiti e gioiosi",
+      "L'umore generale delle persone è molto allegro e festoso",
+      "L'umore generale è ilare e festoso",
+      "L'umore dei personaggi presenti nella scena è divertito"
+    ],
+    "merged_reference": "L'umore generale dei personaggi presenti nella scena è molto allegro e festoso, sono felici e divertiti e sembrano brindare per un lieto evento."
+  },
+  {
+    "ID": 9,
+    "question": "Dove si trova l'uomo che stappa la bottiglia alla fine del video?",
+    "references": [
+      "Cade dentro la fontana",
+      "Alla fine del video l'uomo è dentro la fontana di Trevi",
+      "Sul bordo esterno della Fontana di Trevi nell'atto di scavalcarlo",
+      "L'uomo sta uscendo dalla fontana dopo esserci caduto dentro",
+      "L'uomo che stappa la bottiglia alla fine del video si trova nella Fontana di Trevi intento ad uscire dopo essere caduto nell'acqua",
+      "Quando il video termina, l'uomo è all'interno della fontana",
+      "L'uomo si trova all'interno della fontana di trevi"
+    ],
+    "merged_reference": "Alla fine del video l'uomo si trova all'interno della Fontana di Trevi, intento ad uscire dopo essere caduto nell'acqua."
+  },
+  {
+    "ID": 10,
+    "question": "Dove si trova la persona che versa da bere?",
+    "references": [
+      "Nel bordo della fontana di trevi",
+      "La persona che versa da bere si trova davanti il parapetto della fontana di Trevi",
+      "Appena fuori dal bordo esterno della Fontana di Trevi",
+      "L'individuo si trova sul bordo di una rinomata fontana romana",
+      "La persona che versa da bere è posizionata in prossimità del muretto della Fontana di Trevi",
+      "L'uomo che versa da bere si trova vicino al bordo della fontana",
+      "sul cornicione della Fontana di Trevi"
+    ],
+    "merged_reference": "Si trova sul bordo della Fontana di Trevi, vicino al parapetto."
+  },
+  {
+    "ID": 11,
+    "question": "Per quanto tempo l'uomo rimane in equilibrio sulla fontana?",
+    "references": [
+      "Qualche secondo",
+      "L'uomo rimane in equilibrio per pochissimi secondi",
+      "L'uomo si mantiene in equilibrio per approssimativamente cinque secondi",
+      "L'uomo si bilancia sulla fontana solo per un breve lasso di tempo",
+      "L'uomo rimane in equilibrio per pochi secondi dopo essere salito sul muretto della Fontana di Trevi",
+      "L'uomo riesce a mantenersi in equilibrio sulla fontana per un intervallo di tempo molto breve",
+      "L'uomo rimane sull'orlo della fontana per qualche secondo"
+    ],
+    "merged_reference": "Qualche secondo, massimo cinque."
+  },
+  {
+    "ID": 12,
+    "question": "Cosa stavano facendo prima che l'uomo cadesse nella fontana?",
+    "references": [
+      "Stanno brindando",
+      "Il gruppo stava brindando prima che l'uomo cadesse dentro la fontana per una spinta",
+      "Hanno aperto una bottiglia di spumante e lo hanno versato in vari bicchieri",
+      "Avevano appena brindato e stavano bevendo",
+      "Prima che cadesse l'uomo era salito sul muretto in precario equilibrio",
+      "Le persone intorno a lui stavano bevendo dai propri bicchieri e facendo video con i propri cellulari",
+      "Stavano chiaccherando"
+    ],
+    "merged_reference": "Stavano brindando: avevano appena aperto una bottiglia di spumante e versato il contenuto in vari bicchieri. Dopo aver bevuto, chiaccherato e fatto video coi cellulari, l'uomo si posiziona in equilibrio precario sul muretto della fontana."
+  },
+  {
+    "ID": 13,
+    "question": "Perchè ci sono delle briciole per terra?",
+    "references": [
+      "Perchè le ha spezzate il tizio",
+      "perché un uomo ha sbriciolato una fetta biscottata per terra",
+      "Perchè l'uomo che registra il video ha triturato una fetta biscottata con la sua mano destra",
+      "Perchè l'uomo ha ridotto in briciole una fetta biscottata per attirare il cane",
+      "Ci sono briciole a terra perchè un uomo ha sminuzzato delle fette biscottate per terra",
+      "Le briciole si trovano a terra perché una persona ha rotto una fetta biscottata e l'ha ridotta in molliche",
+      "L'uomo ha spezzettato in pezzi molto piccoli la fetta biscottata"
+    ],
+    "merged_reference": "Le briciole sul pavimento sono dovute al fatto che una fetta biscottata è stata sbriciolata in pezzi molto piccoli da un uomo per attirare il cane."
+  },
+  {
+    "ID": 14,
+    "question": "Che cosa succederebbe se il cane con il collare non riuscisse a muoversi?",
+    "references": [
+      "Non pulirebbe",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Non sarebbe in grado di mangiare autonomamente il pane datogli da chi registra il video",
+      "Il cane non potrebbe mangiare la fetta biscottata sbriciolata",
+      "Se non riuscisse a muoversi il cne non potrebbe mangiare le fette biscottate",
+      "Se il cane con il collare non riuscisse a muoversi, forse le briciole le mangerebbe l'altro cane o un uccello",
+      "L'altro cane alle sue spalle mangerebbe la fetta biscottata"
+    ],
+    "merged_reference": "Se il cane con il collare non riuscisse a muoversi non potrebbe mangiare autonomamente la fetta biscottata sbriciolata, e le briciole verrebbero probabilmente mangiate dall’altro cane alle sue spalle o da un uccello."
+  },
+  {
+    "ID": 15,
+    "question": "Di che colore sono i fiorellini alla base dell'albero?",
+    "references": [
+      "Bianchi",
+      "I fiorellini alla base dell'albero sono bianchi",
+      "I fiori a terra nel video sono bianchi",
+      "Alla base dell'albero ci sono piccoli fiori bianchi",
+      "I fiorellini nella piccola aiuola a terra vicino al tronco dell'albero sono bianchi",
+      "I fiorellini che si vedono nel video sono bianchi",
+      "I fiorellini a terra sono di un colore molto chiaro"
+    ],
+    "merged_reference": "Sono di un colore molto chiaro: bianco."
+  },
+  {
+    "ID": 16,
+    "question": "Dove è stato sicuramente portato di recente il cane?",
+    "references": [
+      "Dal veterinario",
+      "Il cane è stato sicuramente portato dal veterinario",
+      "Di recente, il cane è stato sicuramente condotto in uno studio veterinario",
+      "Il cane è sicuramente stato dal veterinario di recente, a giudicare dal collare e dalle medicazioni",
+      "Visto il collare che porta al collo, il cane sicuramente di recente è stato portato dal veterinario",
+      "Il cane sarà stato portato in una clinica veterinaria per subire qualche operazione",
+      "Probabilmente dal veterinario visto che ha un collare elisabettiano"
+    ],
+    "merged_reference": "Di recente il cane è stato sicuramente portato dal veterinario visto che ha un collare elisabettiano e delle medicazioni."
+  },
+  {
+    "ID": 17,
+    "question": "Da quanti anni il cane vive con il suo padrone?",
+    "references": [
+      "Non è specificato ma sembra un cane che vive da un bel po' di tempo lì",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Non ho sufficienti dettagli per determinare da quanti anni il cane viva con il proprietario",
+      "Il video non mi permette di rispondere",
+      "Non è possibile sapere da quanti anni il cane vive con il padrone",
+      "Non è possibile conoscere questo dato dalla visione del video",
+      "Non si può determinare da quanto tempo il cane risieda con il suo proprietario"
+    ],
+    "merged_reference": "Non è possibile determinare da quanti anni il cane viva con il padrone, poiché il video e le informazioni disponibili non permettono di stabilirlo."
+  },
+  {
+    "ID": 18,
+    "question": "Di che colore è l'aspirapolvere?",
+    "references": [
+      "Non ci sono aspirapolveri",
+      "Non c'è alcuna aspirapolvere inquadrato",
+      "Non è presente alcun apparecchio elettrico per aspirare la polvere da terra nel video",
+      "Nel video non c'è un aspirapolvere",
+      "Non si vede alcun pulitore elettrico per la polvere nel video",
+      "nel video non c'è nessuna apparecchiatura per la pulizia, ma un cane che mangia una fetta biscottata sbriciolata",
+      "Il video non mostra un'aspiratore di nessun tipo"
+    ],
+    "merged_reference": "Nel video non si vede alcun aspirapolvere o apparecchio per la pulizia, ma solo un cane che mangia una fetta biscottata sbriciolata."
+  },
+  {
+    "ID": 19,
+    "question": "Cosa dovrebbe fare il cane per finire di raccogliere le briciole?",
+    "references": [
+      "Finirle tutte",
+      "ll cane dovrebbe liberarsi dal cono che gli impedisce i movimenti",
+      "Dovrebbe mangiarle tutte",
+      "Il cane dovrebbe spostarsi di angolazione con il cono per arrivare a mangiare altre briciole",
+      "Il cane dovrebbe continuare a mangiarle",
+      "Il cane dovrebbe muoversi in varie direzioni e affidarsi all'olfatto per poter raccogliere tutte le briciole",
+      "Il cane non potrebbe fare di più per raccogliere le briciole"
+    ],
+    "merged_reference": "Il cane dovrebbe liberarsi dal cono o al massimo muoversi in varie direzioni o angolazioni, affidandosi all'olfatto, per raccogliere e mangiare tutte le briciole."
+  },
+  {
+    "ID": 20,
+    "question": "Che atteggiamento mostra il cane con la benda gialla quando il padrone sbriciola le fette biscottate sul pavimento?",
+    "references": [
+      "Sembra che stesse aspettando ciò",
+      "Il cane si dimostra impaziente di mangiare le briciole",
+      "Appare affamato perchè si fionda subito sulle briciole",
+      "Il cane è euforico",
+      "Il cane con la benda si avvicina alle briciole per mangiarle",
+      "Il cane con la benda gialla sembra entusiasta e affamato",
+      "Il cane manifesta gioia e gratitudine"
+    ],
+    "merged_reference": "Il cane con la benda gialla sembra entusiasta e affamato; si avvicina alle briciole molto velocemente per mangiarle, mostrando gioia e gratitudine."
+  },
+  {
+    "ID": 21,
+    "question": "Da che lato dell'inquadratura entra il cane bianco subito dopo che la fetta biscottata è stata sbriciolata?",
+    "references": [
+      "Da destra",
+      "il cane bianco entra nell'inquadratura dal lato destro, per chi guarda il video",
+      "Entra dal lato destro",
+      "In alto a destra",
+      "Il cane bianco entra dal lato destro dell'inquadratura",
+      "Il cane bianco arriva dall'angolo in alto a destra dell'inquadratura",
+      "Il cane entra nell'inquadratura dalla destra"
+    ],
+    "merged_reference": "Dal lato in alto a destra dell'inquadratura."
+  },
+  {
+    "ID": 22,
+    "question": "Dove cadono le briciole di pane?",
+    "references": [
+      "Sul pavimento di pietra",
+      "le briciole cadono su vialetto del giardino",
+      "Sopra un vialetto di cemento",
+      "Le briciole cadono in cortile, accanto ad un prato",
+      "Cadono per terra, nel cortile di casa",
+      "Le briciole di pane cadono su un sentiero piastrellato e asfaltato vicino a un prato o giardino",
+      "Le briciole cadono sul pavimento"
+    ],
+    "merged_reference": "Cadono su un pavimento in pietra piastrellato che compone il vialetto del cortile di casa, di fianco a un giardino."
+  },
+  {
+    "ID": 23,
+    "question": "Quanto tempo impiega la persona per sbriciolare una fetta biscottata?",
+    "references": [
+      "Pochi istanti",
+      "la persona impiega 1 o 2 secondi a sbriciolare la fetta biscottata",
+      "Impiega circa tre secondi",
+      "Ci impiega pochi secondi",
+      "Una fetta biscottata viene sbriciolata in un tempo molto breve",
+      "La persona impiega pochi secondi",
+      "L'individuo sbriciola la fetta biscottata in un breve lasso di tempo"
+    ],
+    "merged_reference": "La persona impiega pochi secondi, tra 1 e circa 3 secondi."
+  },
+  {
+    "ID": 24,
+    "question": "Cosa succede dopo che l'uomo spezza il cibo?",
+    "references": [
+      "Arriva il cane bianco",
+      "Dopo che l'uomo spezza il cibo accorre un cane con un cono al collo e la zampa fasciata",
+      "Un cane bianco arriva a mangiare le briciole prodotte",
+      "Arriva un cane con un collare elisabettiano",
+      "Dopo che le briciole sono cadute a terra,  arriva il cane a mangiarle",
+      "Dopo che l'uomo spezza il cibo, il cane con la benda accorre e comincia a mangiare le briciole",
+      "Il cane con la fascia gialla si avvicina per mangiare il ciboo"
+    ],
+    "merged_reference": "Dopo che l'uomo spezza il cibo, accorre un cane con collare elisabettiano e una zampa fasciata che si avvicina per mangiare le briciole prodotte e cadute a terra."
+  },
+  {
+    "ID": 25,
+    "question": "Perchè la donna stesa di fianco all'uomo con il costume rosso è illuminata?",
+    "references": [
+      "Perchè il sole la illumina",
+      "La donna stesa è illuminata perché è colpita dal sole",
+      "Perchè non è riparata dall'ombra dell'ombrellone ed è quindi colpita in pieno dal sole",
+      "Perchè si trova al sole, fuori dall'ombra degli ombrelloni",
+      "La donna stesa a fianco dell'uomo col costume rossa senbra illuminata perchè esposta al sole",
+      "La donna è illuminata perché non sta usando nessuna protezione contro il sole, né ombrellone né il parasole della sedia a sdraio, ed è completamente esposta",
+      "Per il sole"
+    ],
+    "merged_reference": "Perchè è esposta al sole, non è al riparo dall'ombra degli ombrelloni né protetta dal parasole della sedia a sdraio, quindi è illuminata."
+  },
+  {
+    "ID": 26,
+    "question": "Che cosa succederebbe se scoppiasse all'improvviso un temporale?",
+    "references": [
+      "Tutti scapperebbero dalla spiaggia",
+      "Probabilmente i bagnanti cercherebbero riparo",
+      "Chi è in mare e sulla spiaggia scapperebbe a cercare un riparo",
+      "Tutti i bagnanti correrebbero via",
+      "Se scoppiasse un temporale tutte le persone abbandonerebbero la spiaggia",
+      "Se scoppiasse un temporale, tutte le persone che si trovano nell'acqua uscirebbero di lì rapidamente, e le persone sulle sdraio raccoglierebbero le proprie cose e troverebbero riparo da qualche parte",
+      "Le persone si riparerebbero sotto gli ombrelloni o lascierebbero la spiaggia"
+    ],
+    "merged_reference": "Se scoppiasse improvvisamente un temporale, tutti i bagnanti cercherebbero riparo: chi è in mare uscirebbe rapidamente dall'acqua, chi è sulla spiaggia scapperebbe o lascerebbe la spiaggia per trovare rifugio, e chi è sulle sdraio recupererebbe le proprie cose e cercherebbe riparo da qualche parte, potendo rifugiarsi sotto gli ombrelloni o abbandonare la spiaggia."
+  },
+  {
+    "ID": 27,
+    "question": "La piccola baia sulla destra è molto affollata oppure è vuota?",
+    "references": [
+      "Sembrerebbe abbastanza affollata",
+      "La piccola baia a destra mi sembra piuttosto affollata",
+      "Parrebbe essere mediamente affollata",
+      "Sembra abbastanza affollata",
+      "Si notano un bel po' di persone",
+      "Sembra che la baia a destra abbia molte persone",
+      "Ci sono diverse persone nella baia a destra"
+    ],
+    "merged_reference": "La piccola baia sulla destra è piuttosto affollata; si notano diverse persone."
+  },
+  {
+    "ID": 28,
+    "question": "In che stagione siamo?",
+    "references": [
+      "Dovrebbe essere estate",
+      "Probabilmente siamo in estate",
+      "Il video sembrerebbe esser stato girato in estate",
+      "È possibile che sia estate",
+      "Estate",
+      "Il video si svolge in estate",
+      "Ci stiamo godendo la stagione estiva"
+    ],
+    "merged_reference": "Siamo in estate."
+  },
+  {
+    "ID": 29,
+    "question": "Chi ha bevuto l'acqua che era nella bottiglia?",
+    "references": [
+      "Non è specificato",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Nel video non è possibile vederlo ma probabilmente l'avrà fatto chi si trova sotto l'ombrellone",
+      "Probabilmente la persona che ha girato il video",
+      "Nel video non si vede nessuno bere acqua dalla bottiglia",
+      "Non è possibile capire chi abbia bevuto l'acqua",
+      "non è possibile vedere chi ha bevuto l'acqua nella bottiglia"
+    ],
+    "merged_reference": "Non è possibile capire chi abbia bevuto l'acqua dalla bottiglia; nel video non si vede nessuno bere dalla bottiglia ma potrebbe essere stato anche chi gira il video."
+  },
+  {
+    "ID": 30,
+    "question": "Quante finestre ha l'autobus parcheggiato sulla spiaggia?",
+    "references": [
+      "Non ci sono autobus parcheggiati in spiaggia",
+      "Non vi è alcun bus fermo nella zona del litorale",
+      "Sulla costa non si trova alcun automezzo parcheggiato",
+      "Non ci sono autobus nel video",
+      "Il video non mostra nessun bus parcheggiato su una zona costiera",
+      "In spiaggia, non si vede alcun autobus",
+      "non è presente nessun pullman sulla spiaggia"
+    ],
+    "merged_reference": "Non c'è alcun autobus parcheggiato sulla spiaggia."
+  },
+  {
+    "ID": 31,
+    "question": "Come dovrebbe fare l'uomo che cammina col costume blu a bere l'acqua nella bottiglia sul tavolino?",
+    "references": [
+      "Se la dovrebbe prendere",
+      "L'uomo dovrebbe avvicinarsi e prendere la bottiglia",
+      "Dovrebbe avvicinarsi all'ombrellone e, se non conosce i proprietari della bottiglia, chiedere di poter bere dell'acqua",
+      "Incamminarsi verso l'ombrellone e prendere la bottiglia, chiedendo il permesso all'uomo sotto l'ombrellone",
+      "La persona con il costume blu dovrebbe avvicinarsi all'ombrellone e versare l'acqua nel bicchiere posto vicino la bottiglia",
+      "L'individuo dovrebbe aprire la bottiglia e versare l'acqua in uno dei bicchieri",
+      "L'uomo dovrebbe avvicinarsi alla bottiglia e chiedere il permesso al proprietario per poter bere"
+    ],
+    "merged_reference": "L'uomo con il costume blu dovrebbe avvicinarsi all'ombrellone e prendere la bottiglia sul tavolino, chiedere all'eventuale proprietario il permesso di bere, aprire la bottiglia e versare l'acqua in uno dei bicchieri posti vicino alla bottiglia."
+  },
+  {
+    "ID": 32,
+    "question": "Quale stato d'animo mostra l'uomo sotto l'ombrellone con il costume rosso?",
+    "references": [
+      "Sembra rilassato",
+      "Sembra si stia rilassando",
+      "Parrebbe essere rilassato",
+      "L'uomo è rilassato",
+      "L'uomo con il costume rosso è molto rilassato e tranquillo",
+      "L'individuo con il costume rosso appare calmo e privo di preoccupazioni",
+      "Lo stato d'animo dell'uomo sotto l'ombrellone è rilassato"
+    ],
+    "merged_reference": "L'uomo sotto l'ombrellone con il costume rosso è molto rilassato e tranquillo."
+  },
+  {
+    "ID": 33,
+    "question": "Su che cosa è sdraiato l'uomo con il costume rosso che si vede prima che siano inquadrati gli occhiali?",
+    "references": [
+      "Su un lettino",
+      "l'uomo è sdraiato su un lettino",
+      "È sdraiato su un lettino da mare",
+      "È sdraiato su un telo bianco",
+      "L'uomo con il costume rosso è sdraiato su un tipico lettino da spiaggia",
+      "L'uomo è sdraiato su una sedia a sdraio",
+      "L'uomo è disteso su una chaise longue"
+    ],
+    "merged_reference": "L'uomo è sdraiato su un lettino da spiaggia con un telo bianco."
+  },
+  {
+    "ID": 34,
+    "question": "Dove sono i bambini?",
+    "references": [
+      "Sembra a mare",
+      "In acqua",
+      "Sono presenti vari bambini in mare, affianco a degli adulti",
+      "I bambini giocano in acqua",
+      "I bambini giocano nell'acqua vicino ad altri adulti",
+      "I bambini sono in acqua con degli adulti",
+      "I piccoli sono nell'acqua"
+    ],
+    "merged_reference": "I bambini stanno giocando in acqua al mare, insieme agli adulti."
+  },
+  {
+    "ID": 35,
+    "question": "Per quanto tempo vengono inquadrate le case sulla costa?",
+    "references": [
+      "Per qualche secondo",
+      "Le case sulla costa vengono inquadrate per pochi secondi all'inizio del video",
+      "Vengono inquadrate per circa quattro secondi",
+      "Per pochi secondi",
+      "Le case sulla costa compaiono nell'inquadratura solo per una manciata di secondi",
+      "Le case vengono inquadrate molto brevemente, forse per un paio di secondi",
+      "Le abitazioni lungo la costa appaiono in video per un breve periodo"
+    ],
+    "merged_reference": "Vengono inquadrate per circa quattro secondi, all'inizio del video."
+  },
+  {
+    "ID": 36,
+    "question": "Quando è possibile capire cosa sta bevendo la persona che registra il video?",
+    "references": [
+      "Quando ci sono le bottiglie e i bicchieri inquadrati",
+      "Nel secondo in cui viene inquadrata l'acqua in bottiglia",
+      "Quando viene inquadrato il tavolino dell'ombrellone",
+      "Quando viene inquadrato il tavolino con bottiglia e bicchieri",
+      "A metà video, quando viene inquadrato cosa c'è sotto il suo ombrellone",
+      "Verso la metà del video",
+      "Quando viene mostrata l'acqua in bottiglia sul tavolino"
+    ],
+    "merged_reference": "Si può capire cosa sta bevendo la persona quando compare inquadrata una bottiglia d’acqua sul tavolino, insieme a dei bicchieri, e questo è visibile soprattutto a metà video."
+  },
+  {
+    "ID": 37,
+    "question": "Come mai il fuoco e il fumo sono ben visibili alla fine della scena?",
+    "references": [
+      "Perchè il palcoscenico è poco illuminato",
+      "Il fuoco è ben visibile perché vengono spente le luci sul palco",
+      "Perchè sono state spente le luci sulla scena",
+      "Perchè le luci vengono spente",
+      "Il fuoco ed il fumo sono ben visibili perchè i ballerini in cerchio si allontanano",
+      "Il fumo e il fuoco sono visibili perché i ballerini si distanziano tra di loro e dall'elemento centrale",
+      "Il fuoco e il fumo si notano chiaramente poiché i ballerini ampliando la formazione creano spazio attorno ad essi"
+    ],
+    "merged_reference": "Il fuoco e il fumo sono ben visibili perché il palcoscenico è poco illuminato e le luci sono spente, e i ballerini si distanziano tra loro e dall'elemento centrale ampliando la formazione e creando spazio attorno a essi."
+  },
+  {
+    "ID": 38,
+    "question": "Che cosa succederebbe se la donna al centro inciampasse?",
+    "references": [
+      "Sarebbe una brutta figura",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Potrebbe cascare o sul palco o addirittura fuori da esso",
+      "Il pubblico riderebbe mentre il suo compagno ballerino la aiuterebbero a rialzarsi",
+      "Se la donna al centro inciampasse potrebbe cadere",
+      "Se la donna inciampasse, dovrebbe rimettersi in piedi velocemente per non ostacolare lo svolgimento dell'evento",
+      "La donna cadrebbe e gli altri ballerini le farebbero da scudo"
+    ],
+    "merged_reference": "Se la donna al centro inciampasse, potrebbe cadere sul palco o addirittura giù da esso; il pubblico potrebbe ridere mentre i compagni ballerini la aiuterebbero a rialzarsi o addirittura potrebbero farle da scudo per non farla cadere; sarebbe una brutta figura e, per non ostacolare lo svolgimento dell'evento, dovrebbe rimettersi in piedi velocemente."
+  },
+  {
+    "ID": 39,
+    "question": "Chi ha acceso il fuoco nella torre?",
+    "references": [
+      "I due danzatori",
+      "Il fuoco è stato accesso dalla coppia che balla separata all'inizio",
+      "Due degli attori presenti sul palco: pare che stiano armeggiando con la torre poco prima che il fuoco divampi",
+      "Ha acceso il fuoco la donna della coppia danzante al centro",
+      "Il fuoco nella torre è stato acceso dal ballerino solista vicino alla torre",
+      "Il fuoco è stato acceso dalla donna inginocchiata al centro, assistita dall'uomo inginocchiato",
+      "un uomo e una donna tra i danzatori sul palco"
+    ],
+    "merged_reference": "Il fuoco nella torre è stato acceso dalla ballerina della coppia danzante, inginocchiata e aiutata dall'altro ballerino."
+  },
+  {
+    "ID": 40,
+    "question": "In che tipo di edificio si trovano le persone?",
+    "references": [
+      "In un teatro",
+      "forse si trovano in un teatro",
+      "Parrebbe essere un teatro al chiuso",
+      "È possibile sia un teatro",
+      "Le persone sembrano trovarsi su un palco di  un teatro",
+      "Le persone si trovano su un palco, quindi probabilmente in un teatro o sala conferenze",
+      "Le persone sono all'interno di un edificio teatrale"
+    ],
+    "merged_reference": "Si trovano sul palco in quello che sembra un teatro o al massimo una sala conferenze."
+  },
+  {
+    "ID": 41,
+    "question": "Cosa indossano gli attori sotto i costumi di scena?",
+    "references": [
+      "Non è possibile dedurlo",
+      "Gli attori probabilmente indossano della biancheria intima",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Il video non contiene questa informazione ma forse indosseranno i loro vestiti personali",
+      "Non si vede nel video cosa indossano gli attori sotto i costumi di scena",
+      "Non saprei, non è possibile dedurre questa informazione vedendo il video",
+      "Il video non rivela cosa si cela sotto i costumi degli attori"
+    ],
+    "merged_reference": "Non è possibile dedurre cosa indossano gli attori sotto i costumi di scena dal video. Molto probabilmente indossano biancheria intima o i loro vestiti personali."
+  },
+  {
+    "ID": 42,
+    "question": "Perché i gatti nel video stanno correndo sotto la pioggia?",
+    "references": [
+      "Non ci sono gatti e non sta piovendo",
+      "Nel video non ci sono felini che corrono sotto la pioggia",
+      "Non vi sono nè animali nè condizioni metereologiche avverse nel video",
+      "Il filmato non presenta alcun gatto",
+      "La registrazione non mostra alcun tipo di animale che si sposta mentre piove",
+      "Nel video non sono visibili scene di gatti in movimento sotto la pioggia",
+      "non piove e non sono presenti dei gatti"
+    ],
+    "merged_reference": "Nel video non ci sono gatti e non sta piovendo."
+  },
+  {
+    "ID": 43,
+    "question": "Cosa dovrebbe fare uno spettatore della prima fila per unirsi al ballo?",
+    "references": [
+      "Non può, è uno spettacolo",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Se non previsto da copione dovrebbe alzarsi e correre sul palco, questo però creerebbe sgomento e interromperebbe il ballo",
+      "Dovrebbe salire sul palco",
+      "Uno spettatore in prima fila dovrebbe alzarsi, salire siul palco e cominciare a ballare",
+      "Penso che non sia possibile per gli spettatori unirsi al ballo durante uno spettacolo. Forse potrebbe chiederlo durante una prova",
+      "Lo spettatore dovrebbe saltare sul palco"
+    ],
+    "merged_reference": "Se non è previsto dal copione, uno spettatore in prima fila non dovrebbe unirsi al ballo durante lo spettacolo, ma se volesse proprio farlo dovrebbe alzarsi, salire sul palco e cominciare a ballare."
+  },
+  {
+    "ID": 44,
+    "question": "Qual è l'umore della coppia che danza?",
+    "references": [
+      "Felice",
+      "la coppia risulta serena ma molto concentrata",
+      "concentrata in quello che sta facendo",
+      "La coppia è serena",
+      "L'umore  della coppia che balla è molto allegro e gioioso",
+      "Non si vede molto bene, però la coppia sembra molto concentrata e seria",
+      "concentrati"
+    ],
+    "merged_reference": "La coppia è serena, felice e molto concentrata."
+  },
+  {
+    "ID": 45,
+    "question": "Su che lato del palcoscenico sta danzando la coppia solista all'inizio del video rispetto all'osservatore?",
+    "references": [
+      "a sinistra",
+      "La coppia solista si trova a sinistra",
+      "Danza sulla sinistra del palco",
+      "Sulla sinistra",
+      "All'inizio del video la coppia solista  balla sulla sinistra del video",
+      "La coppia solista parte dal lato sinistro e poi si mette al centro rispetto all'osservatore",
+      "La coppia sta danzando sulla sinistra"
+    ],
+    "merged_reference": "All'inizio del video, la coppia solista danza sulla sinistra del palcoscenico rispetto all'osservatore."
+  },
+  {
+    "ID": 46,
+    "question": "Dove si trova il gruppo di ballerini?",
+    "references": [
+      "Su un palcoscenico",
+      "il gruppo di ballerini si trova su un palco",
+      "Su un palco di un teatro al chiuso",
+      "Si trovano su un palco",
+      "Il gruppo di ballerini è posizionato su una spaziosa piattaforma",
+      "I ballerini si trovano su una piattaforma elevata",
+      "I ballerini stanno esibendosi su una pedana rialzata"
+    ],
+    "merged_reference": "Si trovano all'interno di un teatro al chiuso su un palco rialzato."
+  },
+  {
+    "ID": 47,
+    "question": "Per quanto tempo i ballerini danzano in cerchio?",
+    "references": [
+      "Qualche secondo",
+      "i ballerini danzano in cerchio per circa 15 secondi",
+      "I ballerini restano in cerchio per approssimativamente 21 secondi",
+      "Pochi secondi",
+      "I ballerini rimangono in cerchio per all'incirca venti secondi",
+      "I ballerini danzano in cerchio per quasi tutta la durata del video, quindi una ventina di secondi",
+      "I ballerini compiono movimenti circolari per un periodo di quindici secondi"
+    ],
+    "merged_reference": "I ballerini restano in cerchio per circa 15–21 secondi."
+  },
+  {
+    "ID": 48,
+    "question": "Cosa succede dopo che i ballerini formano il cerchio?",
+    "references": [
+      "La coppia solista accende il fuoco",
+      "Una coppia solista dà inizio al fuoco posizionato al centro",
+      "Due di essi pare che accendano il fuoco nella torre e successivamente iniziano a ballarci attorno",
+      "Il cerchio si stringe e la coppia accende il fuoco nella torre",
+      "Dopo che i ballerini formano il cerchio, viene acceso un fuoco nella torre",
+      "Una volta formato il cerchio, un fuoco centrale viene acceso",
+      "Viene acceso un fuoco nella torre centrale"
+    ],
+    "merged_reference": "Dopo che i ballerini formano il cerchio, viene acceso un fuoco nella torre centrale e successivamente iniziano a ballarci attorno."
+  },
+  {
+    "ID": 49,
+    "question": "Perchè i ragazzi guardano verso l'uomo pelato?",
+    "references": [
+      "Perchè sta spiegando lui",
+      "Perchè l'uomo sta spiegando qualcosa che interessa al gruppo",
+      "Perchè sta parlando e probabilmente spiegando qualcosa del suo lavoro",
+      "Perchè l'uomo sta illustrando un processo",
+      "Iragazzi guardano verso l'uomo pelata per ascoltare le sue spiegazioni sulle gondole",
+      "I ragazzi guardano verso l'uomo pelato perché lui sta dando loro delle spiegazioni riguardo le gondole",
+      "I ragazzi guardano verso l'uomo pelato perchè stà dando loro una spiegazione"
+    ],
+    "merged_reference": "I ragazzi guardano verso l'uomo pelato perché sta spiegando qualcosa riguardo alle gondole, illustrando un processo."
+  },
+  {
+    "ID": 50,
+    "question": "Che cosa succederebbe se l'uomo con il cappello lanciasse il pennello sporco di vernice contro il gruppo di scolari?",
+    "references": [
+      "Finirebbe in tanti guai",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "I bambini inizierebbero a piangere, le maestre si arrabbierebbero e molto probabilmente andrebbero via indignate con i bambini",
+      "Tutti sarebbero molto stupiti per il gesto",
+      "Se l'uomo con il cappello lanciasse il pennello sporco sporcherebbe con la pittura gli scolari",
+      "Se l'uomo lanciasse il pennello contro gli scolari, molti di loro si sporcherebbero di vernice e si creerebbe una situazione di caos",
+      "Li scolari verrebbero macchiati dall avernice"
+    ],
+    "merged_reference": "Se l'uomo con il cappello lanciasse il pennello sporco di vernice contro gli scolari, molti di loro si sporcherebbero di vernice e si creerebbe una situazione di caos; i bambini inizierebbero a piangere, le maestre si arrabbierebbero e probabilmente andrebbero via indignate. Tutti sarebbero molto stupiti dal gesto e l'uomo finirebbe in tanti guai."
+  },
+  {
+    "ID": 51,
+    "question": "Come porta i capelli l'uomo con la camicia di flanella?",
+    "references": [
+      "Non ha capelli",
+      "L'uomo con la camicia in flanella è calvo",
+      "La persona che indossa la camicia di flanella non ha capelli",
+      "Il signore ha i capelli rasati",
+      "I capelli dell'uomo con la camicia di flanella sono rasati a zero",
+      "L'uomo in camicia di flanella ha la testa completamente priva di capelli",
+      "L'individuo con la camicia di flanella ha il cranio completamente glabro"
+    ],
+    "merged_reference": "L'uomo con la camicia di flanella è completamente calvo."
+  },
+  {
+    "ID": 52,
+    "question": "In quale città ci troviamo?",
+    "references": [
+      "Dalla presenza delle gondole si evince che il video è girato a Venezia",
+      "Ci troviamo probabilmente a Venezia",
+      "Sebbene le gondole siano tipiche di Venezia, non ci sono abbastanza informazioni per rispondere",
+      "Probabilmente Venezia",
+      "La presenza delle gondole fa ipotizzare che ci troviamo nella città di Venezia",
+      "Dati gli elementi nel video, ci troviamo a Venezia",
+      "A Venezia dal momento che le gondole che stanno costruendo nel video vengono usate lì"
+    ],
+    "merged_reference": "Dalla presenza di gondole si può dedurre che siamo a Venezia."
+  },
+  {
+    "ID": 53,
+    "question": "Chi è la madre del ragazzo che pittura lo scafo?",
+    "references": [
+      "Non è specificato nel video ma molto probabilemente non è neanche presente nella scena",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Nel video mancano dettagli sufficienti per identificare la madre del ragazzo che dipinge lo scafo",
+      "Non ho questa informazione poichè non sembrano esserci donne adulte nel video",
+      "Non è possibile stabilire nel video chi è la madre del ragazzo che pittura",
+      "Non è possibile dedurre questo dalla visione del video",
+      "Non appare nel video nessuna figura femminile identificabile come la madre del ragazzo che pittura lo scafo"
+    ],
+    "merged_reference": "Non è possibile stabilire chi sia la madre del ragazzo che dipinge lo scafo: nel video non appare alcuna figura femminile identificabile come sua madre e non ci sono informazioni sufficienti per rispondere."
+  },
+  {
+    "ID": 54,
+    "question": "Quanti balconi ci sono nella stanza?",
+    "references": [
+      "Zero",
+      "Nella stanza non ci sono balconi",
+      "Non ci sono balconi nel video",
+      "Non vedo balconi",
+      "Nella stanza mancano completamente i balconi",
+      "La stanza è priva di balconi",
+      "Il video non mostra alcun balcone nella stanza"
+    ],
+    "merged_reference": "Il video non mostra alcun balcone nella stanza."
+  },
+  {
+    "ID": 55,
+    "question": "Come potrebbe il verniciatore cambiare il colore della barca?",
+    "references": [
+      "Usando altra vernice",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Dovrebbe prendere un secchio di vernice di un colore differente e ricominciare da capo a tinteggiare del col nuovo colore",
+      "Dovrebbe utilizzare una vernice con un altro colore",
+      "Il verniciatore dovrebbe scegliere un nuovo colore da utilizzare per verniciare la barca",
+      "Il verniciatore potrebbe utilizzare una vernice di colore diverso",
+      "Il verniciatore potrebbe cambiare il colore della barca cambiando il colore della pittura"
+    ],
+    "merged_reference": "Il verniciatore potrebbe cambiare il colore della barca scegliendo una vernice di colore diverso e tinteggiare con il nuovo colore."
+  },
+  {
+    "ID": 56,
+    "question": "Quale stato d'animo mostra l'uomo che dipinge con un pennello la barca?",
+    "references": [
+      "Neutrale",
+      "l'uomo che dipinge sembra tranquillo e concentrato",
+      "Non pare mostrare alcuno stato d'animo in particolare",
+      "Molto concentrato",
+      "L'uomo che dipinge la barca è molto serio e concentrato nel suo lavoro",
+      "L'uomo che dipinge sembra molto concentrato sul suo lavoro",
+      "L'uomo appare sereno e focalizzato sul suo lavoro"
+    ],
+    "merged_reference": "L'uomo appare sereno, tranquillo e molto concentrato nel dipingere la barca."
+  },
+  {
+    "ID": 57,
+    "question": "Dove si trova l'uomo che pittura nella seconda metà del video rispetto al gruppo di bambini?",
+    "references": [
+      "Dietro",
+      "L'uomo che sta dipingendo si trova a destra del gruppo, per chi guarda il video",
+      "Si trova alle loro spalle",
+      "Il signore con il pennello è situato dietro i bambini",
+      "L'uomo che pittura si trova alla destra del gruppo di bambini dal punto di vista del video",
+      "Il pittore è posizionato sulla destra dei bambini rispetto all'inquadratura",
+      "La persona si trova di spalle ai bambini"
+    ],
+    "merged_reference": "Dietro i bambini, sulla loro destra rispetto all'inquadratura del video."
+  },
+  {
+    "ID": 58,
+    "question": "Dove si trova il gruppo di persone?",
+    "references": [
+      "In una sorta di officina per barche",
+      "Il gruppo si trova in un posto dove si construiscono le gondole",
+      "All'interno di una bottega di artigiani che fabbricano gondole",
+      "In un laboratorio",
+      "Il gruppo di persone si trova in un laboratorio per la costruzione di gondole",
+      "Il gruppo di persone si trova in un cantiere navale od officina",
+      "Le persone sono situate all'interno di uno spazio dedicato alla riparazione o costruzione"
+    ],
+    "merged_reference": "Si trovano in un laboratorio per la costruzione e riparazione di gondole."
+  },
+  {
+    "ID": 59,
+    "question": "Per quanto tempo è inquadrata la persona che parla?",
+    "references": [
+      "Pochi secondi",
+      "La persona che parla è inquadrata per pochi secondi",
+      "È inquadrata per circa sei secondi",
+      "La persona che parla viene mostrata per un breve intervallo di tempo",
+      "La persona che parla appare nell'inquadratura solo per un breve momento",
+      "L'uomo che parla è inquadrato per pochi secondi all'inizio del video",
+      "La persona che parla è ripresa solo per un attimo fugace"
+    ],
+    "merged_reference": "La persona che parla è inquadrata per pochi secondi, circa sei, all'inizio del video."
+  },
+  {
+    "ID": 60,
+    "question": "Quando viene inquadrato l'uomo che dipinge la gondola?",
+    "references": [
+      "Nella seconda metà del video",
+      "L'uomo che dipinge viene inquadrato nella seconda metà del video",
+      "Subito dopo che viene inquadrato il gruppo di bambini",
+      "Verso la fine del video",
+      "La persona che dipinge la gondola viene inquadrata dopo che termina l'inquadratura della persona pelata, a circa metà della ripresa video",
+      "L'uomo che dipinge viene inquadrato dopo i bambini",
+      "L'uomo viene inquadrato dopo una decina di secondi"
+    ],
+    "merged_reference": "L'uomo che dipinge la gondola viene inquadrato nella seconda metà del video, circa a metà della ripresa dopo i primi dieci secondi, subito dopo l'inquadratura sui bambini e sull'uomo calvo."
+  },
+  {
+    "ID": 61,
+    "question": "Perchè i bambini scendono dalle macchinine alla fine del video?",
+    "references": [
+      "Perchè la corsa è finita",
+      "I bambini scendono perché hanno finito il turno di gioco",
+      "Perchè è terminato il tempo a disposizione per la corsa",
+      "Perchè non hanno più gettoni da inserire",
+      "I bambini scendono perchè è finito il loro turno e le macchine si sono fermate",
+      "I bambini si allontanano dalle macchinine poiché il loro tempo di gioco è giunto al termine",
+      "I bambini scendono perchè le macchine non si muovono più"
+    ],
+    "merged_reference": "I bambini scendono perché è finito il loro turno e il tempo a disposizione per la corsa, quindi le macchine si sono fermate. Evidentemente i bambini non hanno più gettoni da inserire per altre corse."
+  },
+  {
+    "ID": 62,
+    "question": "Che cosa succederebbe se l'uomo con la felpa grigia entrasse nella pista prima che le macchine si fermino?",
+    "references": [
+      "Si farebbe male e verrebbe richiamato",
+      "Sicuramente verrebbe colpito da qualche macchina a scontro",
+      "Potrebbe essere travolto da una delle macchine ed in ogni caso farebbe interrompere la corsa dal giostraio",
+      "Le macchine gli andrebbero addosso",
+      "Se l'uomo con la felpa grigia entrasse prima nella pista rischierebbe di farsi male perchè ci sono le macchine in movimento",
+      "Se l'uomo entrasse prima che le macchine si fermino, probabilmente qualche macchina gli andrebbe addosso e gli farebbe male",
+      "I bambini gli andrebbero addosso"
+    ],
+    "merged_reference": "Se l’uomo con la felpa grigia entrasse prima che le macchine si fermino, rischierebbe di farsi male e potrebbe essere travolto o colpito dalle macchine in movimento, e in ogni caso il giostraio interromperebbe la corsa."
+  },
+  {
+    "ID": 63,
+    "question": "Sono accesi o spenti i fari dell'autoscontro giallo guidato dai due bambini con gli occhiali vestiti di blu alla fine del video?",
+    "references": [
+      "Spenti",
+      "I fari dell'autoscontro sono spenti, come tutti gli altri",
+      "I fanalini della macchinina dell'autoscontro giallo guidato dai due bambini con gli occhiali sono spenti",
+      "Le luci delle macchinine dell'autoscontro sono spente a fine video",
+      "Alla fine del video i fari dell'autoscontro giallo guidato dai due bambini con gli occhiali vestiti di blu  sono spenti",
+      "Alla fine l'illuminazione della macchina gialla guidata dai due bambini vestiti di blu è spenta",
+      "In conclusione del video, le luci dell'autoscontro giallo condotto dai due bimbi con occhiali vestiti di blu sono spente"
+    ],
+    "merged_reference": "I fari sono spenti."
+  },
+  {
+    "ID": 64,
+    "question": "Da cosa sono alimentati i veicoli nel video?",
+    "references": [
+      "Sono elettrici",
+      "I veicoli sono alimentati dall'elettricità",
+      "Da elettricità, attraverso la griglia elettrica posta sopra la pista",
+      "Sono alimentati tramite elettricità",
+      "I veicoli nel video sono alimentati da corrente elettrica",
+      "I veicoli sono alimentati attraverso una specie di antenna che tocca il soffitto",
+      "I veicoli utilizzano energia elettrica come fonte di alimentazione"
+    ],
+    "merged_reference": "I veicoli nel video sono alimentati dall'elettricità, fornita dalla griglia elettrica posta sopra la pista e tramite una specie di antenna che tocca il soffitto."
+  },
+  {
+    "ID": 65,
+    "question": "Quale bambino aveva già guidato una macchina da scontro?",
+    "references": [
+      "Non è possibile saperlo ma probabilmente non sarà la prima volta per molti dei bambini",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Non sono disponibili informazioni sufficienti per determinare quale bambino avesse già guidato una macchina da scontro",
+      "Il video non mi fornisce quest'informazione ma posso immaginare che qualcuno le avrà già guidate",
+      "Non è possibile stabilire dal video quale bambino avesse già guidato una macchina da scontro",
+      "Non saprei, questo non è un dato facilmente deducibile dalla visione del video",
+      "Non ci sono elementi sufficienti per determinare quale bambino avesse già esperienza con le macchine da scontro"
+    ],
+    "merged_reference": "Non è possibile stabilire dal video quale bambino avesse già guidato una macchina da scontro, poiché non ci sono elementi né informazioni sufficienti per determinare questa circostanza."
+  },
+  {
+    "ID": 66,
+    "question": "La Ferrari nel video è rossa o gialla?",
+    "references": [
+      "Non ci sono ferrari",
+      "Nessuna Ferrari è visibile nel video",
+      "Nel video non appare nessuna Ferrari",
+      "Non c'è una Ferrari",
+      "Non si vede alcuna ferrari nel video",
+      "Non è presente alcuna Ferrari nella clip",
+      "La Ferrari non è presente nel filmato"
+    ],
+    "merged_reference": "Nel video non è presente alcuna Ferrari."
+  },
+  {
+    "ID": 67,
+    "question": "Come dovrebbe fare l'uomo con la felpa grigia a montare sul kart con la bandiera dell'italia?",
+    "references": [
+      "Aspettare che gli altri scendano",
+      "Dovrebbe aspettare che finisca il turno dei bambini e salire subito su quellla macchina prima di altri",
+      "Dovrebbe vedere se i passeggeri del kart in questione intendono fare un altro giro, in caso di risposta negativa dovrebbe correre a prendere il kart per evitare che qualcun altro vi salga prima di lui",
+      "L'uomo deve attendere che i bambini scendano",
+      "Luomo con la felpa grigia per montare sul kart con la bandiera dell'italia dovrebbe aspettare che i bambini scendano alla fine del loro turno",
+      "L'uomo dovrebbe dirigersi verso sinistra per trovare la macchina con la bandiera dell'Italia",
+      "Dovrebbe fermare il gioco e saltare sul Kart"
+    ],
+    "merged_reference": "Dovrebbe aspettare che i bambini finiscano il loro turno e scendano dal kart con la bandiera italiana; poi, se nessuno intende fare un altro giro, dirigersi verso sinistra per trovare la macchina con la bandiera dell'Italia e montare sul kart."
+  },
+  {
+    "ID": 68,
+    "question": "Che atteggiamento hanno i bambini che guidano gli autoscontri?",
+    "references": [
+      "Sono divertiti",
+      "I bambini sono felici",
+      "Paiono essere felici e divertiti",
+      "Hanno un atteggiamento di sfida",
+      "I bambini che guidano gli autoscontri sono allegri e festosi",
+      "I bambini si divertono e sono agguerriti",
+      "Hanno un atteggiamento determinato"
+    ],
+    "merged_reference": "Sono divertiti, felici, allegri e festosi, con un atteggiamento di sfida, agguerriti e determinati."
+  },
+  {
+    "ID": 69,
+    "question": "Da che lato dello schermo entrano gli adulti che si vedono alla fine del video?",
+    "references": [
+      "Da sinistra",
+      "Gli adulti entrano in pista da sinistra, per chi guarda il video",
+      "Entrano dal lato sinistro",
+      "L'ingresso degli adulti avviene dal lato sinistro dello schermo",
+      "Gli adulti compaiono dallo schermo a sinistra",
+      "Le persone adulte fanno il loro ingresso dal lato sinistro dello schermo",
+      "Entrano dalla sinistra"
+    ],
+    "merged_reference": "Dal lato sinistro dello schermo."
+  },
+  {
+    "ID": 70,
+    "question": "Dove si trovano le macchinine?",
+    "references": [
+      "In una pista di autoscontri",
+      "Le macchinine sono nell'area dell'autoscontro",
+      "All'interno di una pista di autoscontro",
+      "Le macchinine si trovano in un'area dedicata agli autoscontri",
+      "Le macchine si trovano su una pista di autoscontro di una giostra",
+      "Le macchinine si trovano in un impianto apposito, probabilmente una giostra per bambini",
+      "Su una pista"
+    ],
+    "merged_reference": "Si trovano su una pista di autoscontri."
+  },
+  {
+    "ID": 71,
+    "question": "Per quanto tempo vediamo i bambini sulle macchinine?",
+    "references": [
+      "Per parecchi secondi",
+      "I bambini si vedono per tutto il video",
+      "Per quasi tutta la durata del video: scendono solo verso l'ultimo secondo",
+      "Per tutto il video",
+      "Si vedono i bambini sulle macchine per l'intera durata del video",
+      "Vediamo i bambini sulle macchinine per quasi tutto il tempo, quindi parecchi secondi",
+      "Li vediamo sulle macchine  per tutta la durata del video"
+    ],
+    "merged_reference": "Li vediamo sulle macchinine per quasi tutta la durata del video."
+  },
+  {
+    "ID": 72,
+    "question": "Cosa succede prima che le macchine si fermino?",
+    "references": [
+      "Le macchinine si fermano perchè viene tolta loro l'alimentazione",
+      "Si spengono i fari delle macchinine",
+      "Viene tolta la corrente ai kart",
+      "Si crea un ingorgo",
+      "Prima che le macchine si fermino si spengono le luci e suona un campanello",
+      "I fari si spengono e le macchine rallentano prima di fermarsi",
+      "Il signore con la camicia fa un cenno"
+    ],
+    "merged_reference": "Prima che le macchine si fermino, si spengono i fari delle macchinine e suona un campanello; le macchine rallentano mentre viene tolta la corrente ai kart."
+  },
+  {
+    "ID": 73,
+    "question": "Perchè i ragazzi ballano?",
+    "references": [
+      "Perchè c'è musica",
+      "perché il dj ha messo musica che piace",
+      "Perchè sono su una terrazza in cui è in corso un dj set",
+      "Perchè apprezzano la musica",
+      "I ragazzi ballano per divertirsi",
+      "I ragazzi ballano perché c'è un DJ set",
+      "I ragazzi ballano perchè sono ad una festa"
+    ],
+    "merged_reference": "I ragazzi ballano perché è in corso un DJ set su una terrazza durante una festa e, apprezzando la musica, si divertono."
+  },
+  {
+    "ID": 74,
+    "question": "Che cosa succederebbe se l'alcol da bere si esaurisse?",
+    "references": [
+      "Rimarrebbero sobri",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Molti ci rimarrebbero male ma probabilmente la festa non si fermerebbe",
+      "I partecipanti all'evento e gli organizzatori sarebbero scontenti",
+      "Se l'alcool si esaurisse bisognerebbe chiamare un cameriere er chiederne altro",
+      "Se l'alcol si esaurisse le persone protesterebbero e lo cercherebbero da qualche altra parte",
+      "I ragazzi berrebbero degli anacolici"
+    ],
+    "merged_reference": "Le persone rimarrebbero sobrie; molti ci rimarrebbero male ma probabilmente la festa non si fermerebbe. Un'altra opzione sarebbe chiamare un cameriere per chiedere altro alcol."
+  },
+  {
+    "ID": 75,
+    "question": "Le piste sono innevate mentre la ragazza con la borraccia in mano balla?",
+    "references": [
+      "Si le piste sono innevate",
+      "Le piste sono coperte di neve",
+      "Non si riescono a distinguere le piste nel video: si vede solo che la montagna è innevata",
+      "La neve ricopre le piste",
+      "Si, le piste sono innevate mentre la ragaza con la borraccia balla",
+      "Sì, la neve copre le piste mentre la ragazza danza",
+      "La ragazza ha in mano una bottiglia e le piste sono innevate"
+    ],
+    "merged_reference": "Sì, le piste sono innevate mentre la ragazza con la borraccia in mano balla."
+  },
+  {
+    "ID": 76,
+    "question": "A cosa servono i tubi di metallo sopra le persone?",
+    "references": [
+      "È il gazebo",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "A sorreggere l'eventuale apertura della tenda, chiusa al momento della registrazione del video",
+      "Sono parte della struttura che in caso di mal tempo si coprirebbe con una tenda",
+      "I tubi di metallo sopra le persone servono per coprire la struttura",
+      "Forse i tubi di metallo servono per appoggiare una tenda o un telone in caso di pioggia o neve",
+      "I tubi di metallo servono a reggere una tenda da sole"
+    ],
+    "merged_reference": "I tubi di metallo sopra le persone servono a sostenere una struttura, come un gazebo, e a supportare tende o teloni (tende da sole) per protezione in caso di maltempo, pioggia o neve, anche per sorreggere l'apertura della tenda quando è chiusa."
+  },
+  {
+    "ID": 77,
+    "question": "Quante persone in questa feste si conoscevano già prima?",
+    "references": [
+      "Non è specificato",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Non dispongo di sufficienti dati per determinare quante persone si conoscessero già",
+      "Non ho questa informazione: è probabile che le persone attorno allo stesso tavolino si conoscano",
+      "Non è possibile stabilire dal video quante persone si conoscessero prima della festa",
+      "Non saprei, forse alcune si conoscevano ma non è possibile capirlo dalla semplice visione del video",
+      "Non è possibilie stabilire quante persone si conoscevano già"
+    ],
+    "merged_reference": "Non è possibile stabilire quante persone si conoscessero prima della festa. Potrebbe essere che alcune persone si conoscessero, ma non è determinabile dalla semplice visione del video."
+  },
+  {
+    "ID": 78,
+    "question": "Di che colore è la chitarra?",
+    "references": [
+      "Non vedo nessuna chitarra",
+      "Non ci sono chitarre",
+      "Non è rappresentata alcuna chitarra nel video",
+      "Non vedo chitarre",
+      "Nel video non appare nessuna chitarra",
+      "Nella ripresa il video manca di qualsiasi chitarra",
+      "Non c'è una chitarra nel video"
+    ],
+    "merged_reference": "Nel video non è presente alcuna chitarra."
+  },
+  {
+    "ID": 79,
+    "question": "Come potrebbe la ragazza bionda con gli occhiali da sole offrire al DJ la birra verde che ha in mano?",
+    "references": [
+      "Gliela passa semplicemente",
+      "La ragazza potrebbe passare al dj la bottiglia",
+      "Potrebbe avvicinarsi a lui e porgerli la birra",
+      "La ragazza verde si dovrebbe avvicinare alla console per porgere la birra al DJ",
+      "La ragazza bionda con gli occhiali da sole dovrebbe spostarsi e avvicinarsi al suo tavolo per offrire la birra al dj",
+      "La ragazza potrebbe avvicinarsi e mettere la birra sul bancone vicino al DJ",
+      "La ragazza potrebbe offrire la birra al dj girandosi e allungando un braccio"
+    ],
+    "merged_reference": "La ragazza bionda con gli occhiali da sole può avvicinarsi al DJ e offrire la birra verde che ha in mano: passarla direttamente, oppure posarla sul bancone vicino a lui."
+  },
+  {
+    "ID": 80,
+    "question": "Quale stato d'animo mostrano i presenti nella scena?",
+    "references": [
+      "Sembrano divertiti",
+      "I presenti sembrano festosi e felici",
+      "Paiono essere allegri e festanti",
+      "Sono tutti molto divertiti",
+      "I presenti alla scena sono allegri e spensierati",
+      "Le persone presenti sembrano euforiche e brille",
+      "I presenti si stanno divertendo"
+    ],
+    "merged_reference": "I presenti sembrano divertiti, festosi e felici, allegri e spensierati ma anche brilli."
+  },
+  {
+    "ID": 81,
+    "question": "Da che lato vengono inquadrate le piste da sci all'inizio del video?",
+    "references": [
+      "A sinistra",
+      "Le piste sono inquadrate dasinistra per chi guarda il video",
+      "Se quelle inquadrate sono piste da sci, vengono inquadrate dal lato sinitro",
+      "All'inizio del video, le piste da sci sono riprese sul lato sinistro",
+      "Le pista da sci sono inquadrate dal lato sinstro del video",
+      "Le piste da sci si trovano a sinistra rispetto a chi sta girando il video, quindi l'inquadratura è da destra verso sinistra",
+      "Vengono inquadrate dalla sinistra"
+    ],
+    "merged_reference": "All'inizio del video le piste da sci sono inquadrate dal lato sinistro con un'inquadratura da destra verso sinistra."
+  },
+  {
+    "ID": 82,
+    "question": "Dove si trova il gruppo di persone?",
+    "references": [
+      "In uno chalet",
+      "Le persone si trovano in montagna",
+      "Parrebbe che si trovino sul terrazzo di una baita di montagna",
+      "Si trova sulla terrazza di un locale in una località sciistica",
+      "Il gruppo di persone si trova su un terrazzo vicino ad una pista innevata",
+      "Il gruppo di persone si trova in uno stabilimento in montagna",
+      "Il gruppo è posizionato su una piattaforma all'aperto"
+    ],
+    "merged_reference": "Il gruppo di persone si trova all'aperto in montagna, su una terrazza o piattaforma, vicino a una pista innevata, in quella che sembra una baita/chalet o in un locale di una località sciistica."
+  },
+  {
+    "ID": 83,
+    "question": "Per quanto tempo viene inquadrato il DJ?",
+    "references": [
+      "Qualche secondo",
+      "il dj viene inquadrato per pochi secondi",
+      "Viene inquadrato per circa sei secondi",
+      "Per pochi secondi",
+      "Il DJ è mostrato nel video solo per un breve periodo",
+      "Il DJ compare nel video solo per un brevissimo istante",
+      "Il DJ appare in video per alcuni secondi"
+    ],
+    "merged_reference": "Il DJ viene inquadrato per pochi secondi, circa sei secondi."
+  },
+  {
+    "ID": 84,
+    "question": "Cosa sta facendo il dj mentre le persone ballano?",
+    "references": [
+      "Sta mixando la musica",
+      "il dj mixa i pezzi",
+      "Pare che stia mixando la musica",
+      "Il DJ suona",
+      "Il dj mentre le persone ballano mette la musica",
+      "Il DJ si occupa della sua console e fa ascoltare la musica mentre il pubblico danza",
+      "Il DJ si occupa di far partire i brani musicali per far ballare il pubblico"
+    ],
+    "merged_reference": "Il DJ sta mixando la musica, si occupa della console e fa partire i brani per far ballare il pubblico."
+  },
+  {
+    "ID": 85,
+    "question": "Perchè a metà video alcune persone applaudono?",
+    "references": [
+      "Perchè la performance è buona",
+      "probabilmente perché lìatmosfera è coinvolgente",
+      "Perchè il primo ballerino ha terminato la sua esibizione e le persone in questione hanno apprezzato",
+      "Perchè il primo ballerino è stato molto bravo",
+      "A metà video alcune persone applaudono per complimentarsi per l'esibizione appena terminata",
+      "Le persone applaudono alla fine dell'esibizione del primo ballerino",
+      "Perchè il ballerino con la barba esce di scena"
+    ],
+    "merged_reference": "A metà video applaudono perché hanno apprezzato l’esibizione appena terminata del primo ballerino, molto bravo, in una performance buona e in un’atmosfera coinvolgente."
+  },
+  {
+    "ID": 86,
+    "question": "Cosa succederebbe se il primo ballerino inciampasse?",
+    "references": [
+      "Brutta figura",
+      "Potrebbe cadere, farsi male e provare vergogna davanti a tutti",
+      "Potrebbe farsi male e rovinerebbe la sua esibzione",
+      "Il ballerino proverebbe a camuffare l'errore",
+      "Se il primo ballerino inciampasse potrebbe cadere e farsi male",
+      "Se il primo ballerino inciampasse, gli spettatori riderebbero o emetterebbero una esclamazione di delusione",
+      "Il primo ballerino cadrebbe se inciampasse"
+    ],
+    "merged_reference": "Se il primo ballerino inciampasse potrebbe cadere, farsi male e rovinare l’esibizione, causando una brutta figura; gli spettatori potrebbero ridere o manifestare delusione e lui cercherebbe probabilmente di camuffare l’errore."
+  },
+  {
+    "ID": 87,
+    "question": "Di che colore è lo zaino della ragazza che passa davanti alla videocamera con la bandiera italiana?",
+    "references": [
+      "Rosso",
+      "è un eastpack rosso",
+      "Magenta",
+      "Lo zaino è rosso con le linguette nere",
+      "Il colore dello zaino è rosso",
+      "Lo zaino della ragazza con la bandiera è rosso",
+      "Lo zaino dell'ultima ragazza è rosso"
+    ],
+    "merged_reference": "È un Eastpak di colore rosso con le linguette nere."
+  },
+  {
+    "ID": 88,
+    "question": "Cosa vende il negozio con le bandiere blu?",
+    "references": [
+      "GAP vende vestiti",
+      "Il negozio con le bandiere blu è GAP e vende vestiti",
+      "Essendo di marchio GAP\" dovrebbe essere un negozio di vestiti\"",
+      "L'esercizio commerciale è Gap e vende abbigliamento",
+      "Il negozio con le bandiere blu vende articoli di abbigliamento",
+      "Il locale con le bandiere blu è una famosa catena di abbigliamento",
+      "Il negozio vende abbigliamento"
+    ],
+    "merged_reference": "Il negozio con le bandiere blu è GAP e vende abbigliamento."
+  },
+  {
+    "ID": 89,
+    "question": "Quale ballerino ha partecipato ad una gara di street dance acrobatica?",
+    "references": [
+      "Non si deduce",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Non sono disponibili informazioni sufficienti per determinare quale ballerino abbia partecipato alla gara",
+      "Il video non fornisce l'informazione: è possibile che tutti abbiano partecipato ad una gara",
+      "Non è possibile stabilire se nel video c'è un ballerino che ha partecipato ad una gara di street dance acrobatica",
+      "Non lo so, non è possibile capirlo durante la visione del video",
+      "Non si può determinare chi abbia preso parte a una gara di street dance acrobatica"
+    ],
+    "merged_reference": "Non è possibile determinare quale ballerino abbia partecipato a una gara di street dance acrobatica basandosi sul video."
+  },
+  {
+    "ID": 90,
+    "question": "Cosa rappresenta il murale sulla parete dell'edificio?",
+    "references": [
+      "Non sembrano esserci murale di nessun tippo",
+      "Non vedo murales sull'edificio",
+      "Non vi è alcun dipinto su muro sulla parete dell'edificio",
+      "Non vedo pareti decorate con murales",
+      "Sulla parete dell'edificio non si vede alcun tipo di arte murale",
+      "Non è visibile alcun murale nel video",
+      "Non c'è nessun murale sulla facciata dell'edificio"
+    ],
+    "merged_reference": "Non si vede alcun murale sulla parete dell'edificio."
+  },
+  {
+    "ID": 91,
+    "question": "Quali azioni dovrebbe fare il ballerino in canottiera per raccogliere soldi dal pubblico nel suo cappello nero?",
+    "references": [
+      "Si leva il cappello e passa fra la gente",
+      "Il ballerino potrebbe predendere il cappello e passare tra gli osservatori per strada chiedendo soldi",
+      "Dovrebbe prendere il cappello e girare tra gli astanti chiedendo un contributo",
+      "Dopo aver ballato molto bene dovrebbe avvicinarsi al pubblico con il cappello",
+      "Il ballerino in canottiera dovrebbe togliersi il cappello e avvicinarsi al pubblico per farlo riempire di soldi",
+      "Il ballerino dovrebbe tenere il cappello in mano e passare davanti alle persone radunate, chiedendo gentilmente un contributo",
+      "Il ragazzo dovrebbe togliersi il cappello e metterlo per terra"
+    ],
+    "merged_reference": "Il ballerino in canottiera dovrebbe togliersi il cappello nero, avvicinarsi al pubblico e passare tra gli astanti chiedendo gentilmente un contributo, tenendo il cappello in mano. Potrebbe anche metterlo per terra per raccogliere i soldi."
+  },
+  {
+    "ID": 92,
+    "question": "Che atteggiamento dimostra l'uomo con la tuta verde?",
+    "references": [
+      "Di intrattenimento",
+      "l'uomo dimostra un atteggiamento rilassato",
+      "Pare incoraggiare il primo ballerino",
+      "Guarda ammirato i compagni che ballano",
+      "L'uomo con la tuta verde  ha un atteggiamento  molto divertito ed allegro",
+      "L'uomo con la tuta verde sembra carico di energia e che si stia divertendo molto",
+      "L'uomo con la tuta verde appare contento e appagato"
+    ],
+    "merged_reference": "L'uomo con la tuta verde mostra un atteggiamento molto divertito ed allegro, rilassato ma energico. Sembra incoraggiare il primo ballerino e guarda ammirato i compagni che ballano."
+  },
+  {
+    "ID": 93,
+    "question": "Su che lato appare il ragazzo con la felpa verde Adidas nei primi secondi del video?",
+    "references": [
+      "Sinistra",
+      "Il ragazzo con la felpa verde appare a sinistra del video, per chi lo guarda",
+      "Appare sul lato sinistro",
+      "Appare a sinistra",
+      "Ilragazzo con la felpa verde Adidas nei primi secondi del video appare sul lato sinistro del video",
+      "Il ragazzo con la tuta verde appare in alto a sinistra",
+      "Il ragazzo appare sulla sinistra"
+    ],
+    "merged_reference": "Appare sul lato sinistro del video."
+  },
+  {
+    "ID": 94,
+    "question": "Dove si sta esibendo il ballerino barbuto?",
+    "references": [
+      "In strada",
+      "il ballerino si sta esibendo in una via centrale di Roma",
+      "In via del Corso a Roma",
+      "Si sta esibendo in una via di fronte agli astanti",
+      "Il ballerino barbuto si sta esibendo lungo un rinomata strada di Roma",
+      "Il ballerino si sta esibendo a terra, nel mezzo di una strada pedonale",
+      "Il ballerino barbuto si esibisce lungo una via molto frequentata di Roma"
+    ],
+    "merged_reference": "Il ballerino barbuto si sta esibendo in via del Corso a Roma, una via centrale molto frequentata."
+  },
+  {
+    "ID": 95,
+    "question": "Per quanto tempo il primo ballerino viene inquadrato?",
+    "references": [
+      "Quasi tutto il video",
+      "Il primo ballerino viene inquadrato per circa metà video, durante la sua esibizione",
+      "Il primo ballerino è nell'inquadratura per tutta la durata del video",
+      "Per circa metà del video",
+      "Il primo ballerino viene inquadrato per circa una quindicina di secondi durante la ripresa del video",
+      "Nel complesso, il primo ballerino appare nell'inquadratura per quasi venti secondi del video, concentrati soprattutto nella parte centrale",
+      "Il ballerino viene iquadrato per buona parte del video"
+    ],
+    "merged_reference": "Il primo ballerino è inquadrato per circa metà del video (circa 15-20 secondi), concentrato soprattutto nella parte centrale."
+  },
+  {
+    "ID": 96,
+    "question": "Quand'è che il secondo ballerino inizia a ballare?",
+    "references": [
+      "Quasi alla fine",
+      "Il secondo ballerino inizia a ballare da metà video circa",
+      "Inizia a ballare dopo circa venti secondi dall'inizio del video",
+      "Dopo che il primo ballerino ha terminato la sua sequenza",
+      "Il secondo ballerino inizia a ballare dopo che il precedente con la barba ha completato la sua esibizione",
+      "Il secondo ballerino inizia a ballare dopo che il primo ballerino si mette in piedi e torna sul lato della strada",
+      "Il secondo ballerino inizia a ballare una decina di secondi prima della fine del video"
+    ],
+    "merged_reference": "Dopo che il primo ballerino ha terminato la sua sequenza, cioè dopo che si è alzato e tornato sul lato della strada. Questo avviene da circa metà video."
+  },
+  {
+    "ID": 97,
+    "question": "Perchè l'uomo con la giacca bianca che sta fermo in piedi sulle scale fa passare i ragazzi?",
+    "references": [
+      "Perchè essendo il controllore, vede che queste persone hanno il biglietto",
+      "l'uomo con la giacca bianca è il controllore dei biglietti della giostra",
+      "Perchè i ragazzi gli consegnano un biglietto, prova che hanno pagato per poter salire sull'attrazione",
+      "Perchè hanno pagato il biglietto",
+      "L''uomo con la giacca bianca che sta fermo in piedi fa passsare i ragazzi perchè sono in regola  dopo avere presentato  i biglietti",
+      "L'uomo fa passare i ragazzi perché loro dimostrano di aver comprato il biglietto di entrata",
+      "L'uomo raccoglie i biglietti"
+    ],
+    "merged_reference": "È il controllore dei biglietti della giostra e fa passare i ragazzi perché hanno pagato l’ingresso e hanno presentato i biglietti, dimostrando di essere in regola."
+  },
+  {
+    "ID": 98,
+    "question": "Cosa succederebbe se il controllore non facesse entrare nessuno sulla giostra?",
+    "references": [
+      "La giostra non partirebbe",
+      "La giostra rimarrebbe vuota",
+      "Non guadagnerebbe alcunchè a fine serata",
+      "Molti sarebbero delusi",
+      "Se il controllore non facesse entrare nessuno sulla giostra, questa partirebbe senza nessun cliente e sarebbe uno spreco di corrente",
+      "Se il controllore non facesse entrare nessuno, le persone in coda protesterebbero",
+      "La giostra rimarrebbe ferma finchè qualcuno non venga ammesso a salire"
+    ],
+    "merged_reference": "Se il controllore non facesse entrare nessuno sulla giostra, la giostra non partirebbe e rimarrebbe ferma finché qualcuno non venga ammesso a salire. In questo caso, non guadagnerebbe nulla a fine serata, con molte persone deluse e le persone in coda che protesterebbero."
+  },
+  {
+    "ID": 99,
+    "question": "L'uomo con la felpa bianca che si vede all'inizio è salito sulla giostra o è sceso dalle scale alla fine del video?",
+    "references": [
+      "È salito",
+      "Credo che l'uomo con la felpa bianca è salito sulla giostra",
+      "Pare che sia salito sulla giostra",
+      "È andato sulla giostra",
+      "L'uomo con la felpa bianca, apparso all'inizio, è entrato nella giostra e si è seduto",
+      "All'inizio del video, l'uomo con la felpa bianca si è diretto verso la giostra e vi è salito sopra",
+      "Verso la fine del video si nota il giovane appropinquarsi al posto a sedere della giostra"
+    ],
+    "merged_reference": "L'uomo con la felpa bianca è salito sulla giostra e si è seduto."
+  },
+  {
+    "ID": 100,
+    "question": "Come si muove il mezzo?",
+    "references": [
+      "Su rotaia",
+      "Il mezzo si muove con l'elettricità",
+      "Parrebbe essere una di quelle giostre che oscilla a destra e sinistra",
+      "È alimentato da elettricità",
+      "Il mezzo si muove ad energia elettrica",
+      "Il mezzo si trova su una rotaia, probabilmente con la spinta dell'energia elettrica",
+      "Il veicolo è alimentato da energia elettrica e compie movimenti accurati"
+    ],
+    "merged_reference": "Si muove su una rotaia ed è alimentato da energia elettrica, oscillando a desta e sinistra."
+  },
+  {
+    "ID": 101,
+    "question": "Quanto tempo dura il giro sulla giostra?",
+    "references": [
+      "Non si deduce dal video anche se di solito non dovrebbero durare più di dieci minuti circa",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Non posso dirlo, mancano le informazioni necessarie per saperlo",
+      "Non ho la certezza dal video: solitamente poco più di un minuto",
+      "Non si può stabilire dal video la durata del giro sulla giostra",
+      "Non si vede la giostra in movimento, quindi non è possibile ipotizzarlo",
+      "Non è possibile stabilire quanto dura un giro sulla giostra"
+    ],
+    "merged_reference": "Non si può stabilire la durata del giro sulla giostra dal video: mancano informazioni sufficienti per rispondere e non è possibile ipotizzarla."
+  },
+  {
+    "ID": 102,
+    "question": "Di che colore è il taxi?",
+    "references": [
+      "Non c'è alcun taxi",
+      "Non ci sono taxi in questo video",
+      "Non vi sono taxi nel filmato",
+      "Non c'è un taxi ma una giostra",
+      "Non si vede alcuna auto nella registrazione",
+      "Il taxi non compare nella scena",
+      "Nel filmato, non appare nessun taxi"
+    ],
+    "merged_reference": "Nel filmato non appare alcun taxi."
+  },
+  {
+    "ID": 103,
+    "question": "Come farebbe la ragazza riccia con la giacca marrone e i jeans a sedersi e chiudere la cintura?",
+    "references": [
+      "Come fanno tutti gli altri",
+      "La ragazza riccia dovrebbe non rimanere in piedi con la cintura non chiusa",
+      "Sedendosi e chiudendo la cintura",
+      "Dopo essere arrivata a lato della giostra, scavalcherebbe per sedersi e allacciare la sicura",
+      "La ragazza riccia con la giacca marrone e i jeans  deve prendere posto ed abbassare il sistema di sicurezza prima di partire",
+      "La ragazza riccia dovrebbe avvicinarsi al posto che preferisce, mettersi seduta e abbassare la protezione su di sé",
+      "La ragazza dovrebbe sedersi e tirare giù le protezioni"
+    ],
+    "merged_reference": "La ragazza riccia con la giacca marrone e i jeans prende posto, si siede, abbassa la protezione e chiude la cintura."
+  },
+  {
+    "ID": 104,
+    "question": "Che stato d'animo esprimono i ragazzi che stanno salendo sulle montagne russe?",
+    "references": [
+      "Eccitati",
+      "i ragazzi esprimono curiosità",
+      "Paiono essere felici",
+      "Sono emozionati",
+      "I ragazzi che stanno salendo sulle montagne russe  hanno uno stato d'animo   contento e divertito",
+      "I ragazzi appaiono felici e trepidanti di iniziare",
+      "I ragazzi sono divertiti"
+    ],
+    "merged_reference": "Sono emozionati, felici, curiosi e trepidanti di iniziare."
+  },
+  {
+    "ID": 105,
+    "question": "Dove si siede il ragazzo con la giacca blu dopo aver consegnato il biglietto?",
+    "references": [
+      "Accanto alla riccia",
+      "Il ragazzo con la giacca blu si siede nella terza fila",
+      "Prende posto in terza fila, affianco alla ragazza in giacca marrone e jeans",
+      "sceglie il posto in terza fila accanto alla ragazza con la maglia marrone",
+      "Il ragazzo con la giacca blu dopo aver consegnato il biglietto si siede sulla terza fila partendo dalla testa della giostra",
+      "Il ragazzo con la giacca blu si siede a sinistra in uno dei posti centrali, accanto alla ragazza riccia",
+      "Il ragazzo si siede sulla destra in terza fila"
+    ],
+    "merged_reference": "Si siede in terza fila, a sinistra in uno dei posti centrali, accanto alla ragazza riccia con giacca marrone e jeans."
+  },
+  {
+    "ID": 106,
+    "question": "Dove si sviluppa la fila delle persone per salire sulla giostra?",
+    "references": [
+      "Una volta superato il controllore",
+      "la fila si sviluppa da sinistra per chi guarda il video",
+      "Si sviluppa dalla base delle scale utilizzate per salire sulla giostra",
+      "Si sviluppa da sinistra a destra",
+      "La fila delle persone per salire sulla giostra si sviluppa sul lato sinistro del video",
+      "La fila inizia da un livello inferiore e si sviluppa lungo una scala",
+      "Sulle scale sulla sinistra"
+    ],
+    "merged_reference": "La fila si sviluppa sul lato sinistro, partendo dalla base delle scale utilizzate per salire sulla giostra e risale lungo una scala da sinistra a destra."
+  },
+  {
+    "ID": 107,
+    "question": "Per quanto tempo vengono inquadrate le scale?",
+    "references": [
+      "Per qualche secondo",
+      "le scale vengono inquadrate per quasi tutto il video",
+      "Le scale in senso stretto non vengono mai inquadrate: viene solo inquadrato per circa 18 secondi il corrimano dell escale",
+      "Per alcuni secondi",
+      "Le scale vengono inquadrate a tratti per quasi tutta la durata del video",
+      "Le scale vengono inquadrate per una decina di secondi",
+      "Vengono inquadrate per metà video"
+    ],
+    "merged_reference": "Le scale vengono inquadrate per quasi tutta la durata del video, sicuramente più di 10 secondi."
+  },
+  {
+    "ID": 108,
+    "question": "Cosa succede dopo che tutti salgono sulla giostra?",
+    "references": [
+      "La giostra dovrebbe partire",
+      "Il video si interrompe, quindi non lo so",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Il video si interrompe: sicuramente la giostra viene messa in azione",
+      "Dopo che tutti salgono sulla giostra  il mezzo è pronto per partire",
+      "Dopo che tutti salgono e si siedono, la giostra può partire",
+      "Non succede nulla"
+    ],
+    "merged_reference": "Dopo che tutti salgono e si siedono, la giostra può partire."
+  },
+  {
+    "ID": 109,
+    "question": "Perchè la bambina è agitata?",
+    "references": [
+      "Per lo scarafaggio",
+      "La bambina è agitata perché ha visto un insetto",
+      "Per la vista dell'insetto vicino alla porta d'ingresso",
+      "Perchè ha paura dell'insetto",
+      "La bambina è agitato per la presenza di un insetto sul pavimento",
+      "La bambina è agitata perché l'insetto la spaventa o le fa ribrezzo",
+      "La bambina è turbata dopo aver trovato un insetto che pare in difficoltà"
+    ],
+    "merged_reference": "La bambina è agitata perché ha visto un insetto (probabilmente uno scarafaggio) vicino alla porta d'ingresso, sul pavimento: l'insetto la spaventa o le provoca ribrezzo e sembra in difficoltà."
+  },
+  {
+    "ID": 110,
+    "question": "Che cosa succederebbe se la bambina inciampasse sui pattini?",
+    "references": [
+      "Si farebbe male",
+      "Potrebbe cadere bruscamente",
+      "Cadrebbe e potrebbe farsi male",
+      "Cadrebbe sulle ginocchia e appoggerebbe le mani a terra",
+      "Se la bambina inciampasse sui pattini potrebbe cadere e farsi male",
+      "La bambina si farebbe male e potrebbe scoppiare a piangere. La madre potrebbe aiutarla a rialzarsi",
+      "La bambina cadrebbe per terra"
+    ],
+    "merged_reference": "Se la bambina inciampasse sui pattini, cadrebbe a terra e potrebbe farsi male. Potrebbe anche scoppiare a piangere e la madre potrebbe aiutarla a rialzarsi."
+  },
+  {
+    "ID": 111,
+    "question": "Dove resta l'insetto per tutta la durata del video?",
+    "references": [
+      "Nel pavimento",
+      "l'insetto resta sul pavimento davanti la porta d'ingresso",
+      "Resta nei pressi della porta d'ingresso dell'appartamento",
+      "Sul suolo di fronte alla porta",
+      "L'insetto resta sulla superficie del pavimento per tutta la durata del video",
+      "L'insetto resta vicino alla porta di ingresso",
+      "L'insetto resta per terra di fronte il portone"
+    ],
+    "merged_reference": "L'insetto resta sul pavimento di fronte alla porta d'ingresso dell'appartamento per tutta la durata del video."
+  },
+  {
+    "ID": 112,
+    "question": "Di quale colore è vestita la mamma della bambina?",
+    "references": [
+      "Dal riflesso allo specchio sembra essere vestita di bianco",
+      "Sembra di bianco",
+      "Forse è la donna vestita di bianco",
+      "Dallo specchio si vede che è vestita di bianco",
+      "La mamma della  bambina indossa un vestito bianco",
+      "La mamma è vestita con una blusa di colore bianco o crema",
+      "La mamma della bambina indossa una maglia bianca"
+    ],
+    "merged_reference": "La donna sembra essere vestita di bianco."
+  },
+  {
+    "ID": 113,
+    "question": "Che grado di scuola frequenta la bambina?",
+    "references": [
+      "Non si deduce",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Non ho abbastanza dettagli per determinare quale grado scolastico frequenti la bambina",
+      "Non so, probabilmente le scuole elementari",
+      "Non si può stabilire quale grado di scuola frequenta la bambina",
+      "Non è possibile dedurlo con certezza, ma sembra una bambina delle elementari",
+      "Non ci sono abbastanza informazioni per determinare in quale grado scolastico si trovi la bambina"
+    ],
+    "merged_reference": "Non si può stabilire con certezza quale grado di scuola frequenti la bambina; sembra però che sia alle elementari."
+  },
+  {
+    "ID": 114,
+    "question": "Di che colore è il cane alla porta?",
+    "references": [
+      "Non c'è nessun cane",
+      "non ci sono animali alla porta",
+      "Non vi è alcun ccagnolino nel filmato",
+      "Non è presente alcun cane",
+      "Non si vede animali domestici davanti la porta",
+      "Non ci sono cani nel video",
+      "Non compare un cane nell'area dell'entrata"
+    ],
+    "merged_reference": "Non c'è nessun cane alla porta."
+  },
+  {
+    "ID": 115,
+    "question": "Come potrebbe la bambina far uscire l'insetto dalla porta?",
+    "references": [
+      "Aprendola ed indurla ad andare li",
+      "La bambina potrebbe prenderlo e potrebbe buttarlo fuori",
+      "Potrebbe chiedere a qualcuno di prenderlo e portarlo fuori dato che pare essere spaventata da esso e per questo non sembrerebbe essere in grado di farlo in autonomia",
+      "Potrebbe farlo salire su un foglio e accompagnarlo fuori",
+      "La bambina potrebbe provare ad aprire la porta  e soffiare sull'insetto per farlo uscire",
+      "La bambina potrebbe spingere leggermente l'insetto verso la porta con un fazzolettino o un cartoncino",
+      "La bambina potrebbe raccogliere l'insetto con le mani o un tovagliolo e portarlo fuori da casa"
+    ],
+    "merged_reference": "La bambina potrebbe aprire la porta e farlo uscire guidandolo verso l’esterno, spingendolo leggermente verso la porta con un fazzolettino o un cartoncino, facendolo salire su un foglio per accompagnarlo fuori, oppure raccoglierlo delicatamente con le mani o con un tovagliolo e portarlo fuori, e se è spaventata potrebbe anche chiedere a qualcuno di prenderlo e portarlo via."
+  },
+  {
+    "ID": 116,
+    "question": "In che stato d'animo si trova la bambina sui pattini alla vista dell'insetto?",
+    "references": [
+      "Spaventata",
+      "La bambina è un po' spaventata",
+      "Pare essere spaventata e inorridita",
+      "È molto spaventata",
+      "La bambina sui attini è preoccupata ed agitata alla vista dell'insetto",
+      "La bambina sembra spaventata e disgustata alla vista dell'insetto",
+      "La bambina appare ansiosa e turbata quando vede l'insetto"
+    ],
+    "merged_reference": "La bambina sui pattini è spaventata, ansiosa e turbata alla vista dell'insetto."
+  },
+  {
+    "ID": 117,
+    "question": "Verso che lato va la bambina dopo aver chiuso la porta?",
+    "references": [
+      "Verso destra",
+      "La bambina va verso destra vicino al cestino del gatto, per chi guarda il video",
+      "Va verso la sua sinistra",
+      "Si dirige a destra",
+      "Dopo aver chiuso la porta la bambina va verso destra",
+      "Dopo aver chiuso la porta, la bambina si muove nella direzione destra",
+      "La bambina si sposta verso la sinistra"
+    ],
+    "merged_reference": "Dopo aver chiuso la porta, va verso destra, vicino al cestino del gatto."
+  },
+  {
+    "ID": 118,
+    "question": "Dove si trova la bambina coi pattini?",
+    "references": [
+      "A casa",
+      "La bambina si trova in un'appartamento",
+      "All'interno dell'ingresso/salone di una casa, probabilmente la sua",
+      "Nel soggiorno di casa",
+      "La bimba con i pattini è all'interno di un'abitazione",
+      "La piccola coi pattini si trova dentro casa",
+      "La bambina si trova all'interno di un alloggio"
+    ],
+    "merged_reference": "All'interno di un'abitazione, probabilmente nel soggiorno."
+  },
+  {
+    "ID": 119,
+    "question": "Per quanto tempo la bambina rimane in casa?",
+    "references": [
+      "Tutta la durata del video",
+      "la bimba resta in casa per tutto il tempo del video",
+      "La piccola resta nella stanza per tutta la lunghezza del video",
+      "La fanciulla è dentro l'appartamento per l'intera durata del video",
+      "La bambina si trova all'interno della casa per tutto il tempo che viene mostrato nel video",
+      "La fanciulla rimane in casa per tutta la durata del video, circa una trentina di secondi",
+      "La ragazzina rimane all'interno dell'abitazione per l'intero video"
+    ],
+    "merged_reference": "La bambina resta in casa per tutta la durata del video, circa trenta secondi."
+  },
+  {
+    "ID": 120,
+    "question": "Quand'è che la bambina apre la porta?",
+    "references": [
+      "All'inizio",
+      "Nella prima parte del video: forse voleva uscire coi pattini",
+      "Il filmato inizia con la bambina nell'atto di aprire la porta",
+      "All'inizio del video",
+      "La bimba apre la porta appena comincia il filmato",
+      "La ragazzina apre la porta nell'apertura del video e poi alla fine, per far uscire l'insetto",
+      "all'avvio del video, la bambina spalanca la porta"
+    ],
+    "merged_reference": "All'inizio del video la bambina apre la porta spalancandola, e la riapre anche alla fine per far uscire l'insetto."
+  },
+  {
+    "ID": 121,
+    "question": "Perchè la donna con la giacca viola tiene la bambina?",
+    "references": [
+      "la donna tiene la bambina per seguirla",
+      "La donna con la giacca viola tiene la bambina per aiutarla a stare in equilibrio",
+      "La signora tiene la bambina per impedirle di cadere",
+      "la donna con la giacca viole tiene la bambina per darle conforto e sicurezza",
+      "la donna con la giacca viola sostiene la bambina per non farla cadere e le spiega come procedere",
+      "La donna con la giacca viola tiene la bambina perché questa non cada",
+      "Per evitare che cada"
+    ],
+    "merged_reference": "La donna con la giacca viola tiene la bambina per aiutarla a stare in equilibrio, impedirle di cadere e darle conforto e sicurezza, spiegandole come procedere."
+  },
+  {
+    "ID": 122,
+    "question": "Che cosa succederebbe se il bambino non indossasse il cappotto?",
+    "references": [
+      "penso congelerebbe",
+      "Il bambino sentirebbe freddo",
+      "Il bambino proverebbe una sensazione di gelo",
+      "se non indossasse il cappotto, il bambino avrebbe freddo",
+      "Probabilmente prenderebbe freddo e si farebbe male in caso di caduta",
+      "Il bambino avvertirebbe una sensazione di freddo se non mettesse il cappotto",
+      "Sentirebbe freddo"
+    ],
+    "merged_reference": "Se il bambino non indossasse il cappotto, avrebbe freddo e si farebbe male in caso di caduta."
+  },
+  {
+    "ID": 123,
+    "question": "Di che colore sono gli scarponcini della donna sulla sinistra?",
+    "references": [
+      "Un colore scuro",
+      "Gli scarponcini della donna a sinistra sono neri",
+      "La signora sulla sinistra indossa scarponcini di colore nero",
+      "Gli scarponcini indossati dalla donna a sinistra sono di colore nero",
+      "La figura femminile all'estrema sinistra indossa scarponcini di tonalità scura",
+      "La persona a sinistra porta stivaletti di un colore scuro",
+      "Neri o marrone scuro"
+    ],
+    "merged_reference": "Sono di colore nero (o al massimo marrone scuro)."
+  },
+  {
+    "ID": 124,
+    "question": "Assumendo che la famiglia della bambina sia composta da 5 persone, qual è il componente della famiglia che manca nel video?",
+    "references": [
+      "Si tratta del padre",
+      "Il padre della bambina",
+      "il componente della famiglia che manca nel video è il padre, che probabilmente sta facendo il video",
+      "Il padre",
+      "Il marito della donna, nonchè padre della bambina",
+      "il padre dei tre giovani",
+      "Manca il padre della bambina che è sicuramente dietro la telecamera"
+    ],
+    "merged_reference": "Il padre della bambina, che probabilmente è colui che registra il video."
+  },
+  {
+    "ID": 125,
+    "question": "Da quanti giorni sta provando a sciare la bambina?",
+    "references": [
+      "penso sia all'inizio, al primo giorno",
+      "Non saprei, non è deducibile dal video",
+      "non lo so, non si può dedurre dal video",
+      "non è possibile capire da quanti giorni sta provando a sciare la bambina",
+      "Posso intuire che sia il primo giorno sugli sci",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Non si può dedurre"
+    ],
+    "merged_reference": "Non è possibile determinare con certezza da quanti giorni sta provando a sciare la bambina dal video; non ci sono abbastanza informazioni per rispondere."
+  },
+  {
+    "ID": 126,
+    "question": "Quanti pupazzi di neve ci sono nel video?",
+    "references": [
+      "io non vedo alcun pupazzo di neve",
+      "Non c'è nessun tipo di composizione con la neve",
+      "Non ci sono sculture fatte di neve nel filmato",
+      "Il video non contiene alcun pupazzo di neve",
+      "Non ho visto nessun pupazzo di neve",
+      "Non sono presenti pupazzi di neve nella scena",
+      "Non si riesce a scorgere alcun pupazzo di neve"
+    ],
+    "merged_reference": "Non ci sono pupazzi di neve nel video."
+  },
+  {
+    "ID": 127,
+    "question": "Come dovrebbe fare la bambina a togliersi gli sci?",
+    "references": [
+      "dato chela bimba è piccola, direi che deve farsi aiutare",
+      "Non saprei",
+      "La bambina per togliere gli sci deve sgancirli dagli scarponi",
+      "per togliere gli sci la bambina dovrebbe farsi aiutare dai familiari",
+      "Dovrebbe mettersi con gli sci in posizione perpendicolare rispetto alla valle e sganciarli con le mani",
+      "Per togliersi gli sci la bambina dovrebbe sganciare gli attacchi degli scarponi",
+      "Sganciando gli scarponi dagli sci"
+    ],
+    "merged_reference": "Dato che la bimba è piccola, deve farsi aiutare dai familiari e sganciare gli attacchi degli scarponi dagli sci, mettendosi con gli sci in posizione perpendicolare rispetto alla valle."
+  },
+  {
+    "ID": 128,
+    "question": "Quale stato d'animo dimostra la bambina sugli sci?",
+    "references": [
+      "la bambina è impacciata, intimidita",
+      "La bambina sembra intimorita",
+      "La bambina appare gioiosa",
+      "la bambina sugli sci sembra essere molto felice",
+      "la bambina sembra un pò impaurita ma anche divertita",
+      "La bambina sugli sci è eccitata",
+      "Divertita"
+    ],
+    "merged_reference": "La bambina sugli sci è felice e divertita, ma anche un po' impaurita."
+  },
+  {
+    "ID": 129,
+    "question": "Da che lato dell'inquadratura è il ragazzo con i capelli corti alla fine del video?",
+    "references": [
+      "a destra",
+      "Il ragazzo con i capelli corti è nella parte centrale dell'inquadratura, leggermente a destra",
+      "Il ragazzo è a destra dell'inquadratura",
+      "il ragazzo con i capelli corti si trova alla destra nell'inquadratura a fine video",
+      "Il ragazzo si trova sulla destra dell'inquadratura  e a sinistra della bambina",
+      "Alla fine del video, il ragazzo con i capelli corti è posizionato sul lato destro dell'inquadratura",
+      "Sulla destra"
+    ],
+    "merged_reference": "Alla fine del video il ragazzo con i capelli corti è sul lato destro dell'inquadratura e a sinistra della bambina."
+  },
+  {
+    "ID": 130,
+    "question": "Dove si trova la piccola sciatrice?",
+    "references": [
+      "la bambina si trova sulla neve",
+      "La piccola sciatrice si trova in montagna, in una pista di sci",
+      "La bambina è in una località montana coperta di neve",
+      "La piccola sciatrice è situata su un pendio innevato in area montana",
+      "La piccola si trova in un'area sciistica",
+      "La sciatrice si trova in montagna",
+      "Su una pista innevata"
+    ],
+    "merged_reference": "La piccola sciatrice si trova in montagna, su una pista di sci innevata, in un’area sciistica."
+  },
+  {
+    "ID": 131,
+    "question": "Per quanto tempo sono inquadrati tutti i 4 protagonisti del video?",
+    "references": [
+      "Quasi per tutto il video",
+      "Per una ventina di secondi",
+      "I 4 protagonisti del video sono inquadrati per quasi tutta la durata del video",
+      "Le quattro persone sono inquadrate per circa 27 secondi",
+      "I protagonisti compaiono sullo schermo insieme per la maggior parte del video",
+      "I quattro protagonisti sono inquadrati per più di 20 secondi",
+      "I quattro protagonisti appaiono insieme sullo schermo per circa venti secondi"
+    ],
+    "merged_reference": "I quattro protagonisti sono inquadrati insieme per una porzione significativa della durata del video, indicativamente tra circa 20 e 27 secondi."
+  },
+  {
+    "ID": 132,
+    "question": "Cosa succede prima che la bambina parta con gli sci?",
+    "references": [
+      "la bimba è circondata dai familiari che la incoraggiano",
+      "Prima che la bambina parta con gli sci, le persone che le sono attorno cercano di aiutarla ad imparare a sciare",
+      "La donna sulla sinistra sistema i guanti del ragazzo sulla destra",
+      "la bambina prima che parta con gli sci viene confortata dai familiari",
+      "la bambina viene abbracciata da una donna con la giacca viola  ed incoraggiata a partire portando il peso in avanti",
+      "Prima che parta con gli sci, la bambina saluta chi riprende, la donna con la giacca viola la abbraccia e tiene ferma e la donna sulla sinistra aiuta il ragazzo a indossare il guanto destro",
+      "Un ragazzo o ragazza la tiene in equilibrio per non farla cadere"
+    ],
+    "merged_reference": "Prima che la bambina parta con gli sci, è circondata dai familiari che la incoraggiano e la confortano; una donna con la giacca viola la abbraccia, la sostiene tenendola ferma e orientando il peso in avanti, mentre saluta chi riprende e un ragazzo o ragazza la tiene in equilibrio per non farla cadere."
+  },
+  {
+    "ID": 133,
+    "question": "Perchè le persone sulla sinistra sono ferme dietro il filo?",
+    "references": [
+      "le persone sono ferme per non disturbare la presentazione",
+      "Le persone sono dietro il filo per non interferire con l'esibizione",
+      "Le persone sono ferme per osservare la dimostrazione dei volontari",
+      "le persone sulla sinistra sono ferme dietro il filo perchè probabilmente stanno osservando l'addestramento e non possono disturbare",
+      "le persone rimangono ad osservare la scena dietro al filo per motivi di sicurezza",
+      "I presenti sul lato sinistro restano fermi oltre il filo per assistere alla dimostrazione",
+      "per sicurezza"
+    ],
+    "merged_reference": "Le persone sulla sinistra restano ferme dietro il filo per non disturbare né interferire con l'esibizione, osservando la dimostrazione dei volontari per motivi di sicurezza."
+  },
+  {
+    "ID": 134,
+    "question": "Cosa succederebbe se il cane cominciasse a correre via?",
+    "references": [
+      "se il cane corresse via farebbe molto ridere",
+      "Non saprei, non è deducibile dal video",
+      "L'uomo cercherebbe di richiamare il cane",
+      "se il cane cominciasse a correre via, gli addestratori lo rincorrerebbero urlandogli di fermarsi",
+      "Probabilmente il lupo aggredirebbe la persona di fronte a lui",
+      "Se il cane corresse via verrebbe fermato o rincorso",
+      "Il padrone comincerebbe a rincorrerlo"
+    ],
+    "merged_reference": "Se il cane cominciasse a correre via, verrebbe fermato o rincorso: il padrone o gli addestratori lo rincorrerebbero urlandogli di fermarsi, e potrebbe suscitare risate."
+  },
+  {
+    "ID": 135,
+    "question": "Che tipo di volontari lavorano nell'associazione \"Onlus Lilla\"?",
+    "references": [
+      "l'associazione onlus lilla lavora con i cani",
+      "Nell'associazione Onlus Lilla ci sono volontari cinofili",
+      "nell'associazione \"Onlus Lilla\" lavorano volontari cinofili",
+      "sembra che l'associazione accolga volontari cinofili",
+      "sono sicuramente dei volontari cinofili",
+      "L'associazione Onlus Lilla impiega volontari specializzati in attività cinofile",
+      "volontari cinofili"
+    ],
+    "merged_reference": "Sono volontari cinofili, ovvero volontari specializzati in attività cinofile."
+  },
+  {
+    "ID": 136,
+    "question": "In che stagione si svolge la scena?",
+    "references": [
+      "la scena è svolta in periodo estivo, si vede dall'abbigliamento",
+      "Sembrerebbe una stagione calda, visto l'abbigliamento delle persone, quindi estate",
+      "la scena si svolge in estate o primavera",
+      "la stagione in cui si svolge la scena potrebbe essere estiva o tardo primaverile",
+      "Difficile dire con esattezza la stagione ma visti i vestiti dei protagonisti si può desumere che faccia caldo",
+      "La scena avviene in una stagione calda, come la primavera o l'estate",
+      "Primavera o estate"
+    ],
+    "merged_reference": "La scena si svolge in una stagione calda, probabilmente primavera o estate dato l'abbigliamento delle persone."
+  },
+  {
+    "ID": 137,
+    "question": "Per quanti mesi è stato addestrato il cale nell'unità cinofila?",
+    "references": [
+      "il cane pare ben ammaestrato, penso che qualche mese sia stato necessario",
+      "Non saprei, non è deducibile dal video",
+      "non lo so non ci viene data questa informazione nel video",
+      "non è dato sapere per quanti mesi è stato addestrato il cane",
+      "non v'è modo di sapere quanti mesi di addestramento il lupo abbia",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Non è possibile dirlo dal video"
+    ],
+    "merged_reference": "Non è possibile stabilire con certezza dai video quanti mesi sia stato addestrato il cane nell’unità cinofila, poiché non è fornita alcuna informazione sul periodo di addestramento."
+  },
+  {
+    "ID": 138,
+    "question": "Cosa sta cercando il lupo?",
+    "references": [
+      "non ci sta alcun lupo ma un pastore tedesco",
+      "Non c'è nessun lupo nel video",
+      "Il video non mostra alcun lupo",
+      "Non è presente alcun lupo nel video",
+      "Non vi è nessun lupo, ma solo un pastore tedesco dell'unità cinofila",
+      "Nel filmato non appare alcun lupo",
+      "Non ci sono lupi, ma solo un pastore tedesco"
+    ],
+    "merged_reference": "Non c'è alcun lupo nel video; è presente solo un pastore tedesco dell'unità cinofila."
+  },
+  {
+    "ID": 139,
+    "question": "Quali azioni dovrebbe compiere il cane per ribaltare il bidone blu?",
+    "references": [
+      "non ho notato alcun bidone blu",
+      "Il cane dovrebbe avvicinarsi al bidone blu e spingerlo per ribaltarlo",
+      "Per ribaltare il bidone blu il cane dovrebbe correre e far ribaltare il bidone",
+      "Il cane potrebbe provare a correre verso la destra del bidone blu e tentare di afferrarlo con la bocca per ribaltarlo",
+      "dovrebbe volgersi verso la sua destra e colpire il bidone blu",
+      "Per ribaltare il bidone il cane dovrebbe sbatterci contro o saltarci sopra",
+      "Il bidone sembra rigido, se non lo fosse il cane potrebbe correrci contro e ribaltarlo"
+    ],
+    "merged_reference": "Il cane dovrebbe avvicinarsi al bidone blu e spingerlo per ribaltarlo; potrebbe anche correre verso il bidone blu per afferrarlo con la bocca, o sbatterci contro o saltarci sopra, a seconda della rigidità del bidone."
+  },
+  {
+    "ID": 140,
+    "question": "Che stato d'animo sembra mostrare l'uomo con la protezione sul braccio?",
+    "references": [
+      "l'uomo con la protezione sul braccio pare fissare il cane con la paura che gli salti addosso",
+      "L'umo con la protezione al braccio appare tranquillo",
+      "L'uomo con la protezione sul braccio sembra calmo e tranquillo",
+      "L'uomo con la protezione sul braccio dà l'impressione di essere sereno e rilassato",
+      "l'uomo sembra concentrato ed in attesa per quello che sta per succedere",
+      "L'individuo con la protezione sul braccio sembra sicuro e a proprio agio",
+      "Sicuro di sè"
+    ],
+    "merged_reference": "L'uomo con la protezione sul braccio sembra sereno, tranquillo e rilassato, sicuro di sé e concentrato, in attesa di quello che sta per succedere."
+  },
+  {
+    "ID": 141,
+    "question": "Su che lato appare il ragazzo con la maglia blu nella prima metà del video?",
+    "references": [
+      "il ragazzo sta nel pubblico in basso a sinistra",
+      "Il ragazzo con la maglia blu appare sul lato sinistro del video",
+      "Il ragazzo con la maglia blu appare sulla sinistra",
+      "Nella prima metà del video, il ragazzo che indossa la maglia blu si trova sul lato sinistro",
+      "Nella parte iniziale del video, il ragazzo che indossa la maglia blu compare nel pubblico, in basso a sinistra",
+      "Nella prima metà del video, il ragazzo con la maglia blu si vede sulla parte sinistra dello schermo",
+      "a sinistra"
+    ],
+    "merged_reference": "Nella prima metà del video il ragazzo con la maglia blu appare sul lato sinistro."
+  },
+  {
+    "ID": 142,
+    "question": "Dov'è accucciato il grosso cane?",
+    "references": [
+      "il cane è accucciato a terra",
+      "Il grosso cane è accuciato vicino all'addestratore",
+      "il cane è accucciato in mezzo alla strada",
+      "Il grosso cane è posizionato a livello del suolo",
+      "il cane è accucciato in terra su quello che sembra un marciapiede vicino ad un parco",
+      "Il cane è accucciato in uno spiazzo di terra battuta",
+      "a terra"
+    ],
+    "merged_reference": "Il grosso cane è accucciato a terra, vicino all'addestratore, su quel che sembra un marciapiede vicino ad un parco."
+  },
+  {
+    "ID": 143,
+    "question": "Per quanto tempo sta seduto il cane?",
+    "references": [
+      "il cane sta seduto per oltre la metà del video",
+      "Il cane sta seduto per qualche secondo",
+      "Il cane rimane seduto per la maggior parte del tempo nel video",
+      "Il cane resta seduto quasi tutto il tempo in cui viene ripreso nel video",
+      "il cane è seduto per 5 secondi",
+      "Il cane sta seduto per una decina di secondi",
+      "per circa 10-12 secondi"
+    ],
+    "merged_reference": "Il cane resta seduto per circa 10-12 secondi, cioè per circa la maggior parte del video."
+  },
+  {
+    "ID": 144,
+    "question": "Cosa succede mentre il cane è seduto?",
+    "references": [
+      "un volontario, che pare interpretare un agente, fa finta di perquisire un altro volontario",
+      "Mentre il cane è seduto, l'addestratore perquisisce l'uomo con la protezione al braccio",
+      "L'uomo sulla destra fa finta di perquisire l'uomo con la protezione al braccio",
+      "mentre il cane è seduto, un addestratore si muove verso l'altro per fare una perquisizione nel suo corpo",
+      "il proprietario si avvicina all'uomo con le mani in aria e la protezione",
+      "Mentre il cane è seduto, uno dei volontari si mette in posa con le protezioni; l'altro volontario prima tiene il guinzaglio del cane, poi lo fa accucciare e va ad aiutare il primo volontario",
+      "Uno dei volontari che lo teneva fermo va dall'uomo con la protezione sul braccio per fare delle manovre"
+    ],
+    "merged_reference": "Mentre il cane è seduto, i due volontari simulano una perquisizione sull'uomo con la protezione al braccio: uno dei volontari finge di perquisire un altro. Nello specifico uno dei volontari va dall’uomo con la protezione sul braccio per fare manovre, tiene prima il guinzaglio del cane e poi lo fa accucciare."
+  },
+  {
+    "ID": 145,
+    "question": "Perchè le persone del coro che cantano sono su altezze diverse?",
+    "references": [
+      "le persone del coro sono sui gradini di una chiesa, quindi su altezze diverse",
+      "I membri del coro si trovano a diverse altezze perché sono posizionati su gradini differenti",
+      "i coristi sono su altezze diverse perchè si trovano su di una scalinata",
+      "le persone del coro sono su altezze diverse perchè forse così il suono si propaga meglio",
+      "perchè sono assise su dei gradiini",
+      "Le persone del coro sono su altezza diverse perché sono scaglionate sugli scalini",
+      "Per l'estensione vocale, le voci maschili sono al di sopra infatti"
+    ],
+    "merged_reference": "Le persone del coro cantano a altezze diverse perché sono disposte su gradini differenti (su una scalinata della chiesa), scaglionate sugli scalini e, per l’estensione vocale, le voci maschili sono posizionate sopra, forse per una migliore propagazione del suono."
+  },
+  {
+    "ID": 146,
+    "question": "Che cosa succederebbe se una corda della chitarra si sganciasse?",
+    "references": [
+      "se la corda si sganciasse il suonatore dovrebbe continuare usando le altre",
+      "La persona che sta suonando, dovrebbe smettere",
+      "Se si sganciasse una corda la chitarra si romperebbe",
+      "se una corda della chitarra si sganciasse, probabilmente il musicista si dovrebbe fermare",
+      "succederebbe che il musicista smetterebbe di suonare",
+      "Se si rompesse una corda della chitarra, probabilmente il chitarrista si fermerebbe per risistemarla e il coro si fermerebbe",
+      "il chitarrista potrebbe smettere di suonare"
+    ],
+    "merged_reference": "Se una corda della chitarra si sganciasse, il musicista potrebbe smettere di suonare o, in alternativa, continuare usando le altre corde. Molto probabilmente il chitarrista si fermerebbe per risistemarla e il coro si fermerebbe."
+  },
+  {
+    "ID": 147,
+    "question": "I coristi stanno cantando a cappella oppure sono accompagnati?",
+    "references": [
+      "i coristi sono accompagnati da una chitarra",
+      "I coristi sono accompagnati da un uomo che suona la chitarrra",
+      "I coristi si esibiscono con l'accompagnamento di una chitarra",
+      "I coristi stanno eseguendo il brano con la chitarra suonata da un artista",
+      "i coristi sono accompagnati dal chitarrista",
+      "I coristi cantano con l'accompagnamento di un chitarrista",
+      "sono accompagnati"
+    ],
+    "merged_reference": "I coristi sono accompagnati da una chitarra suonata da un artista."
+  },
+  {
+    "ID": 148,
+    "question": "Che mezzo di trasporto utilizza l'uomo con i baffi che sta cantando nel coro?",
+    "references": [
+      "Dato che ha un casco, avrà un motorino o una bici",
+      "Forse una moto o un motorino",
+      "l'uomo che ha i baffi utilizza un mezzo di trasporto per cui necessita l'uso di un casco",
+      "l'uomo ha un casco per il motorino",
+      "l'uomo possiede un veicolo a due ruote",
+      "L'uomo con i baffi utilizza un mezzo a due ruote poiché regge un casco",
+      "potrebbe avere una moto, avendo un casco in mano"
+    ],
+    "merged_reference": "L'uomo con i baffi che canta nel coro usa un mezzo a due ruote, probabilmente una moto o un motorino, perché ha un casco in mano."
+  },
+  {
+    "ID": 149,
+    "question": "Come ha imparato a suonare la chitarra l'uomo con lo strumento musicale?",
+    "references": [
+      "non lo so, potrebbe essere anche un'autodidatta",
+      "Non saprei, non è deducibile dal video",
+      "Non lo so non ci viene data questa informazione nel video",
+      "non è dato sapere se l'uomo con la chitarra abbia imparato a suonare lo strumento da autodidatta o in una scuola di musica",
+      "non è dato sapere il modo in cui il musicista abbia imparato a suonare",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "non è possibile dirlo"
+    ],
+    "merged_reference": "Non è possibile stabilire come l'uomo con la chitarra abbia imparato a suonare, poiché non ci sono informazioni sufficienti: non si può dire se sia stato autodidatta o se abbia frequentato una scuola di musica."
+  },
+  {
+    "ID": 150,
+    "question": "Quante bandiere rosse ci sono nel video?",
+    "references": [
+      "non ho visto alcuna bandiera rossa",
+      "Nel video non ci sono bandiere rosse",
+      "Il video è privo di bandiere di colore rosso",
+      "Nella scena non appaiono drappi di colore rosso",
+      "Il video non mostra alcuna bandiera rossa",
+      "Non si vedono bandiere di colore rosso nel video",
+      "nessuna"
+    ],
+    "merged_reference": "Non ci sono bandiere rosse nel video."
+  },
+  {
+    "ID": 151,
+    "question": "Come farebbe il chitarrista a riporre la chitarra nella custodia?",
+    "references": [
+      "il chitarrista è paraplegico ma pare sappia e possa usare le mani",
+      "Il chitarrista dovrebbe alzarsi, avvicinarsi alla custodia e riporvi la chitarra",
+      "il chitarrista dovrebbe aprire la custodia e riporre la chitarra",
+      "il chitarrista per riporre la chitarra nella custodia dovrebbe alzarsi e muoversi alla sua destra verso la custodia",
+      "la custodia si trova a circa 1 metro sulla sua destra",
+      "Per riporre la chitarra il chitarrista si alzerebbe, aprirebbe la custodia e vi riporrebbe la chitarra",
+      "aprirebbe la custodia e ci metterebbe dentro la chitarra"
+    ],
+    "merged_reference": "Nonostante sia paraplegico, pare sappia usare le mani; si alza, si avvicina alla custodia, che si trova circa un metro a sua destra, la apre e ripone la chitarra dentro la custodia."
+  },
+  {
+    "ID": 152,
+    "question": "Che stato d'animo dimostra l'uomo con la chitarra?",
+    "references": [
+      "l'uomo con la chitarra pare felice di suonare",
+      "L'uomo sembra coinvolto da quello che sta facendo",
+      "L'uomo con la chitarra appare allegro mentre suona",
+      "L'uomo con la chitarra appare soddisfatto e sereno durante la sua esecuzione musicale",
+      "il chitarrista sembra compiaciuto e sicuro di se",
+      "L'uomo con la chitarra sembra concentrato",
+      "fierezza"
+    ],
+    "merged_reference": "L'uomo con la chitarra sembra concentrato, felice di suonare, coinvolto e allegro durante l'esecuzione. Si dimostra anche compiaciuto e sicuro di sé, mostrando fierezza."
+  },
+  {
+    "ID": 153,
+    "question": "Su che cosa è appoggiata la custodia della chitarra che si vede nella prima metà del video?",
+    "references": [
+      "la custodia poggia su una bicicletta",
+      "La custodia della chitarra è appoggiata ad una bicicletta",
+      "Nella prima parte del video, la custodia della chitarra è sostenuta da una bicicletta",
+      "la custodia della chitarra che si vede nella prima metà del video si trova appoggiata ad una bicicletta",
+      "La custodia della chitarra si trova posizionata su una bicicletta",
+      "La custodia è appoggiata alla ruota di una bicicletta, a sua volta poggiata sul muro di un edificio",
+      "su una bicicletta"
+    ],
+    "merged_reference": "La custodia della chitarra è appoggiata alla ruota di una bicicletta, a sua volta poggiata sul muro di un edificio."
+  },
+  {
+    "ID": 154,
+    "question": "Dove si trova il coro?",
+    "references": [
+      "il coro si trova sulla scalinata di una chiesa",
+      "Il coro si trova sulla sinistra, disposto su alcuni gradini",
+      "I cantanti del coro sono posizionati su una serie di gradini",
+      "il coro si trova sulle scale di un edificio",
+      "il coro si trova di fronte al chirattista su quella che sembra l'entrata di una chiesa",
+      "Il coro è composto da persone disposte su una successione di gradini",
+      "su una scalinata"
+    ],
+    "merged_reference": "Il coro si trova sulla scalinata di una chiesa, disposto su una successione di gradini e sulla sinistra."
+  },
+  {
+    "ID": 155,
+    "question": "Per quanto tempo è inquadrato il chitarrista?",
+    "references": [
+      "il chitarrista è inquadrato per il primo quarto del video",
+      "Il chitarrista è inquadrato per diversi secondi",
+      "La telecamera si concentra sul chitarrista per un momento ridotto all'inizio del video",
+      "il chitarrista viene inquadrato per qualche secondo ad inizio del video",
+      "In apertura del video, il chitarrista appare in scena per circa sette secondi",
+      "Durante i primi istanti del video, il chitarrista viene ripreso per pochi secondi",
+      "6-7 secondi"
+    ],
+    "merged_reference": "All'inizio del video il chitarrista è inquadrato per pochi secondi all'inizio del video:circa 6-7 secondi."
+  },
+  {
+    "ID": 156,
+    "question": "Cosa succede mentre il chitarrista suona?",
+    "references": [
+      "mentre il chitarrista suona, il coro tanta",
+      "Durante la performance del chitarrista, il coro si unisce con il canto",
+      "mentre il chitarrista suona i coristi cantano",
+      "mentre il chitarrista suona, il coro e le persone alle sue spalle cantano",
+      "il coro davanti a se canta e altre persone ascoltano",
+      "Mentre il chitarrista suona il coro canta, così come alcuni spettatori; alcune persone entrano o escono dall'edificio; un uomo del coro alza un pugno al cielo",
+      "Il coro canta mentre altre persone osservano in silenzio"
+    ],
+    "merged_reference": "Mentre il chitarrista suona, il coro canta e si unisce al canto insieme ad altre persone presenti che ascoltano, mentre alcune entrano o escono dall'edificio e un membro del coro alza un pugno al cielo."
+  },
+  {
+    "ID": 157,
+    "question": "Perchè l'uccello spicca il volo?",
+    "references": [
+      "l'uccello vola a comando",
+      "L'uccllo spicca il volo perché chiamato dal falconiere",
+      "l'uccello spicca il volo perchè l'uomo ha del cibo per lui tra le mani",
+      "l'uccello spicca il volo perchè è richiamato dal suo addestratore",
+      "probabilmente perchè richiamato da uno specifio segnale",
+      "L'uccello spicca il volo perché è stato addestrato così",
+      "perché è stato istruito a fare questo esercizio"
+    ],
+    "merged_reference": "L'uccello spicca il volo perché è stato addestrato a farlo e risponde a comandi o segnali del suo addestratore o falconiere. Un altro dei motivi è che potrebbe essere stimolato dal cibo che il falconiere ha per lui tra le mani."
+  },
+  {
+    "ID": 158,
+    "question": "Che cosa succederebbe se passasse all'improvviso un gatto e afferrasse il volatile?",
+    "references": [
+      "il gatto dovrebbe litigare con il falchetto e probabilmente non farebbe una bella fine, nonostante il falco sia piccolo",
+      "Il gatto cercherebbe di mangiare il volatile",
+      "se un gatto afferrasse il volatile lo ferirebbe",
+      "se passasse all'improvviso un gatto e afferrasse il volatile, creerebbe un grande scompiglio tra la folla e gli allevatori",
+      "ci sarebbe una lotta tra i due animali",
+      "Se passasse un gatto e afferrasse l'uccello, questi lotterebbero e le persone intorno si stupirebbero e proverebbero a separarli",
+      "Le persone che assistono alla scena cercherebbero di fermare il gatto"
+    ],
+    "merged_reference": "Se all'improvviso passasse un gatto e afferrasse il volatile, il gatto cercherebbe di mangiarlo e tra i due verrebbe una lotta durante la quale il volatile verrebbe ferito; le persone presenti si stupirebbero e cercherebbero di separarli, provocando un grande scompiglio tra la folla e gli allevatori."
+  },
+  {
+    "ID": 159,
+    "question": "Da che parte se n'è andato il ragazzino con la felpa rossa?",
+    "references": [
+      "il ragazzino è andato in direzione della chiesa",
+      "Il ragazzino con la felpa rossa è andato via verso sinistra",
+      "Il ragazzo con la felpa rossa si è allontanato andando a sinistra",
+      "il ragazzino con la felpa rossa se ne va sulla sinistra alla fine del video",
+      "Il ragazzino se n'è andata sulla sinistra dello schermo",
+      "Il ragazzino con la felpa rossa è uscito dal lato sinistro dell'inquadratura",
+      "prima va verso destra ed alla fine del video torna verso sinistra sparendo dall'inquadratura"
+    ],
+    "merged_reference": "Il ragazzino con la felpa rossa si è mosso verso sinistra ed è uscito dall'inquadratura dal lato sinistro. All'inizio aveva però avuto un movimento verso destra prima di tornare verso sinistra."
+  },
+  {
+    "ID": 160,
+    "question": "Che tipo di attività si svolgono nell'edificio sullo sfondo?",
+    "references": [
+      "mi pare che sullo sfondo ci sia una chiesa",
+      "Nell'edificio sullo sfondo svolgono attività religiose",
+      "Probabilmente funzioni religiose",
+      "è una chiesa antica, quindi forse eventi religiosi",
+      "l'edificio sullo sfondo sembra un luogo di culto",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "il video è sgranato, ma sembra una chiesa"
+    ],
+    "merged_reference": "L'edificio sullo sfondo sembra una chiesa, un luogo di culto dove si svolgono attività religiose."
+  },
+  {
+    "ID": 161,
+    "question": "Quanti anni ha il falco?",
+    "references": [
+      "il falchetto pare piccolo",
+      "Non saprei, non è deducibile dal video",
+      "Non c'è un falco nel video",
+      "non è dato sapere l'età del falco",
+      "non è possibile stabilire l'età dell'animale",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "non è un dato disponibile"
+    ],
+    "merged_reference": "Non è possibile stabilire l’età del falco dal video: non ci sono abbastanza informazioni."
+  },
+  {
+    "ID": 162,
+    "question": "Cosa fa l'aquila nel video?",
+    "references": [
+      "Nel video non è presente alcuna aquila, bensì un picolo falco",
+      "Non c'è un'aquila nel video",
+      "Nel video non compare un'aquila",
+      "Nel video non appare alcuna aquila",
+      "Non c'è nessun aquila, ma un falco che vola dal braccio di una ragazza a quello di un ragazzo",
+      "Non ci sono aquile nel video",
+      "Non ci sono aquile. L'uccello che vola è un falco"
+    ],
+    "merged_reference": "Nel video non c'è alcuna aquila; l'uccello che vola è un falco che vola dal braccio di una ragazza al braccio di un ragazzo."
+  },
+  {
+    "ID": 163,
+    "question": "Come potrebbe l'uccello scappare dal ragazzo e nascondersi sopra la bandiera?",
+    "references": [
+      "l'uccello potrebbe volare",
+      "L'uccello dovrebbe volare verso sinistra verso la bandiera",
+      "l'uccello potrebbe volare via e posarsi sulla bandiera",
+      "l'uccello potrebbe scappare dal ragazzo volando sulla sinistra e andare a nascondersi sopra la bandiera",
+      "l'aquila dovrebbe improvvisamente virare sulla sinistra",
+      "L'uccello potrebbe semplicemente deviare il suo volo verso la sinistra e posarsi sulla bandiera",
+      "volando via"
+    ],
+    "merged_reference": "L'uccello potrebbe volare via verso la sinistra e posarsi sulla bandiera, nascondendosi sopra di essa."
+  },
+  {
+    "ID": 164,
+    "question": "Che atteggiamento mostra l'uomo inginocchiato dopo che il falco vola in mezzo alle sue braccia?",
+    "references": [
+      "dopo il passaggio dell'uccello si alza felice",
+      "L'uomo sembra più rilassato dopo che il volatile è passato in mezzo alle sue braccia",
+      "L'uomo inginocchiato appare disteso e sereno dopo che il falco è passato tra le sue braccia",
+      "L'uomo inginocchiato si mostra calmo e appagato dopo il passaggio del falco tra le sue braccia",
+      "sembra tranquillo ed in attesa del volo dell'animale",
+      "L'uomo inginocchiato mostra soddisfazione",
+      "compiacimento"
+    ],
+    "merged_reference": "L'uomo inginocchiato mostra calma, serenità e soddisfazione dopo che il falco è passato tra le sue braccia."
+  },
+  {
+    "ID": 165,
+    "question": "Da che lato dell'inquadratura cammina l'uomo inginocchiato dopo essersi alzato?",
+    "references": [
+      "l'uomo va verso la sua sinistra",
+      "L'uomo cammina verso la destra del video",
+      "l'uomo dopo essersi alzato cammina verso destra rispetto all'osservatore",
+      "l'uomo inginocchiato dopo essersi alzato cammina sulla destra dell'inquadratura",
+      "L'uomo si dirige verso il lato destro dello schermo dopo essersi alzato",
+      "L'uomo inginocchiato dopo essersi rialzato cammina sul lato destro dell'inquadratura",
+      "verso la destra della scena"
+    ],
+    "merged_reference": "L'uomo, dopo essersi alzato, cammina verso la destra dell'inquadratura che corrisponde alla sua sinistra."
+  },
+  {
+    "ID": 166,
+    "question": "Dov'è il pubblico che osserva l'esibizione?",
+    "references": [
+      "il pubblico è in alto, sulla sinistra dell'inquadratura",
+      "Il pubblico è sul lato sinistro",
+      "il pubblico che osserva si trova sia a sinistra che a destra dell'esibizione",
+      "il pubblico che osserva l'esibizione si trova alla destra e alla sinistra del falco",
+      "il pubblico si trova sulla sinistra della scena",
+      "Il pubblico è disposto tutto attorno ai dimostranti",
+      "attorno alla scena, sia a sinistra che a destra che dietro l'uomo inginocchiato"
+    ],
+    "merged_reference": "Il pubblico è attorno alla scena, sia a sinistra che a destra e anche dietro l'uomo inginocchiato."
+  },
+  {
+    "ID": 167,
+    "question": "Per quanto tempo il rapace rimane sul braccio della bambina?",
+    "references": [
+      "il rapace resta sul braccio della bimba per quasi la prima metà del video",
+      "Il rapace resta sul braccio della bambina per diversi secondi",
+      "il rapace rimane sul braccio della bambina per la maggior parte del video",
+      "Il rapace si posa sul braccio della bambina per una porzione significativa del video",
+      "l'aquila rimane sul braccio della bambina per circa 15 secondi",
+      "L'uccello si appoggia sul braccio della giovane per approssimativamente 15 secondi",
+      "14 secondi"
+    ],
+    "merged_reference": "Rimane sul braccio della bambina per circa 14–15 secondi, quindi per la prima metà del video."
+  },
+  {
+    "ID": 168,
+    "question": "Cosa succede dopo che il falco inizia a volare?",
+    "references": [
+      "il falco passa sopra una persona e va dall'altro falconiere",
+      "Dopo che il falco inizia a volare, passa in mezzo alle braccia di un uomo e poi raggiunge un falconiere",
+      "Il pubblico continua ad osservare la scena",
+      "dopo che il falco inizia a volare tutto il pubblico guarda dove va",
+      "un ragazzo pone il braccio per riceverlo e la persona seduta si alza",
+      "Dopo che l'uccello inizia a volare gli spettatori applaudono, l'uomo inginocchiato si rialza e applaude e il ragazzo che ha ricevuto l'uccello inizia a camminare verso la telecamera",
+      "raggiunge un uomo che lo prende tra le mani dopo che ha attraversato le braccia di un altro uomo"
+    ],
+    "merged_reference": "Dopo che il falco inizia a volare, attraversa le braccia di un uomo e raggiunge infine l'altro falconiere, che lo prende tra le mani. Il pubblico osserva la scena, guarda dove va e applaude. L'uomo inginocchiato si rialza e applaude. Un ragazzo porge il braccio per ricevere l'uccello e inizia a camminare verso la telecamera."
+  },
+  {
+    "ID": 169,
+    "question": "Perchè il bambino con la giacca blu si è avvicinato al bambino con il cestino?",
+    "references": [
+      "il bimbo in giacca blu si è avvicinato per vedere cosa ci sta nel secchiello",
+      "Il bambino con la giacca blu si è avvicinato al bambino con il cestino per vedere quanti dolci vi fossero",
+      "Il bambino con la giacca blu si è avvicinato al bambino con il cestino con l'intenzione di ottenere una caramella",
+      "il bambino con la giacca blu si avvicina al bambino con il cestino per prendere qualcosa da questo",
+      "si è avvicinato per prendere un dolcetto",
+      "Il bambino con la giacca blu si è avvicinato a quello con il cestino perché voleva qualche dolcetto",
+      "per rubare una caramella"
+    ],
+    "merged_reference": "Il bambino con la giacca blu si è avvicinato al bambino con il cestino per prendere dolcetti o rubargli una caramella dopo aver visto quante ce ne fossero."
+  },
+  {
+    "ID": 170,
+    "question": "Cosa succederebbe se scoppiasse un temporale all'improvviso?",
+    "references": [
+      "penso che in caso di temporale la festa finirebbe",
+      "Le persone correrebbero a cercare riparo",
+      "se scoppiasse un temporale tutti i bambini si bagnerebbero e scapperebbero via",
+      "se scoppiasse un temporale all'improvviso, tutti i bambino andrebbero a coprirsi da qualche parte",
+      "succederebbe che scapperebbero tutti per evitare di bagnarsi",
+      "Se scoppiasse un temporale le persone nel video cercherebbero riparo",
+      "tutti cercherebbero o riparo o aprirebbero gli ombrelli"
+    ],
+    "merged_reference": "In caso di temporale improvviso la festa finirebbe e le persone cercherebbero riparo o aprirebbero ombrelli. I bambini probabilmente si bagnerebbero e scapperebbero via."
+  },
+  {
+    "ID": 171,
+    "question": "Da quante donne è accompagnata la signora con il piumino rosa?",
+    "references": [
+      "la donna con il piumino rosa è a braccetto di un'altra signora",
+      "La signora è accompagnara da due donne",
+      "la donna con la giacca rossa è accompagnata da due persone di sesso femminile",
+      "la signora con il piumino rosa è accompagnata da due donne",
+      "La donna con il piumino rosa è insieme a due altre signore",
+      "La signora con il piumino rosa si trova in compagnia di due altre donne",
+      "due"
+    ],
+    "merged_reference": "La signora con il piumino rosa è accompagnata da due donne."
+  },
+  {
+    "ID": 172,
+    "question": "In che festività è stato registrato il video?",
+    "references": [
+      "dai secchielli e costumi , penso sia halloween",
+      "Il video è registrato ad halloween",
+      "Analizzando gli indizi dei costumi, il video sembra essere stato girato ad Halloween",
+      "ad halloween dati i costumi dei bambini",
+      "viste le maschere ed i travestimenti è sicuramente carnevale o halloween",
+      "Il video è stato girato in occasione di Halloween",
+      "carnevale o halloween"
+    ],
+    "merged_reference": "È stato registrato ad Halloween, osservando i costumi dei bambini."
+  },
+  {
+    "ID": 173,
+    "question": "Tra i bambini c'è una coppia di fratelli?",
+    "references": [
+      "ci sono troppi bambini per pensare che siano tutti fratelli",
+      "Non saprei, non è deducibile dal video",
+      "Non lo so non ci viene data questa informazone nel video",
+      "non è dato sapere se c'è una coppia di fratelli ma è comunque possibile",
+      "non è dato sapere se vi sono fratelli tra i bambini",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "non è possibile dirlo"
+    ],
+    "merged_reference": "Non è possibile dirlo: non è deducibile dal video e non ci sono abbastanza informazioni per stabilire se tra i bambini c'è una coppia di fratelli."
+  },
+  {
+    "ID": 174,
+    "question": "Cosa fanno i soldati nel video?",
+    "references": [
+      "non vedo soldati nel video",
+      "Nel video non ci sono militari, ma si vedono solo bambini, alcuni dei quali con costumi",
+      "Nel video non compaiono uomini che appartengono a qualche tipo di forza armata",
+      "Nel video non appaiono militari di alcun tipo",
+      "Non si vedono soldati ma solo bambini che giocano a fare gli spadaccini",
+      "Non si vedono soldati nella scena del video",
+      "Nel video non si vedono soldati ma solo dei bimbi che fanno finta di combattere"
+    ],
+    "merged_reference": "Nel video non si vedono soldati né militari di alcun tipo; si vedono solo bambini, alcuni con costumi, che giocano a fare gli spadaccini e fanno finta di combattere."
+  },
+  {
+    "ID": 175,
+    "question": "Come potrebbe fare il bambino con il cesto di caramelle all'inizio del video per ottenere più dolci dagli appartamenti intorno?",
+    "references": [
+      "non so",
+      "Non saprei, non è deducibile dal video",
+      "il bambino con il cestino dovrebbe andare a suonare a tutte le porte degli edifici per chiedere più caramelle",
+      "non ci sono appartamenti intorno al bambino con il cesto di caramelle",
+      "dovrebbe continuare a bussare alle loro porte",
+      "Per ottenere più dolci il bambino potrebbe vuotare il cestino e fare il giro degli appartamenti intorno",
+      "far finta di averne pochi"
+    ],
+    "merged_reference": "Il bambino potrebbe suonare a tutte le porte degli edifici per chiedere più caramelle e continuare a bussare alle porte; in alternativa, potrebbe svuotare il cestino e rifare il giro degli appartamenti intorno, magari fingendo di averne poche."
+  },
+  {
+    "ID": 176,
+    "question": "Quale stato d'animo interessa i bambini che giocano con le spade?",
+    "references": [
+      "non so, spirito di guerra",
+      "I bambini sono divertiti",
+      "i bambini che giocano con le spade sono felici",
+      "I bambini che usano le spade mostrano molta gioia",
+      "i bambini sembrano divertiti e sfidanti",
+      "I bambini che giocano con le spade si mostrano vivaci e gioiosi",
+      "allegria"
+    ],
+    "merged_reference": "I bambini che giocano con le spade sono felici, divertiti, vivaci e gioiosi, mostrando allegria."
+  },
+  {
+    "ID": 177,
+    "question": "Su che lato si vede il bambino col secchiello arancione all'inizio del video?",
+    "references": [
+      "il bimbo con il secchiello sta sulla sinistra",
+      "Il bambino è sul lato sinistro",
+      "il bambino col secchiello arancione all'inizio del video si vede sulla sinistra",
+      "il bambino con il secchiello arancione si trova nel lato sinistro all'inizio del video",
+      "All'inizio della scena, il bimbo con il secchiello arancione appare sul lato sinistro",
+      "Nell'inquadratura iniziale del video, il bambino che tiene il secchiello arancione è visibile a sinistra",
+      "sinistra"
+    ],
+    "merged_reference": "Sul lato sinistro."
+  },
+  {
+    "ID": 178,
+    "question": "Dove giocano i bambini mascherati?",
+    "references": [
+      "i bambini giocano in piazza",
+      "I bambini giocano per strada",
+      "i bambini mascherati giocano in una piazzetta",
+      "I bambini in costume si divertono a giocare nella piazza",
+      "giocano in strada in quella che sembra una Piazza",
+      "I bambini mascherati si divertono in un'area pubblica del paese",
+      "in una piazza di paese"
+    ],
+    "merged_reference": "I bambini mascherati giocano in una piazza di paese."
+  },
+  {
+    "ID": 179,
+    "question": "Per quanto tempo viene inquadrato un secchiello arancione?",
+    "references": [
+      "il secchiello viene inquadrato per pochi secondi",
+      "Il secchiello arancione è visibile nel video per un breve momento",
+      "All'inizio del filmato, il secchio arancione compare solo per un intervallo di tempo limitato",
+      "Il secchiello arancione compare brevemente nel video per un attimo appena percettibile",
+      "il secchiello viene inquadrata per 4 secondi circa",
+      "Il secchiello arancione è inquadrato per qualche secondo",
+      "6 secondi circa"
+    ],
+    "merged_reference": "Viene inquadrato per pochi secondi, circa 4-6 secondi."
+  },
+  {
+    "ID": 180,
+    "question": "Cosa fa la signora con la giacca rossa mentre i bambini giocano con le spade?",
+    "references": [
+      "la signora in giacca rossa guarda",
+      "La signora tira via sua figlia",
+      "la signora con la giacca rossa osserva i bambini che giocano",
+      "la signora con la giacca rossa accompagna una bambina mentre i bambini giocano con le spade",
+      "la signora con la giacca rossa sembra voler proteggere una bambina e scansarla dagli altri bambini",
+      "La signora con la giacca rossa prova a trattenere una bambina e si guarda intorno",
+      "prende per un braccio una bambina per spostarla"
+    ],
+    "merged_reference": "La signora con la giacca rossa osserva i bambini che giocano con le spade, poi tira via sua figlia, proteggendola da loro, e si guarda intorno."
+  },
+  {
+    "ID": 181,
+    "question": "Perchè la signora tira le arance?",
+    "references": [
+      "la signora tira arance contro il ragazzo per farlo indietreggiare",
+      "Per cacciare il ragazzo",
+      "La signoara tira la frutta per colpire il ragazzo e cacciarlo",
+      "perchè è arrabbiata con il ragazzo",
+      "per fare uscire il ragazzo dalla stanza",
+      "La signora tira le arance in segno di riprovazione, per far uscire il ragazzo",
+      "La signora lancia le arance al ragazzo per allontanarlo"
+    ],
+    "merged_reference": "La signora tira le arance perché è arrabbiata con il ragazzo e vuole farlo uscire dalla stanza. Cerca di colpirlo e cacciarlo come segno di riprovazione."
+  },
+  {
+    "ID": 182,
+    "question": "Cosa succederebbe se il ragazzo vestito di verde rovesciasse per errore il tavolo?",
+    "references": [
+      "penso che in caso di rovesciamento del tavolo la sua punizione sarebbe enorme",
+      "Succederebbe un grande caos",
+      "se il ragazzo vestito di verde rovesciasse per errore il tavolo il tavolo si romperebbe e i signori nel video si farebbero male",
+      "se il ragazzo vestito di verde rovesciasse per errore il tavolo, probabilmente farebbe male agli anziani",
+      "che probabilmente le persone sedute al tavolo verrebbero coinvolte",
+      "Se il ragazzo rovesciasse il tavolo, i due anziani si arrabbierebbero ancora di più",
+      "tutto quello che c'è sul tavolo finirebbe a terra o sopra i due anziani"
+    ],
+    "merged_reference": "Se il ragazzo vestito di verde rovesciasse per errore il tavolo, il tavolo si romperebbe, i due anziani seduti verrebbero coinvolti e poi si arrabbierebbero ancora di più. Tutto quello che c'è sul tavolo, inoltre, finirebbe a terra o sui due anziani. Sicuramente ci sarebbe grande caos e una punizione enorme per lui, oltre a poter ferire gli anziani."
+  },
+  {
+    "ID": 183,
+    "question": "Quante arance conteneva la ciotola sul tavolo prima che si aprisse la porta?",
+    "references": [
+      "c'erano 4 arance",
+      "La ciotola conteneva quattro arance",
+      "la ciotola conteneva 4 arance all'inizio del video",
+      "ci sono quattro arance sulla ciotola nel tavolo prima che si apra la porta",
+      "le arance sembrano essere 4",
+      "La ciotola sul tavolo conteneva 4 arance",
+      "4"
+    ],
+    "merged_reference": "La ciotola sul tavolo conteneva 4 arance prima che si aprisse la porta."
+  },
+  {
+    "ID": 184,
+    "question": "In che festività è stato registrato il video?",
+    "references": [
+      "non so, pare una casa vecchia, di quelle con camino",
+      "Non saprei, non è deducibile dal video",
+      "non lo so non si vede nel video",
+      "non è dato sapere il tipo di riscaldamento di cui dispone la casa (si può supporre sia pellet per via del bustone di pellet sul tavolo)",
+      "difficile distinguere se nel sacco sul tavolo vi siano dei pellets",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Non è possibile dirlo"
+    ],
+    "merged_reference": "Non è possibile stabilire in quale festività sia stato registrato il video, poiché non ci sono informazioni sufficienti nelle immagini."
+  },
+  {
+    "ID": 185,
+    "question": "Perché il ragazzo sul motorino è vestito di verde?",
+    "references": [
+      "penso che il vestito sia stato scelto per fare coppia con il colore della moto",
+      "Non saprei, non è deducibile dal video",
+      "non lo so non ci viene mostrato il perchè",
+      "non è dato sapere perchè il ragazzo sul motorino sia vestito di verde",
+      "ha un costume dello stesso colore del motorino ma il motivo è ignoto",
+      "Il ragazzo è vestito di verde perché indossa un costume da coccodrillo",
+      "Non è possibile dirlo"
+    ],
+    "merged_reference": "Non è possibile dirlo con certezza dal video: la ragione non è spiegata; potrebbe trattarsi di un abbinamento accoppiato al colore del motorino, ma la spiegazione rimane ignota. In ogni caso è verde perché indossa un costume da coccodrillo."
+  },
+  {
+    "ID": 186,
+    "question": "Di che colore è la bici?",
+    "references": [
+      "non ho notato alcuna bici ma un motorino verde",
+      "Non c'è una bici, c'è un motorino",
+      "Nel video non appare nessuna bicicletta",
+      "non c'è nessuna bici nel video",
+      "Nel video non si vede alcuna bicicletta",
+      "Non ci sono bici nel video",
+      "Nel video mancano biciclette di qualsiasi colore"
+    ],
+    "merged_reference": "Nel video non c'è alcuna bicicletta; c'è un motorino verde."
+  },
+  {
+    "ID": 187,
+    "question": "Cosa dovrebbe fare la signora per raccogliere le arance dal pavimento?",
+    "references": [
+      "per raccogliere le arance da terra basta piegarsi",
+      "Dovrebbe avvicinarsi alle arance, abbassarsi e raccoglierle",
+      "la signora per raccogliere le arance dal pavimento dovrebbe alzarsi e raccoglierle",
+      "La signora potrebbe abbassarsi per raccogliere le arance sparse per terra",
+      "dovrebbe prendere una scopa",
+      "Per raccogliere le arance sul pavimento la signora potrebbe chinarsi e prenderle una per una o usare una scopa",
+      "Piegarsi e raccoglierle"
+    ],
+    "merged_reference": "La signora dovrebbe avvicinarsi alle arance, abbassarsi per raccoglierle, eventualmente una per una oppure usando una scopa."
+  },
+  {
+    "ID": 188,
+    "question": "Qual è l'umore del ragazzo che entra nella stanza col motorino?",
+    "references": [
+      "il ragazzo è  allegro e scherzoso",
+      "Il ragazzo sembra divertito",
+      "Il ragazzo che entra nella stanza col motorino appare di buon umore e con un'aria giocosa",
+      "il ragazzo che entra nella stanza col motorino sembra felice e scherzoso",
+      "il ragazzo sembra molto divertito ed in vena di scherzi",
+      "Il ragazzo è felice ed eccitato quando entra nella stanza col motorino",
+      "Allegria"
+    ],
+    "merged_reference": "È allegro, felice, divertito e in vena di scherzi, con un’aria giocosa ed eccitata."
+  },
+  {
+    "ID": 189,
+    "question": "Dove prende il mattarello il signore anziano dopo essersi alzato?",
+    "references": [
+      "il mattarello è in un mobile",
+      "Il signore prende il mattarello in un cassetto",
+      "il signore prende il mattarello da un cassetto nel mobile sulla destra",
+      "Dopo essersi alzato, il signore anziano afferra il mattarello da un cassetto a destra",
+      "il signore prende il mattarello dal cassetto della credenza",
+      "Il signore anziano recupera il mattarello da uno dei cassetti del mobile",
+      "dal cassetto di un mobile"
+    ],
+    "merged_reference": "Prende il mattarello dal cassetto del mobile sulla destra."
+  },
+  {
+    "ID": 190,
+    "question": "Dove porta la moto il ragazzo?",
+    "references": [
+      "il ragazzo guida la moto dentro un salotto o cucina abitabile",
+      "Il ragazzo porta la moto in una casa",
+      "Il ragazzo guida la moto all'interno di un soggiorno",
+      "il ragazzo porta la moto dentro la stanza dove ci sono degli anziani",
+      "il ragazzo entra con la moto all'interno della sala da pranzo",
+      "Il ragazzo porta la moto in uno spazio domestico adibito a pranzo",
+      "Attraversa una porta e finisce in una sala da pranzo"
+    ],
+    "merged_reference": "La moto è portata all'interno di una casa, in uno spazio domestico come il soggiorno (salotto) o la sala da pranzo, entrando da una porta."
+  },
+  {
+    "ID": 191,
+    "question": "Quanto dura l'irruzione del ragazzo col motorino nella stanza?",
+    "references": [
+      "l'irruzione dura per tutta la durata del video ed oltre",
+      "L'irruzione dura una trentina di secondi",
+      "l'irruzione del ragazzo col motorino nella stanza dura per tutto il video",
+      "L'irruzione del ragazzo con il motorino si estende per l'intero tempo del video",
+      "l'interruzione dura 30 secondi circa",
+      "L'irruzione dura circa mezzo minuto",
+      "per tutta la durata del video, circa 30 secondi"
+    ],
+    "merged_reference": "L'irruzione dura per tutta la durata del video, circa 30 secondi."
+  },
+  {
+    "ID": 192,
+    "question": "Cosa succede dopo che il ragazzo entra nella stanza?",
+    "references": [
+      "dopo l'irruzione scoppia il caos",
+      "Dopo che il ragazzo entra nella stanza, i due signori cercano di cacciarlo",
+      "dopo l'entrata del ragazzo con il motorino i due signori si arrabbiano e cercano di cacciarlo",
+      "dopo che il ragazzo entra nella stanza, gli anziani inziano ad urlargli contro",
+      "che le persone all'interno della stanza gli tirano la frutta e poi prendono un mattarello",
+      "Dopo che il ragazzo entra nella stanza i due anziani dapprima gli inveiscono contro, poi la signora gli lancia le arance e il signore lo prende a colpi col mattarello",
+      "Entrambi i signori si arrabbiano, la signora comincia a tirare della frutta e il signore prende una mazza o mattarello da un cassetto per colpire scherzosamente il ragazzo"
+    ],
+    "merged_reference": "Dopo che il ragazzo entra nella stanza, scoppia il caos: i due anziani iniziano ad urlargli contro, la signora gli lancia arance e il signore prende un mattarello per colpire scherzosamente il ragazzo."
+  },
+  {
+    "ID": 193,
+    "question": "Perchè a metà video il primo posto del podio è ancora vuoto?",
+    "references": [
+      "il primo posto è vuoto perchè il vincitore deve ancora entrare e salire",
+      "Perchè ancora non è stato premiato il vincitore",
+      "a metà video il primo posto del podio è ancora vuoto perchè il vincitore ancora non è arrivato",
+      "Nel mezzo del video, il primo gradino del podio è ancora libero perché il secondo classificato deve ancora prendere posizione",
+      "perchè prima salgono rispettivamente il terzo ed il secondo classificati",
+      "Il primo posto è ancora vuoto perché il vincitore non è ancora stato annunciato",
+      "perché il ragazzo con la maglia gialla doveva ancora arrivare"
+    ],
+    "merged_reference": "Il primo posto è vuoto perché il vincitore non è ancora arrivato né è stato annunciato né premiato."
+  },
+  {
+    "ID": 194,
+    "question": "Cosa succederebbe se il ragazzo con la giacca gialla inciampasse sul podio?",
+    "references": [
+      "se uno inciampasse penso che tutti riderebbero",
+      "Il ragazzo con la giacca gialla cadrebbe",
+      "se il ragazzo con la giacca gialla inciampasse sul podio cadrebbe e si farebbe male",
+      "se il ragazzo con la giacca gialla inciampasse sul podio, genererebbe ilarità in chi gli sta intorno",
+      "cadrebbe dal gradino piu alto del podio",
+      "Se il ragazzo inciampasse sul podio cadrebbe sul tappeto blu",
+      "Si potrebbe fare male"
+    ],
+    "merged_reference": "Se il ragazzo con la giacca gialla inciampasse sul podio, cadrebbe e potrebbe farsi male, generando ilarità in chi gli sta intorno e, cadendo dal gradino più alto del podio, finirebbe sul tappeto blu."
+  },
+  {
+    "ID": 195,
+    "question": "Che cosa rappresenta la bandiera più a destra di tutte?",
+    "references": [
+      "a destra c'è la bandiera europea",
+      "La bandiera rappresenta l'Unione Europea",
+      "Unione Europea",
+      "Sembra la bandiera dell'unione europea",
+      "quella più a destra sembra essere la bandiera europea",
+      "La bandiera all'estremità destra simboleggia l'Unione Europea",
+      "La bandiera dell'europa"
+    ],
+    "merged_reference": "Rappresenta l'Unione Europea."
+  },
+  {
+    "ID": 196,
+    "question": "Chi è il vincitore della gara?",
+    "references": [
+      "un tizio in giacca gialla",
+      "Il vincitore è il ragazzo con la giacca gialla",
+      "il ragazzo che è arrivato per primo ed è salito sul podio per ultimo è il vincitore della gara",
+      "Il campione della competizione è il giovane che indossa una felpa gialla",
+      "Il vincitore è il giovane che indossa una divisa di colore giallo",
+      "Il ragazzo che indossa una giacca gialla ha vinto la competizione",
+      "Il trionfatore è il giovane che porta una giacca gialla"
+    ],
+    "merged_reference": "Il vincitore è il giovane che è arrivato primo, che indossa un capo di colore giallo e che sale sul podio per ultimo."
+  },
+  {
+    "ID": 197,
+    "question": "In che sport si sono sfidati i vincitori della gara?",
+    "references": [
+      "non si capisce",
+      "Non saprei, non è deducibile dal video",
+      "Non saprei",
+      "Non saprei, forse i vincitori della gara dovrebbero essersi sfidati nella camminata sportiva",
+      "non è dato sapere che sport pratichino gli atleti",
+      "Forse i partecipanti si sono sfidati in una gara di camminata sportiva",
+      "Forse camminata sportiva"
+    ],
+    "merged_reference": "Non è possibile stabilirlo con certezza; forse si è trattato di una camminata sportiva."
+  },
+  {
+    "ID": 198,
+    "question": "Di che colore è la coppa tenuta in mano dal primo vincitore?",
+    "references": [
+      "non vedo alcuna coppa",
+      "Il vincitore non ha nessuna coppa",
+      "non c'è nessuna coppa nel video",
+      "nessuna coppa è tenuta in mano dal primo vincitore",
+      "Non c'è nessuna coppa. Il video si interrompe prima che venga consegnato il premio",
+      "Non si vedono coppe nel video",
+      "Non tiene in mano nessuna coppa"
+    ],
+    "merged_reference": "Non si vede alcuna coppa nel video. Il video si interrompe prima che venga consegnato il premio."
+  },
+  {
+    "ID": 199,
+    "question": "Cosa dovrebbe fare il secondo classificato per farsi mettere al collo una medaglia?",
+    "references": [
+      "chiunque dovrebbe chinarsi per farsi mettere una medaglia",
+      "Non saprei, nel video non ci sono medaglie per nessuno",
+      "non lo so",
+      "il secondo classificato dovrebbe abbassare il collo per farsi mettere la medaglia",
+      "attendere che gli venga consegnata la medaglia d'argento",
+      "Il secondo classificato dovrebbe piegarsi in avanti per ricevere la medaglia intorno al collo",
+      "Aspettare di essere premiato"
+    ],
+    "merged_reference": "Il secondo classificato dovrebbe aspettare e poi piegarsi in avanti per ricevere la medaglia intorno al collo."
+  },
+  {
+    "ID": 200,
+    "question": "In che stato d'animo si trova l'uomo con la felpa gialla che sale sul podio?",
+    "references": [
+      "l'uomo è felice di esser primo",
+      "L'uomo è euforico",
+      "il ragazzo con la felpa gilla è contento",
+      "l'uomo con la felpa gialla che sale sul podio è molto felice",
+      "è sicuramente contento per il primo posto",
+      "Il ragazzo con la felpa gialla è felice e soddisfatto",
+      "Allegria"
+    ],
+    "merged_reference": "È felice, euforico, molto contento e soddisfatto di esser primo, pieno di allegria."
+  },
+  {
+    "ID": 201,
+    "question": "Da che lato entra il ragazzo prima di posizionarsi sul primo posto del podio?",
+    "references": [
+      "il ragazzo entra dalla sinistra del video",
+      "Il ragazzo entra dal lato sinistro",
+      "il ragazzo prima di posizionarsi sul primo posto del podio viene dalla parte sinistra",
+      "Il ragazzo raggiunge il primo posto del podio entrando da sinistra",
+      "Il ragazzo accede da sinistra della scena",
+      "Il ragazzo arriva dalla parte sinistra dell'inquadratura",
+      "Il ragazzo entra da sinistra"
+    ],
+    "merged_reference": "Entra da sinistra."
+  },
+  {
+    "ID": 202,
+    "question": "Dov'è il ragazzo con la maglia bianca?",
+    "references": [
+      "il ragazzo con la maglia bianca è sul gradino del terzo classificato",
+      "Il giovane con la maglia bianca si trova in terza posizione sul podio",
+      "Il giovane che indossa la maglia bianca è posizionato sulla terza piattaforma del podio",
+      "il ragazzo con la maglia bianca si trova sulla destra del video",
+      "si trova a sinistra del ragazzo con la maglia gialle sul gradino del podio numero 3",
+      "Il ragazzo che indossa la maglia bianca si trova sul podio, al terzo livello",
+      "Sul podio al terzo posto"
+    ],
+    "merged_reference": "È sul podio al terzo posto, sulla destra del video."
+  },
+  {
+    "ID": 203,
+    "question": "Quanto tempo passa prima che venga premiato il secondo posto?",
+    "references": [
+      "pochi secondi dall'inizio",
+      "nei primi secondi della scena",
+      "il secondo posto viene premiato all'inizio del video",
+      "nei primi 10 secondi",
+      "all'inizio del video",
+      "Il ragazzo al secondo posto viene fatto salire sul podio all'inizio del video",
+      "per pochi secondi dall'inizio del video"
+    ],
+    "merged_reference": "Pochi secondi, circa 10 secondi, ma comunque all'inizio del video."
+  },
+  {
+    "ID": 204,
+    "question": "Quand'è che il ragazzo con la maglia gialla sale sul podio?",
+    "references": [
+      "verso la fine del video il ragazzo entra e sale",
+      "Il ragazzo sale sul podio dopo una ventina di secondi",
+      "il ragazzo con la maglia gialla sale sul podio a metà video",
+      "Alla conclusione del video, il ragazzo con la maglia gialla si posiziona sul podio",
+      "sale per ultimo dopo che il 3 ed il secondo hanno preso posto sul podio",
+      "Il giovane con la maglia gialla sale sul podio circa venti secondi dopo l'inizio del video",
+      "Poco dopo 24 secondi dall'inizio del video, il giovane con la maglia gialla si avvicina al podio"
+    ],
+    "merged_reference": "Circa venti secondi dopo l'inizio del video, il ragazzo con la maglia gialla sale sul podio e, alla fine del video, è posizionato sul podio. Comunque solo dopo che il 3 ed il secondo hanno preso posto sul podio."
+  },
+  {
+    "ID": 205,
+    "question": "Perchè tutti guardano verso il centro della sala?",
+    "references": [
+      "tutti guardano gli sposi entrare",
+      "Perchè stanno arrivando gli sposi",
+      "tutti guardano verso il centro della sala perchè sono arrivati gli sposi",
+      "Tutti si concentrano al centro della sala per l’ingresso degli sposi",
+      "perchè ci sono gli sposi appena arrivati",
+      "Tutti guardano verso il centro della sala perché è dove fanno il loro ingresso gli sposi",
+      "Tutti volgono lo sguardo al centro della sala in quanto stanno entrando gli sposi"
+    ],
+    "merged_reference": "Tutti guardano verso il centro della sala perché stanno entrando gli sposi."
+  },
+  {
+    "ID": 206,
+    "question": "Cosa succederebbe se al fotografo cadesse la macchina fotografica?",
+    "references": [
+      "la macchina fotografica si romperebbe",
+      "La fotocamera andrebbe in pezzi",
+      "se al fotografo cadesse la macchina fotografica, la macchina fotografica si danneggerebbe gravemente e non si potrebbero più fare foto",
+      "se al fotografo cadesse la macchina fotografica, avrebbe problemi probabilmente con le foto fatte e con il proseguio del matrimonio",
+      "Potrebbe danneggiarsi l'obiettivo",
+      "Gli sposi non avrebbero più foto del loro matrimonio perchè la macchina fotografica si romperebbe",
+      "Il fotografo potrebbe perdere le foto realizzate, oltre a danneggiare la macchina fotografica"
+    ],
+    "merged_reference": "Se al fotografo cadesse la macchina fotografica, la fotocamera si romperebbe o verrebbe gravemente danneggiata, potrebbe andare in pezzi e l'obiettivo potrebbe danneggiarsi, rischiando la perdita delle foto realizzate e l'impossibilità di fare nuove foto, con conseguenze sul proseguimento del matrimonio e sugli sposi che non avrebbero più foto del loro matrimonio."
+  },
+  {
+    "ID": 207,
+    "question": "Che strumento c'è affianco alla cantante?",
+    "references": [
+      "a fianco alla cantante c'è una pianola",
+      "Affianco alla cantante c'è un piano",
+      "Accanto alla cantante si trova una tastiera",
+      "al fianco della cantante c'è una tastiera",
+      "Lo strumento posizionato accanto alla cantante è una tastiera",
+      "Accanto alla cantante si può vedere una pianola",
+      "Lo strumento situato vicino alla cantante è una pianola"
+    ],
+    "merged_reference": "Accanto alla cantante c'è una tastiera/ pianola."
+  },
+  {
+    "ID": 208,
+    "question": "Cosa contengono i secchi bianchi portati dai camerieri?",
+    "references": [
+      "nei secchi penso ci sia del ghiaccio",
+      "I secchi contengono ghiaccio",
+      "ghiaccio",
+      "ghiaccio per mantenere il vino al freddo",
+      "sono dei secchi per il posizionamento di bottiglie di vino",
+      "I secchi bianchi servono a tenere in fresco le bottiglie di vino e contengono ghiaccio",
+      "Non è possibile dirlo"
+    ],
+    "merged_reference": "I secchi bianchi contengono ghiaccio per tenere in fresco le bottiglie di vino."
+  },
+  {
+    "ID": 209,
+    "question": "In che giorno si è sposata la coppia?",
+    "references": [
+      "non so",
+      "Non saprei, non è deducibile dal video",
+      "non lo so non si vede dal video che giorno è",
+      "non è dato sapere in che giorno si sia sposata la coppia",
+      "non vi sono elementi indicatori del giorno del loro matrimonio",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Non è possibile dirlo"
+    ],
+    "merged_reference": "Non è possibile dirlo: non si vede dal video che giorno è e non ci sono elementi indicatori del giorno del matrimonio."
+  },
+  {
+    "ID": 210,
+    "question": "Quale strumento a fiato suona il ragazzo vestito di verde?",
+    "references": [
+      "non noto nessuno vestito di verde e che suoni",
+      "Non suona nessuno strumento a fiato",
+      "non c'è un ragazzo vestito di verde ch sta suonando uno strumento",
+      "Non si trova alcun ragazzo in abiti verdi che stia suonando uno strumento a fiato",
+      "Non vi è nessun ragazzo vestito di verde che suona uno strumento",
+      "Nel video non ci sono suonatori vestiti di verde",
+      "Non appare alcun ragazzo vestito di verde che suoni strumenti a fiato"
+    ],
+    "merged_reference": "Non risulta alcun ragazzo vestito di verde che suoni uno strumento a fiato."
+  },
+  {
+    "ID": 211,
+    "question": "Cosa dovrebbe fare il fotografo con la camicia rosa per fare una foto a tutte le persone nella stanza?",
+    "references": [
+      "il fotografo dovrebbe semplicemente fare foto",
+      "Il fotografo dovrebbe girarsi attorno",
+      "il fotografo dovrebbe fotografare tutte le persone nella stanza",
+      "il fotografo con la camicia rosa dovrebbe spostarsi più indietro verso la cantante per fare una foto a tutte le persone nella stanza",
+      "dovrebbe far spostare tutte le persone dalla parte degli sposi",
+      "Per riprendere tutte le persone nella stanza il fotografo dovrebbe allargare ancora l'inquadratura e usare un obiettivo molto grandangolare",
+      "Il fotografo dovrebbe riunire tutte le persone e ordinargli di mettersi in posa per fare la foto"
+    ],
+    "merged_reference": "Il fotografo con la camicia rosa dovrebbe girarsi attorno e spostarsi un po' indietro verso la cantante per includere tutte le persone nella stanza, allargare l'inquadratura o utilizzare un grandangolo, riunire tutte le persone e farle mettersi in posa, eventualmente facendole spostare dalla parte degli sposi."
+  },
+  {
+    "ID": 212,
+    "question": "Che atteggiamento mostra la sposa entrando col bouquet?",
+    "references": [
+      "la sposa è felice",
+      "La sposa sembra felicissima",
+      "la sposa sembra molto contenta",
+      "La sposa entra col bouquet mostrando un'espressione di gioia",
+      "da come agita il bouquet sembra raggiante",
+      "La sposa appare gioiosa",
+      "Divertimento"
+    ],
+    "merged_reference": "La sposa appare felice e gioiosa entrando col bouquet."
+  },
+  {
+    "ID": 213,
+    "question": "Dietro che cosa si trova la ragazza che parla al microfono all'inizio del video?",
+    "references": [
+      "la ragazza si trova dietro una pianola",
+      "La ragazza è posizionata dietro un'apparecchiatura per la gestione del suono",
+      "la ragazza che parla al microfono si trova dietro ad una console",
+      "la ragazza che parla ai microfoni all'inizio del video si trova dietro il mixer",
+      "All'inizio del video, la ragazza che parla al microfono è posizionata dietro un mixer",
+      "La ragazza è dietro un mixer",
+      "La ragazza che parla al microfono ad inizio video è dietro ad uno strumento per l'audio"
+    ],
+    "merged_reference": "La ragazza si trova dietro una console/mixer."
+  },
+  {
+    "ID": 214,
+    "question": "Dove sono i palloncini bianchi e rossi?",
+    "references": [
+      "i palloncini adornano il tavolo del delle bevande",
+      "I palloncini sono al tavolo degli sposi",
+      "i palloncini sono alla sinistra del video",
+      "i palloncini bianchi e rossi si trovano sulla sinistra del video",
+      "i palloncini si trovano sulla sinistra nella zona del tavolo degli sposi",
+      "I palloncini bianchi e rossi sono poggiati in terra a fianco al tavolo in primo piano sulla sinistra",
+      "I palloncini bianchi e rossi sono vicini ad un tavolo"
+    ],
+    "merged_reference": "I palloncini bianchi e rossi si trovano in primo piano sulla sinistra del video, nell'area del tavolo degli sposi."
+  },
+  {
+    "ID": 215,
+    "question": "Per quanto tempo nel video si vede una ragazza con un vestito giallo?",
+    "references": [
+      "la ragazza in giallo che è la cantante, è inquadrata per pochi secondi",
+      "La ragazza si vede per pochi secondi",
+      "La ragazza che indossa il vestito giallo appare brevemente nel video",
+      "la ragazza col vestito giallo si vede all'inizio del video",
+      "si vede per 3 secondi circa",
+      "La ragazza col vestito giallo è inquadrata per un paio di secondi",
+      "La ragazza con il vestito giallo si vede per 2 secondi"
+    ],
+    "merged_reference": "La ragazza con il vestito giallo si vede all'inizio del video per pochi secondi, circa 2-3 secondi."
+  },
+  {
+    "ID": 216,
+    "question": "Cosa succede mentre la cantante canta?",
+    "references": [
+      "mentre la cantante canta entrano gli sposi",
+      "Nel momento in cui la cantante si esibisce, gli sposi fanno il loro ingresso",
+      "entrano gli sposi",
+      "gli sposi fanno il loro ingresso",
+      "i commensali applaudono i camerieri imbandiscono e gli sposi fanno il loro ingresso",
+      "Mentre la cantante canta gli sposi fanno il loro ingresso, applauditi dagli invitati",
+      "Mentre la cantante canta entrano in sala gli sposi, molte persone applaudono e i fotografi scattano le foto mentre alcuni camerieri sistemano sui tavoli dei cestini bianchi"
+    ],
+    "merged_reference": "Mentre la cantante canta, entrano gli sposi e gli invitati applaudono, i fotografi scattano le foto e alcuni camerieri sistemano sui tavoli dei cestini bianchi."
+  },
+  {
+    "ID": 217,
+    "question": "Perchè alla fine del video l'uomo con la casacca rossa e nera è a terra?",
+    "references": [
+      "l'uomo con la casacca rosso e nera è a terra perchè è stato fatto cadere ed ha perso",
+      "L'uomo è a terra perché ha perso il duello",
+      "L'individuo con la casacca rossa e nera è a terra perché è stato battuto nel combattimento",
+      "l'uomo con la casacca rossa e nera si trova a terra alla fine del video perchè è stato sconfitto dall'altro duellante",
+      "perchè provando un affondo finisce a terra perdendo l'arma",
+      "L'individuo vestito di rosso e nero si trova a terra perché è stato battuto nel confronto",
+      "L'uomo vestito di rosso e nero si ritrova a terra poiché è stato sopraffatto e non è riuscito a prevalere nel duello"
+    ],
+    "merged_reference": "L'uomo vestito di rosso e nero è a terra perché è stato battuto nel duello, perdendo anche l'arma che stava usando."
+  },
+  {
+    "ID": 218,
+    "question": "Cosa succederebbe se l'uomo con la maglietta bianca inciampasse poco prima di vincere?",
+    "references": [
+      "se cadesse succederebbe che  perderebbe",
+      "L'uomo perderebbe",
+      "se l'uomo con la maglietta bianca inciampasse poco prima di vincere, cadrebbe e si farebbe male",
+      "Se l'uomo con la maglietta bianca dovesse inciampare prima di arrivare al traguardo, con alta probabilità non riuscirebbe a vincere la gara",
+      "succederebbe che molto probabilmente non sarebbe lui a vincere",
+      "Se l'uomo con la maglia bianca inciampasse, vincerebbe l'uomo con la maglia rossa",
+      "Se l'uomo con la maglietta bianca inciampasse a un passo dalla vittoria, potrebbe ferirsi e non riuscire a conquistare il primo posto"
+    ],
+    "merged_reference": "Se l'uomo con la maglietta bianca inciampasse poco prima di vincere, cadrebbe e potrebbe ferirsi, e molto probabilmente non vincerebbe, quindi vincerebbe l'uomo con la maglia rossa."
+  },
+  {
+    "ID": 219,
+    "question": "Che arma porta l'uomo che si allontana sulla sinistra?",
+    "references": [
+      "l'uomo porta una spada",
+      "L'uomo è armato di una spada",
+      "una spada",
+      "l'uomo che si allontana sulla sinistra ha una spada alla cinta",
+      "l'uomo ha in mano una spada",
+      "L'uomo tiene in mano una spada mentre si allontana",
+      "L'uomo che si sta allontanando sulla sinistra è dotato di una spada"
+    ],
+    "merged_reference": "L'uomo che si allontana sulla sinistra porta una spada."
+  },
+  {
+    "ID": 220,
+    "question": "Che attività possono svolgersi sotto i tendoni sullo sfondo durante la fiera del paese?",
+    "references": [
+      "Potrebbe trattarsi di bancarelle a tema medievale",
+      "Non si vede cosa c'è sotto i tendoni ma probabilmente qualcosa inerente alla manifestazione",
+      "sotto i tendoni sullo sfondo durante la fiera del paese potrebbero vendere del cibo tipico",
+      "Ci saranno attività commerciali di cibo o di oggettistica medievale",
+      "Si può presumere che si svolgano attività come mercatini o preparazione di cibo",
+      "Possono vendersi prodotti tipici o manufatti realizzati artigianalmente",
+      "Sotto i tendoni ci saranno attività commerciali di vario tipo"
+    ],
+    "merged_reference": "Sotto i tendoni sullo sfondo della fiera del paese si svolgono attività commerciali di vario tipo, tra mercatini o bancarelle a tema medievale, vendita di cibo tipico e di oggetti o manufatti artigianali, e la preparazione di cibo."
+  },
+  {
+    "ID": 221,
+    "question": "Quanto tempo si allenano ogni giorno i due duellanti?",
+    "references": [
+      "non so",
+      "Non saprei, non è deducibile dal video",
+      "non lo so non ci viene mostrato nel video ma forse tante ore per avere questa resa",
+      "non è dato sapere quanto tempo si allenano ogni giorno i due duellanti",
+      "non vi sono elementi per poter affermare quanto tempo al giorno si allenano",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Non è possibile dirlo"
+    ],
+    "merged_reference": "Non è possibile dirlo: non è deducibile dal video e non ci sono elementi sufficienti per stabilire quanto tempo al giorno si allenino i duellanti."
+  },
+  {
+    "ID": 222,
+    "question": "Quanti soldati ci sono nel video?",
+    "references": [
+      "Non sono soldati veri, ma sono 2 uomini vestiti con l'elmo da soldato medioevali",
+      "Non ci sono soldati, solo persone in una rievocazione medievale",
+      "ci sono due persone vestite da soldati nel video, ma non sono soldati realmente",
+      "non ci sono soldati nel video",
+      "Le persone presenti nel video non sono veri soldati",
+      "Non credo che quelli nel video possano essere definiti soldati",
+      "Il video non presenta soldati, ma include due individui con costumi e armature medievali"
+    ],
+    "merged_reference": "Nel video ci sono due persone vestite da soldati con costumi e armature medievali, ma non sono soldati reali."
+  },
+  {
+    "ID": 223,
+    "question": "Come dovrebbero fare le persone ad andare dall'altra parte della strada una volta terminato lo spettacolo?",
+    "references": [
+      "tutti dovrebbero passare per la piazza",
+      "Le persone dovrebbero attraversare la strada",
+      "le persone per andare dall'altra parte della starda dovrebbero camminare dritto",
+      "una persona dovrebbe attraversare il centro dell'arena per muoversi dall'altra parte una volta terminato l'incontro",
+      "terminato lo spettacolo possono attraversare l'\"arena\"'",
+      "Per andare dall'altra parte della strada le persone dovrebbero scavalcare o aggirare le recinzioni",
+      "Per andare dall'altra parte della strada le persone dovrebberro camminare da una parte all'altra"
+    ],
+    "merged_reference": "Terminato lo spettacolo le persone dovrebbero attraversare la strada, ad esempio passando per la piazza o camminando dritto, oppure attraversando il centro dell’arena per andare dall’altra parte."
+  },
+  {
+    "ID": 224,
+    "question": "Che atteggiamento mostrano i due combattenti?",
+    "references": [
+      "i combattenti sembrano agguerriti",
+      "I due combattenti sono attenti a ciò che fanno",
+      "i deu combattenti sembrano tranquilli ma concentrati",
+      "i due combattenti sono concentrati sull'evento",
+      "sembrano concentrati su quello che stanno facendo",
+      "I due combattenti mostrano un atteggiamento combattivo",
+      "I due combattenti appaiono determinati e pronti alla sfida"
+    ],
+    "merged_reference": "I due combattenti mostrano un atteggiamento determinato e combattivo, pronti alla sfida, tranquilli ma concentrati sull’evento e su ciò che stanno facendo."
+  },
+  {
+    "ID": 225,
+    "question": "Su che lato dell'inquadratura si vede un uomo con pantaloni bianchi e rossi all'inizio del video?",
+    "references": [
+      "l'uomo dai pantaloni bianchi e rossi è sulla sinistra del video",
+      "L'uomo è sul lato sinistro dell'inquadratura",
+      "Appena inizia il video, l'uomo con pantaloni a righe bianche e rosse si trova sul lato sinistro",
+      "l'uomo con i pantaloni bianchi e rossi si vede sul lato sinistro dell'ìnquadratura",
+      "l'uomo si trova sulla sinistra dell'inquadratura",
+      "All'inizio del video, l'uomo con i pantaloni bianchi e rossi appare a sinistra nell'inquadratura",
+      "L'uomo con i pantaloni bianchi e rossi si vede sulla sinistra ad inizio video"
+    ],
+    "merged_reference": "All'inizio del video, l'uomo con i pantaloni bianchi e rossi si trova sul lato sinistro dell'inquadratura."
+  },
+  {
+    "ID": 226,
+    "question": "Dove sta il pubblico ad osservare?",
+    "references": [
+      "il pubblico è alle spalle dei combattenti",
+      "Il prbblico osserva da tutto attorno allo spettacolo",
+      "il pubblico osserva tutto intorno al combattimento",
+      "il pubblico si trova intorno all'arena dove si sfidano i duellanti",
+      "il pubblico si trova tutto intorno ai contendenti",
+      "Il pubblico è dietro delle recinzioni tutto attorno ai duellanti",
+      "Il pubblico osserva tutto attorno ai due combattenti, principalmente sul lato destro dell'inquadratura e dietro i combattenti"
+    ],
+    "merged_reference": "Il pubblico osserva tutto intorno al combattimento, intorno all'arena dove si sfidano i duellanti e dietro le recinzioni che li circondano, principalmente sul lato destro dell'inquadratura."
+  },
+  {
+    "ID": 227,
+    "question": "Quanto dura il duello tra i due soldati?",
+    "references": [
+      "il duello dura meno di mezzo minuto",
+      "Il duello dura pochi secondi",
+      "il duello dura per quasi tutto il video",
+      "Il duello tra i soldati si svolge per gran parte del video",
+      "Il duello si estende per circa 26 secondi",
+      "Il duello si prolunga per una trentina di secondi",
+      "Il duello tra i due combattenti dura circa 27 secondi"
+    ],
+    "merged_reference": "Il duello dura circa 26-30 secondi, poco meno di mezzo minuto, e occupa gran parte del video."
+  },
+  {
+    "ID": 228,
+    "question": "Cosa succede mentre i due combattono?",
+    "references": [
+      "la gente guarda i due che combattono",
+      "La folla li osserva",
+      "mentre i due combattono le persone osservano il combattimento",
+      "mentre i due uomini combattono, la folla guarda l'incontro",
+      "Il pubblico intorno osserva",
+      "Mentre i due combattono il pubblico osserva, alcuni si allontanano, altri parlano tra loro",
+      "Durante il combattimento il pubblico osserva e alcune persone vestite con abiti medievali si intravedono sulla parte sinistra dell'inquadratura"
+    ],
+    "merged_reference": "Mentre i due combattono, il pubblico intorno osserva il combattimento; alcuni si allontanano e altri parlano tra loro, e sulla sinistra dell'inquadratura si intravedono persone vestite con abiti medievali."
+  },
+  {
+    "ID": 229,
+    "question": "Perchè la donna giovane coi pantaloni neri all'inizio del video è immobile?",
+    "references": [
+      "la donna è in posa per una foto",
+      "La donna rimane ferma perché sta aspettando che le venga scattata una foto",
+      "La donna rimane immobile perché sta posando per una fotografia",
+      "la donna giovane con i pantaloni neri all'inizio del video è immobile perchè sta aspettando di fare la foto",
+      "vuole far intendere di sorreggere la torre pendente",
+      "All'inizio del video, la donna con i pantaloni neri rimane immobile perché è in posa per uno scatto fotografico",
+      "La donna giovane con pantaloni neri ad inizio del video è ferma poiché è in posa"
+    ],
+    "merged_reference": "È immobile perché sta posando per una fotografia e aspetta che venga scattata. Inoltre è ferma in quella posizione per far intendere dalla foto che sta sorreggendo la torre pendente"
+  },
+  {
+    "ID": 230,
+    "question": "Cosa succederebbe se qualcuno rubasse la borsa della donna col vestito rosso?",
+    "references": [
+      "se ci fosse un furto molti urlerebbero",
+      "La donna cercherebbe di inseguirlo",
+      "Se qualcuno rubasse la borsa della signora le altre persone cercherebbero di fermarlo",
+      "se qualcuno rubasse la borsa della donna col vestito rosso, si creerebbe molto scompiglio tra le persone",
+      "che probabilmente sarebbe rincorso",
+      "Se qualcuno rubasse la borsa alla donna ci sarebbe un tentativo di inseguimento",
+      "Se qualcuno rubasse la borse della donna col vestito rosso, probabilmente qualcuno correrebbe dietro i ladri e qualcun'altro chiamerebbe la polizia"
+    ],
+    "merged_reference": "Se qualcuno rubasse la borsa della donna col vestito rosso, si creerebbe molto scompiglio tra le persone: la donna cercherebbe di inseguire il ladro, altri cercherebbero di fermarlo, probabilmente qualcuno correrebbe dietro ai ladri e qualcun altro chiamerebbe la polizia, e molti urlerebbero."
+  },
+  {
+    "ID": 231,
+    "question": "Che scarpe ha la donna vestita di rosso?",
+    "references": [
+      "la signora ha scarpe nere",
+      "La donna ha delle scarpe aperte con il tacco",
+      "la signora vestita di rosso ha dei sandali neri",
+      "la donna vestita di rosso ha delle scarpe di colore nero",
+      "la donna indossa delle scarpe con la zeppa nere",
+      "La signora vestita di rossa indossa un paio di sandali neri col tacco alto",
+      "La donna con il vestito rosso indossa degli stivaletti di colore scuro, nero o marrone"
+    ],
+    "merged_reference": "La donna vestita di rosso ha scarpe di colore nero o scuro: sembrano sandali neri con tacco alto o al massimo stivaletti di colore comunque scuro."
+  },
+  {
+    "ID": 232,
+    "question": "Dove si svolge la scena?",
+    "references": [
+      "La scena si svolge nella città di Pisa",
+      "La scena si svolge in una nota città della Toscana",
+      "La scena è ambienta in Piazza dei Miracoli a Pisa",
+      "La scena si svolge nei pressi della famosa torre di Pisa",
+      "La scena è ambientata nell'area più visitata di Pisa",
+      "La scena è ambientata in Toscana",
+      "Il video è tutto ambientato nei pressi della torre pendente in Piazza dei Miracoli"
+    ],
+    "merged_reference": "La scena si svolge a Pisa, in Toscana, nell’area di Piazza dei Miracoli, nei pressi della Torre Pendente."
+  },
+  {
+    "ID": 233,
+    "question": "Quante foto sono state scattate sotto la torre in tutti questi anni?",
+    "references": [
+      "Non saprei, ma sotto la torre si scattano tantissime foto",
+      "Non saprei, non è deducibile dal video",
+      "non lo so non si può vedere quanto foto sono effettivamente state scattate",
+      "Di solito molte foto vengono scattate sotto la torre, ma è difficile da dire",
+      "il video non fornisce informazioni al riguardo",
+      "Non lo so, non ci sono abbastanza informazioni per rispondere",
+      "Non è possibile dirlo"
+    ],
+    "merged_reference": "Non è possibile dirlo: il video non fornisce informazioni al riguardo e non ci sono abbastanza informazioni per rispondere."
+  },
+  {
+    "ID": 234,
+    "question": "Quanti cani ci sono nel video?",
+    "references": [
+      "non vedo cani nel video",
+      "Non si trova nessun cane nel video",
+      "Nella scena girata, non appare nessun cane",
+      "Non c'è alcun tipo di animale nel video",
+      "Nel video ci sono esseri umani ma non si vedono cani",
+      "Non vi è alcun cane nel video",
+      "Non si vedono cani nel video ma solo persone sotto la torre di Pisa"
+    ],
+    "merged_reference": "Non ci sono cani nel video, si vedono solo persone sotto la torre di Pisa."
+  },
+  {
+    "ID": 235,
+    "question": "Cosa dovrebbe fare la donna con il vestito rosso per salire sulla torre?",
+    "references": [
+      "per salire sulla torre si devono salire tanti gradini",
+      "La donna dovrebbe avvicinarsi alla torre e salirci",
+      "Non lo so, non so se è possibile salire sulla torre",
+      "la donna con il vestito rosso per salire sulla torre dovrebbe muoversi in avanti verso la fila per l'ingresso",
+      "dovrebbe avvicinarsi e salire i gradini",
+      "Per salire sulla torre la donna dovrebbe acquistare il biglietto e dirigersi verso l'ingresso della scalinata",
+      "La donna vestita di rosso dovrebbe comprare un biglietto per poter accedere alla torre"
+    ],
+    "merged_reference": "La donna con il vestito rosso dovrebbe acquistare un biglietto, mettersi in fila per l'ingresso, e dirigersi verso l'entrata dove ci sono i gradini per salire."
+  },
+  {
+    "ID": 236,
+    "question": "Che atteggiamento dimostra la donna messasi in posa e intenta a farsi scattare una foto?",
+    "references": [
+      "la donna ha un atteggiamento da turista divertita in posa",
+      "La donna è in attesa",
+      "la donna mostra un atteggiamento tranquillo e rilassato",
+      "la donna in posa è felice quando si fa scattare le foto",
+      "sembra molto divertita dalla posa",
+      "La donna in posa ha un intento giocoso",
+      "La donna che si mette in posa per farsi scattare le foto sembra divertita"
+    ],
+    "merged_reference": "La donna sembra divertita e felice in quella posa per farsi scattare una foto, con un atteggiamento tranquillo e rilassato."
+  },
+  {
+    "ID": 237,
+    "question": "Dove va il signore con la maglia blu e pantaloncini neri dopo aver scattato la foto?",
+    "references": [
+      "il signore si avvicina alla donna cui ha appena scattato una foto",
+      "Il signore va verso la donna a cui ha scattato la foto",
+      "il signore va a far vedere la foto alla donna",
+      "il signore con la maglia blu e pantaloncini neri dopo aver scattato la foto va verso la donna a cui ha scattato la foto per farle controllare la foto appena fatta",
+      "mostra la foto alla persona fotografata e poi si allontana sulla destra",
+      "Il signore va incontro al soggetto della fotografia",
+      "Il signore con la maglia blu e pantaloncini neri dopo aver scattato la foto va da una signora per far vedere le foto e poi cammina verso destra nell'inquadratura"
+    ],
+    "merged_reference": "Dopo aver scattato la foto, va verso la donna a cui ha scattato la foto per farle vedere la foto appena fatta e poi cammina verso destra nell'inquadratura."
+  },
+  {
+    "ID": 238,
+    "question": "Dove si trovano i turisti?",
+    "references": [
+      "i turisti si trovano a pisa",
+      "I turisti si trovano vicino la torre di Pisa",
+      "I visitatori sono posizionati davanti al monumento inclinato di Pisa",
+      "I visitatori si trovano proprio ai piedi della Torre di Pisa",
+      "I turisti sono situati nei pressi della Torre di Pisa",
+      "I turisti si trovano a Pisa, all'interno di Piazza dei Miracoli, proprio di fronte alla Torre",
+      "I visitatori mostrati nel video sono a Pisa"
+    ],
+    "merged_reference": "I turisti si trovano a Pisa, all'interno di Piazza dei Miracoli, proprio di fronte alla Torre di Pisa."
+  },
+  {
+    "ID": 239,
+    "question": "Per quanto tempo sta in posa la prima donna?",
+    "references": [
+      "la donna sta in posa per qualche secondo",
+      "La donna posa per alcuni secondi",
+      "La prima donna resta in posa per un breve momento",
+      "La prima donna tiene la posa per un breve lasso di tempo",
+      "la donna rimane in posa per 6 secondi circa",
+      "La prima donna conserva la posizione per all'incirca cinque secondi",
+      "La prima donna si ferma in posa per un periodo di tempo che va dai 6 ai 7 secondi"
+    ],
+    "merged_reference": "La prima donna resta in posa per qualche secondo, circa 5-7 secondi."
+  },
+  {
+    "ID": 240,
+    "question": "Cosa succede mentre scattano le foto?",
+    "references": [
+      "mentre una coppia scatta le foto, anche le altre lo fanno o continuano a passeggiare",
+      "Mentre scattano la foto, altre persone fanno la stessa cosa",
+      "le due donne stanno in posa mentre le altre persone sull sfondo passeggiano",
+      "mentre scattano le foto, altre persone intorno aspettano il loro turno",
+      "altri turisti si apprestano a fare lo stesso",
+      "Mentre scattano le foto altri osservano la scena o aspettano il loro turno",
+      "Mentre vengono scattate le foto, alcune persone si mettono in posa ed altre scattano le foto"
+    ],
+    "merged_reference": "Mentre vengono scattate le foto, altre persone si mettono in posa e fanno la stessa cosa, osservando o aspettando il loro turno. Altri si apprestano a fare lo stesso e nello sfondo ci sono persone che passeggiano."
+  }
+]

@@ -82,6 +82,25 @@ def parse_args() -> argparse.Namespace:
             "0.0 = tutte negative, 1.0 = tutte positive."
         ),
     )
+    parser.add_argument(
+        "--reference-overrides-json",
+        type=Path,
+        default=None,
+        help=(
+            "JSON locale con override delle ground-truth references per il path synthetic/MAIA. "
+            "Ogni record deve esporre un id allineabile al sample MAIA e il testo della reference override."
+        ),
+    )
+    parser.add_argument(
+        "--reference-overrides-id-field",
+        default="ID",
+        help="Campo id da leggere nel file --reference-overrides-json.",
+    )
+    parser.add_argument(
+        "--reference-overrides-value-field",
+        default="merged_reference",
+        help="Campo testo reference da leggere nel file --reference-overrides-json.",
+    )
 
     parser.add_argument("--output-file", type=Path, default=Path("judge_eval_report.json"))
 
@@ -116,6 +135,9 @@ def build_config(args: argparse.Namespace) -> PipelineConfig:
         generated_field=args.generated_field,
         pixmo_transcript_positive_ratio=args.pixmo_transcript_positive_ratio,
         generated_sample_mode=args.generated_sample_mode,
+        reference_overrides_json=args.reference_overrides_json,
+        reference_overrides_id_field=args.reference_overrides_id_field,
+        reference_overrides_value_field=args.reference_overrides_value_field,
     )
 
 
@@ -170,6 +192,9 @@ def main() -> None:
             offset_samples=cfg.offset_samples,
             max_samples=cfg.max_samples,
             seed=cfg.random_seed,
+            reference_overrides_json=cfg.reference_overrides_json,
+            reference_overrides_id_field=cfg.reference_overrides_id_field,
+            reference_overrides_value_field=cfg.reference_overrides_value_field,
         )
 
     if not samples:
@@ -211,7 +236,11 @@ def main() -> None:
             "dataset_subset": cfg.dataset_subset,
             "split": cfg.split,
             "num_references": cfg.num_references,
-            "effective_num_references": 1 if cfg.candidate_source == "pixmo_transcripts" else cfg.num_references,
+            "effective_num_references": (
+                1
+                if cfg.candidate_source == "pixmo_transcripts" or cfg.reference_overrides_json is not None
+                else cfg.num_references
+            ),
             "offset_samples": cfg.offset_samples,
             "max_samples": cfg.max_samples,
             "random_seed": cfg.random_seed,
@@ -230,6 +259,9 @@ def main() -> None:
             "pixmo_transcript_positive_ratio": cfg.pixmo_transcript_positive_ratio,
             "generated_sample_mode": cfg.generated_sample_mode,
             "input_json": str(cfg.input_json) if cfg.input_json else None,
+            "reference_overrides_json": str(cfg.reference_overrides_json) if cfg.reference_overrides_json else None,
+            "reference_overrides_id_field": cfg.reference_overrides_id_field,
+            "reference_overrides_value_field": cfg.reference_overrides_value_field,
             "sample_prompt_file": str(prompt_sample_path) if prompt_sample_path else None,
         },
         "metrics": {

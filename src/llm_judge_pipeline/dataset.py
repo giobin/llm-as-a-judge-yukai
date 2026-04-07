@@ -42,6 +42,58 @@ def _collect_reference_answers(row: dict[str, Any]) -> list[str]:
     return []
 
 
+def _normalize_override_key(value: Any) -> str:
+    if value is None:
+        return ""
+    return str(value).strip()
+
+
+def _load_reference_overrides(
+    reference_overrides_json: Path,
+    id_field: str,
+    value_field: str,
+) -> dict[str, str]:
+    payload = json.loads(reference_overrides_json.read_text(encoding="utf-8"))
+
+    if isinstance(payload, dict):
+        rows = payload.get("rows")
+        if not isinstance(rows, list):
+            raise ValueError(
+                "Invalid reference overrides JSON: expected a top-level list or an object with a 'rows' list."
+            )
+    elif isinstance(payload, list):
+        rows = payload
+    else:
+        raise ValueError(
+            "Invalid reference overrides JSON: expected a top-level list or an object with a 'rows' list."
+        )
+
+    overrides: dict[str, str] = {}
+    for index, row in enumerate(rows):
+        if not isinstance(row, dict):
+            raise ValueError(f"Invalid reference overrides JSON row at index {index}: expected object.")
+
+        override_id = _normalize_override_key(row.get(id_field))
+        if not override_id:
+            raise ValueError(
+                f"Invalid reference overrides JSON row at index {index}: missing non-empty id field {id_field!r}."
+            )
+
+        override_value = str(row.get(value_field, "")).strip()
+        if not override_value:
+            raise ValueError(
+                f"Invalid reference overrides JSON row at index {index}: missing non-empty value field {value_field!r}."
+            )
+
+        previous = overrides.get(override_id)
+        if previous is not None and previous != override_value:
+            raise ValueError(f"Duplicate override id with conflicting values: {override_id!r}.")
+
+        overrides[override_id] = override_value
+
+    return overrides
+
+
 def _extract_transcripts(value: Any) -> list[str]:
     if isinstance(value, list):
         transcripts: list[str] = []
@@ -209,6 +261,9 @@ def load_maia_gen_samples(
     offset_samples: int = 0,
     max_samples: int = 50,
     seed: int = 42,
+    reference_overrides_json: Path | None = None,
+    reference_overrides_id_field: str = "ID",
+    reference_overrides_value_field: str = "merged_reference",
 ) -> list[JudgeSample]:
     """Build positive+negative judge samples from MAIA-like rows.
 
@@ -225,6 +280,15 @@ def load_maia_gen_samples(
 
     rng = random.Random(seed)
     indices = list(range(len(dataset)))
+    reference_overrides = (
+        _load_reference_overrides(
+            reference_overrides_json=reference_overrides_json,
+            id_field=reference_overrides_id_field,
+            value_field=reference_overrides_value_field,
+        )
+        if reference_overrides_json is not None
+        else None
+    )
 
     selected = indices[offset_samples:]
     if max_samples > 0:
@@ -238,13 +302,25 @@ def load_maia_gen_samples(
             continue
 
         all_answers = _collect_all_answers(row)
-        if len(all_answers) < num_references + 1:
-            # Need num_references references + at least 1 different candidate positive answer.
-            continue
-        gt_answers = all_answers[:num_references]
-        candidate_pool = all_answers[num_references:]
-
         question_id = str(row.get("id", idx))
+
+        if reference_overrides is not None:
+            merged_reference = reference_overrides.get(question_id)
+            if merged_reference is None:
+                raise ValueError(
+                    f"Missing reference override for selected MAIA sample id={question_id!r} "
+                    f"in {reference_overrides_json}."
+                )
+            if not all_answers:
+                continue
+            gt_answers = [merged_reference]
+            candidate_pool = list(all_answers)
+        else:
+            if len(all_answers) < num_references + 1:
+                # Need num_references references + at least 1 different candidate positive answer.
+                continue
+            gt_answers = all_answers[:num_references]
+            candidate_pool = all_answers[num_references:]
 
         # Positive sample: good answer from the pool not used as references.
         pos_answer = rng.choice(candidate_pool)

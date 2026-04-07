@@ -32,3 +32,6 @@ class PipelineConfig:
     generated_field: str
     pixmo_transcript_positive_ratio: float
     generated_sample_mode: str
+    reference_overrides_json: Path | None
+    reference_overrides_id_field: str
+    reference_overrides_value_field: str

@@ -28,6 +28,7 @@ VLLM_BASE_URL="http://${VLLM_HOST}:${VLLM_PORT}"
 VLLM_API_KEY="${VLLM_API_KEY:-EMPTY}"
 VLLM_TIMEOUT_SECONDS="${VLLM_TIMEOUT_SECONDS:-600}"
 VLLM_POLL_INTERVAL="${VLLM_POLL_INTERVAL:-5}"
+VLLM_MAX_NUM_SEQS="${VLLM_MAX_NUM_SEQS:-8}"
 
 SUBSETS=("it" "en" "es")
 VLLM_PID=""
@@ -148,12 +149,14 @@ start_vllm_server() {
   echo "Base URL: ${VLLM_BASE_URL}"
   echo "Log: ${log_file}"
   echo "Env modello: NCCL_P2P_DISABLE=1 CUDA_VISIBLE_DEVICES=${GEMMA27_GPUS}"
+  echo "vLLM max_num_seqs: ${VLLM_MAX_NUM_SEQS}"
 
   env NCCL_P2P_DISABLE=1 CUDA_VISIBLE_DEVICES="${GEMMA27_GPUS}" \
     vllm serve "${GEMMA_MODEL_NAME}" \
       --host "${VLLM_HOST}" \
       --port "${VLLM_PORT}" \
       --tensor-parallel-size "${tp_size}" \
+      --max-num-seqs "${VLLM_MAX_NUM_SEQS}" \
       --disable-custom-all-reduce \
       --enforce-eager \
       >"${log_file}" 2>&1 &

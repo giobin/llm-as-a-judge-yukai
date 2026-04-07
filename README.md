@@ -218,6 +218,33 @@ SUBSETS=it,en MAX_SAMPLES=10 MODELS=models--google--gemma-3-12b-it,models--Qwen-
 Il riepilogo include anche il tempo effettivo per 10 sample e una stima lineare per 240 sample.
 Per il backend `vllm_in_process`, il launcher usa il Python nativo del container e aggiunge `src/` e i site-packages della `.venv` del repo al `sys.path`, evitando conflitti tra `vllm/transformers` del container e le librerie Python del progetto.
 
+## Multi-Pixmo Transcript Judge
+
+Per valutare `gpt-5.2` e `google/gemma-3-27b-it` come judge sul dataset `VillanovaAI/multi-pixmo-cap` usando `pixmo_transcripts` con mix 50/50 di esempi positivi e negativi, e' disponibile il launcher:
+
+```bash
+export OPENAI_API_KEY="..."
+./run_all_multi_pixmo_transcript_judge.sh
+```
+
+Default principali:
+- `SUBSETS=it,en,es`
+- `MAX_SAMPLES=240`
+- `PIXMO_TRANSCRIPT_POSITIVE_RATIO=0.5`
+- `GEMMA27_GPUS=1,2`
+- `VLLM_MAX_NUM_SEQS=8`
+
+Note operative:
+- il judge Gemma viene eseguito via `vllm serve`
+- il server vLLM per Gemma usa `--disable-custom-all-reduce`
+- il launcher non abilita `--enforce-eager` per Gemma
+
+Esempio con override:
+
+```bash
+OPENAI_API_KEY="..." RANDOM_SEED=7 MAX_SAMPLES=240 ./run_all_multi_pixmo_transcript_judge.sh
+```
+
 ## Judge su risposte generate
 
 `llm-judge` supporta input JSON prodotto da `model-infer`.
