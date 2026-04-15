@@ -69,6 +69,12 @@ def parse_args() -> argparse.Namespace:
         help="Field name to read generated candidate answers from when --candidate-source=generated and --generated-sample-mode=generated_field.",
     )
     parser.add_argument(
+        "--generated-expected-label",
+        choices=["yes", "no"],
+        default="yes",
+        help="Expected label to assign to generated candidates loaded from --generated-field.",
+    )
+    parser.add_argument(
         "--generated-sample-mode",
         choices=["generated_field", "transcript_pair"],
         default="generated_field",
@@ -135,6 +141,7 @@ def build_config(args: argparse.Namespace) -> PipelineConfig:
         input_json=args.input_json,
         candidate_source=args.candidate_source,
         generated_field=args.generated_field,
+        generated_expected_label=args.generated_expected_label,
         pixmo_transcript_positive_ratio=args.pixmo_transcript_positive_ratio,
         generated_sample_mode=args.generated_sample_mode,
         reference_overrides_json=args.reference_overrides_json,
@@ -170,10 +177,14 @@ def main() -> None:
         samples = load_generated_samples_from_json(
             input_json=cfg.input_json,
             generated_field=cfg.generated_field,
+            generated_expected_label=cfg.generated_expected_label,
             generated_sample_mode=cfg.generated_sample_mode,
             num_references=cfg.num_references,
             offset_samples=cfg.offset_samples,
             max_samples=cfg.max_samples,
+            reference_overrides_json=cfg.reference_overrides_json,
+            reference_overrides_id_field=cfg.reference_overrides_id_field,
+            reference_overrides_value_field=cfg.reference_overrides_value_field,
         )
     elif cfg.candidate_source == "pixmo_transcripts":
         samples = load_pixmo_transcript_pair_samples(
@@ -260,6 +271,7 @@ def main() -> None:
             "vllm_disable_custom_all_reduce": cfg.vllm_disable_custom_all_reduce,
             "candidate_source": cfg.candidate_source,
             "generated_field": cfg.generated_field,
+            "generated_expected_label": cfg.generated_expected_label,
             "pixmo_transcript_positive_ratio": cfg.pixmo_transcript_positive_ratio,
             "generated_sample_mode": cfg.generated_sample_mode,
             "input_json": str(cfg.input_json) if cfg.input_json else None,

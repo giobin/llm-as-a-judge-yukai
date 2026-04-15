@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VENV_DIR="${VENV_DIR:-${ROOT_DIR}/.llm_as_a_judge_venv}"
-RESULTS_DIR="${ROOT_DIR}/judge_results/maia_it_merged_reference"
+RESULTS_DIR="${RESULTS_DIR:-${ROOT_DIR}/judge_results/maia_it_merged_reference}"
 LOGS_DIR="${ROOT_DIR}/logs"
 
 DATASET_NAME="${DATASET_NAME:-caput/MAIA_ita}"

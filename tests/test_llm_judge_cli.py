@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from llm_judge_pipeline.cli import write_sample_prompt_file
+from llm_judge_pipeline.cli import build_config, parse_args, write_sample_prompt_file
 from llm_judge_pipeline.schemas import JudgeSample
 
 
@@ -27,3 +27,30 @@ def test_write_sample_prompt_file_writes_rendered_first_prompt(tmp_path: Path) -
         "Candidate:\nA cat on a chair.\n\n"
         "Refs:\n- A cat.\n- A feline on a chair.\n"
     )
+
+
+def test_parse_args_supports_generated_expected_label(monkeypatch) -> None:
+    monkeypatch.setattr(
+        "sys.argv",
+        [
+            "cli.py",
+            "--backend",
+            "openai",
+            "--model-name",
+            "gpt-5.2",
+            "--candidate-source",
+            "generated",
+            "--input-json",
+            "generated.json",
+            "--generated-field",
+            "wrong_answer1",
+            "--generated-expected-label",
+            "no",
+        ],
+    )
+
+    args = parse_args()
+    cfg = build_config(args)
+
+    assert args.generated_expected_label == "no"
+    assert cfg.generated_expected_label == "no"

@@ -3,6 +3,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+import pytest
+
 from llm_judge_pipeline.dataset import load_generated_samples_from_json
 
 
@@ -37,6 +39,7 @@ def test_load_generated_samples_from_json_rows_object(tmp_path: Path) -> None:
     samples = load_generated_samples_from_json(
         input_json=path,
         generated_field="generated_answer1",
+        generated_expected_label="yes",
         generated_sample_mode="generated_field",
         num_references=4,
         offset_samples=0,
@@ -72,6 +75,7 @@ def test_load_generated_samples_from_json_pixmo_caption_rows(tmp_path: Path) -> 
     samples = load_generated_samples_from_json(
         input_json=path,
         generated_field="generated_answer1",
+        generated_expected_label="yes",
         generated_sample_mode="generated_field",
         num_references=4,
         offset_samples=0,
@@ -118,6 +122,7 @@ def test_load_generated_samples_from_json_pixmo_caption_transcript_pair_mode(tmp
     samples = load_generated_samples_from_json(
         input_json=path,
         generated_field="generated_answer1",
+        generated_expected_label="yes",
         generated_sample_mode="transcript_pair",
         num_references=4,
         offset_samples=0,
@@ -154,6 +159,7 @@ def test_load_generated_samples_from_json_pixmo_ask_model_anything_rows(tmp_path
     samples = load_generated_samples_from_json(
         input_json=path,
         generated_field="generated_answer1",
+        generated_expected_label="yes",
         generated_sample_mode="generated_field",
         num_references=4,
         offset_samples=0,
@@ -167,3 +173,134 @@ def test_load_generated_samples_from_json_pixmo_ask_model_anything_rows(tmp_path
     assert sample.question == "What is the person holding?"
     assert sample.candidate_answer == "The person is holding a red umbrella."
     assert sample.ground_truth_answers == ["A red umbrella."]
+
+
+def test_load_generated_samples_from_json_supports_negative_expected_label(tmp_path: Path) -> None:
+    payload = {
+        "schema_version": "model_inference/v1",
+        "rows": [
+            {
+                "id": 7,
+                "question": "What is shown?",
+                "answer1": "A cat",
+                "answer2": "A feline",
+                "wrong_answer1": "A dog",
+            }
+        ],
+    }
+
+    path = tmp_path / "generated_negative.json"
+    path.write_text(json.dumps(payload), encoding="utf-8")
+
+    samples = load_generated_samples_from_json(
+        input_json=path,
+        generated_field="wrong_answer1",
+        generated_expected_label="no",
+        generated_sample_mode="generated_field",
+        num_references=4,
+        offset_samples=0,
+        max_samples=0,
+    )
+
+    assert len(samples) == 1
+    sample = samples[0]
+    assert sample.question_id == "7"
+    assert sample.candidate_answer == "A dog"
+    assert sample.expected_label == "no"
+
+
+def test_load_generated_samples_from_json_rejects_invalid_expected_label(tmp_path: Path) -> None:
+    payload = {
+        "rows": [
+            {
+                "id": 1,
+                "question": "What is shown?",
+                "answer1": "A cat",
+                "generated_answer1": "A cat",
+            }
+        ]
+    }
+
+    path = tmp_path / "generated_invalid_label.json"
+    path.write_text(json.dumps(payload), encoding="utf-8")
+
+    with pytest.raises(ValueError, match="generated_expected_label"):
+        load_generated_samples_from_json(
+            input_json=path,
+            generated_field="generated_answer1",
+            generated_expected_label="maybe",
+            generated_sample_mode="generated_field",
+            num_references=4,
+            offset_samples=0,
+            max_samples=0,
+        )
+
+
+def test_load_generated_samples_from_json_uses_reference_override_as_single_ground_truth(tmp_path: Path) -> None:
+    payload = {
+        "rows": [
+            {
+                "id": 1,
+                "question": "What is happening?",
+                "answer1": "A person is cooking.",
+                "answer2": "Someone cooks a meal.",
+                "generated_answer1": "A person cooks in a kitchen.",
+            }
+        ]
+    }
+    overrides = [{"ID": 1, "merged_reference": "A person is cooking food in a kitchen."}]
+
+    input_path = tmp_path / "generated_with_override.json"
+    override_path = tmp_path / "references_merged.json"
+    input_path.write_text(json.dumps(payload), encoding="utf-8")
+    override_path.write_text(json.dumps(overrides), encoding="utf-8")
+
+    samples = load_generated_samples_from_json(
+        input_json=input_path,
+        generated_field="generated_answer1",
+        generated_expected_label="yes",
+        generated_sample_mode="generated_field",
+        num_references=4,
+        offset_samples=0,
+        max_samples=0,
+        reference_overrides_json=override_path,
+        reference_overrides_id_field="ID",
+        reference_overrides_value_field="merged_reference",
+    )
+
+    assert len(samples) == 1
+    assert samples[0].question_id == "1"
+    assert samples[0].ground_truth_answers == ["A person is cooking food in a kitchen."]
+
+
+def test_load_generated_samples_from_json_requires_override_for_every_selected_sample(tmp_path: Path) -> None:
+    payload = {
+        "rows": [
+            {
+                "id": 1,
+                "question": "What is happening?",
+                "answer1": "A person is cooking.",
+                "generated_answer1": "A person cooks in a kitchen.",
+            }
+        ]
+    }
+    overrides = [{"ID": 999, "merged_reference": "Unrelated reference."}]
+
+    input_path = tmp_path / "generated_missing_override.json"
+    override_path = tmp_path / "references_merged.json"
+    input_path.write_text(json.dumps(payload), encoding="utf-8")
+    override_path.write_text(json.dumps(overrides), encoding="utf-8")
+
+    with pytest.raises(ValueError, match="Missing reference override"):
+        load_generated_samples_from_json(
+            input_json=input_path,
+            generated_field="generated_answer1",
+            generated_expected_label="yes",
+            generated_sample_mode="generated_field",
+            num_references=4,
+            offset_samples=0,
+            max_samples=0,
+            reference_overrides_json=override_path,
+            reference_overrides_id_field="ID",
+            reference_overrides_value_field="merged_reference",
+        )

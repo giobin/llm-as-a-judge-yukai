@@ -376,11 +376,17 @@ def load_maia_gen_samples(
 def load_generated_samples_from_json(
     input_json: Path,
     generated_field: str,
+    generated_expected_label: str,
     generated_sample_mode: str,
     num_references: int,
     offset_samples: int,
     max_samples: int,
+    reference_overrides_json: Path | None = None,
+    reference_overrides_id_field: str = "ID",
+    reference_overrides_value_field: str = "merged_reference",
 ) -> list[JudgeSample]:
+    if generated_expected_label not in {"yes", "no"}:
+        raise ValueError("generated_expected_label must be 'yes' or 'no'.")
     if generated_sample_mode not in {"generated_field", "transcript_pair"}:
         raise ValueError("generated_sample_mode must be 'generated_field' or 'transcript_pair'.")
     if not 1 <= num_references <= 7:
@@ -400,6 +406,16 @@ def load_generated_samples_from_json(
         rows = payload
     else:
         raise ValueError("Invalid input JSON: expected object or array.")
+
+    reference_overrides = (
+        _load_reference_overrides(
+            reference_overrides_json=reference_overrides_json,
+            id_field=reference_overrides_id_field,
+            value_field=reference_overrides_value_field,
+        )
+        if reference_overrides_json is not None
+        else None
+    )
 
     selected_rows = rows[offset_samples:]
     if max_samples > 0:
@@ -425,13 +441,23 @@ def load_generated_samples_from_json(
             if not candidate_answer:
                 continue
 
-            all_answers = _collect_reference_answers(row)
-            if not all_answers:
-                continue
-
-            ground_truth_answers = all_answers[: min(num_references, len(all_answers))]
-
         question_id = str(row.get("id", row.get("question_id", idx)))
+
+        if generated_sample_mode != "transcript_pair":
+            if reference_overrides is not None:
+                merged_reference = reference_overrides.get(question_id)
+                if merged_reference is None:
+                    raise ValueError(
+                        f"Missing reference override for selected generated sample id={question_id!r} "
+                        f"in {reference_overrides_json}."
+                    )
+                ground_truth_answers = [merged_reference]
+            else:
+                all_answers = _collect_reference_answers(row)
+                if not all_answers:
+                    continue
+
+                ground_truth_answers = all_answers[: min(num_references, len(all_answers))]
 
         samples.append(
             JudgeSample(
@@ -439,7 +465,7 @@ def load_generated_samples_from_json(
                 question=question,
                 candidate_answer=candidate_answer,
                 ground_truth_answers=ground_truth_answers,
-                expected_label="yes",
+                expected_label=generated_expected_label,
             )
         )
 

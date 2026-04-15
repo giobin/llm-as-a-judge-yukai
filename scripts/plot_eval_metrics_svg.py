@@ -69,7 +69,16 @@ def parse_args() -> argparse.Namespace:
 
 
 def prettify_model_name(model_name: str) -> str:
-    return MODEL_LABELS.get(model_name, model_name.split("/")[-1].replace("_", "-"))
+    known_label = MODEL_LABELS.get(model_name)
+    if known_label:
+        return known_label
+
+    hf_cache_match = re.search(r"models--([^/]+)--([^/]+)/snapshots/", model_name)
+    if hf_cache_match:
+        org, model = hf_cache_match.groups()
+        return f"{org}/{model}".replace("_", "-")
+
+    return model_name.split("/")[-1].replace("_", "-")
 
 
 def detect_language(config: dict[str, object], file_name: str) -> str | None:
