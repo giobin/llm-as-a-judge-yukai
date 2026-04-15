@@ -1,0 +1,38 @@
+[
+  {
+    "label": "Gemma 3 27B IT",
+    "model_name": "google/gemma-3-27b-it",
+    "eval_file": "/data01/gbonetta/llm-as-a-judge/judge_results/maia_it_generated_gemma_cross_judge_merged_reference/judge_gemma3_27b_it/eval_ita_generated_from_google_gemma_3_27b_it_field_generated_answer1_expected_yes_judged_by_google_gemma_3_27b_it_num_refs_1_offset_0_max_240.json",
+    "n_common": 240,
+    "n_predictions": 240,
+    "n_gold": 240,
+    "missing_in_gold": [],
+    "missing_in_eval": [],
+    "tp": 128,
+    "tn": 67,
+    "fp": 42,
+    "fn": 3,
+    "accuracy": 0.8125,
+    "precision_yes": 0.7529411764705882,
+    "recall_yes": 0.9770992366412213,
+    "f1_yes": 0.8504983388704319
+  },
+  {
+    "label": "GPT-5.2",
+    "model_name": "gpt-5.2",
+    "eval_file": "/data01/gbonetta/llm-as-a-judge/judge_results/maia_it_generated_gemma_cross_judge_merged_reference/judge_gpt52/eval_ita_generated_from_google_gemma_3_27b_it_field_generated_answer1_expected_yes_judged_by_gpt_5_2_num_refs_1_offset_0_max_240.json",
+    "n_common": 240,
+    "n_predictions": 240,
+    "n_gold": 240,
+    "missing_in_gold": [],
+    "missing_in_eval": [],
+    "tp": 119,
+    "tn": 94,
+    "fp": 15,
+    "fn": 12,
+    "accuracy": 0.8875,
+    "precision_yes": 0.8880597014925373,
+    "recall_yes": 0.9083969465648855,
+    "f1_yes": 0.8981132075471697
+  }
+]
